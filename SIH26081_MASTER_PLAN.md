@@ -23,10 +23,12 @@
 **Document map — one canonical file, two annexes:**
 
 ```
-SIH26081_MASTER_PLAN.md          ← THIS FILE. Single source of truth.
-docs/archive/                     ← old blueprint + revised (historical only)
+SIH26081_MASTER_PLAN.md          ← THIS FILE. Single source of truth for scope, DoD, pitch.
+TECH_APPROACH_AND_TEAMS.md       ← BINDING for tech choices (§9 "or"s resolved), algorithms,
+                                    the results/ data contract, and the Team A / Team B split.
+DECISIONS.md                       ← D-01…D-17 from §1, D-18…D-30 from TECH_APPROACH; append-only
 SIH26081_research_gaps.md         ← INTERNAL ANNEX: competitor evidence, per-repo detail, sources
-DECISIONS.md                       ← generated from §1; append every new decision with a date
+docs/archive/                     ← old blueprint + revised (historical only)
 ```
 
 > ⚠️ **Rule:** if a number, year range, or design choice appears in a slide, it must trace to §1 or a `results/` file. Nothing in this document may be quoted to judges until it is measured. Placeholders are written as `?.??` on purpose.
@@ -806,6 +808,8 @@ Each top-level module maps to one box in §7.1. **Adding NCUM/NEPS is a new file
 ---
 
 # 9. Tech Stack
+
+> **Every "X or Y" below is resolved in `TECH_APPROACH_AND_TEAMS.md` §1 (D-18 → D-30).** That document is binding for tooling; this section is the survey it was chosen from.
 
 ## 9.1 Backend / Core (Python)
 

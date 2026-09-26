@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.nc binary
+*.grib2 binary
+*.mp4 binary
+*.zarr/** binary

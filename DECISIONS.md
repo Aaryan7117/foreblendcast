@@ -53,3 +53,30 @@ A decision here is binding on code, slides and README. If you change one, update
 **Affects:** <code modules / slides / README sections to update in the same commit>
 **Decided by:** <name>
 ```
+
+---
+
+## 2026-09-27 — Tech approach & team split (from TECH_APPROACH_AND_TEAMS.md §1, §4)
+
+**Supersedes:** every "X or Y" in MASTER_PLAN §9. **Affects:** `environment.yml`, `frontend/package.json`, repo ownership.
+
+| # | Decision | Locked value | One-line reason |
+|---|---|---|---|
+| D-18 | Backend runtime | **Python 3.11 on conda-forge (mamba)**; Docker base `condaforge/mambaforge` | `eccodes` is a C lib; conda-forge is the only sane path on Windows |
+| D-19 | Schema | **pydantic v2** | The quality gate *is* validation |
+| D-20 | Canonical grid | **The IMD 0.25° rainfall grid itself** (6.5–38.5 N, 66.5–100 E) | Truth is never regridded |
+| D-21 | Regridding | **`xarray.interp` bilinear** | `xesmf` has no Windows build; WB2 is already 0.25° |
+| D-22 | ML | **LightGBM** (quantile objective) | Native quantile, CPU-fast, light install |
+| D-23 | Config / CLI / scheduler | **pyyaml + argparse + cron-in-Docker** | Zero learning curve; cron is what NCMRWF runs. Prefect = production upgrade path |
+| D-24 | API | **FastAPI, 6 endpoints**, `results/` mounted static | Dashboard never depends on the API during the demo |
+| D-25 | Frontend | **Vite + React 18 + TypeScript + zustand + Tailwind** | Shared state across six panels; TS types generated from the data contract |
+| D-26 | Map / charts | **Leaflet + react-leaflet** (PNG `ImageOverlay` rasters pre-rendered by backend) · **Plotly.js** | No token/billing; scientific charts native |
+| D-27 | Team A ↔ Team B interface | **Files in `results/` per TECH_APPROACH §3.** Team A writes, Team B reads. Nothing else crosses. | Lets both teams work from hour one |
+| D-28 | Fixtures | `frontend/fixtures/` only; `"fixture": true`; full-screen watermark; `build:demo` refuses them | Team B is never blocked, and never fakes a number |
+| D-29 | `results/` freeze | **Tue 30 Sep, 14:00** — tag `v1.0-results` | Numbers in deck == numbers in results |
+| D-30 | Repo ownership | Team A: science modules + tests + env. Team B: `frontend/ api/ outputs/ docker/ README deck demo`. | See TECH_APPROACH §4.1 |
+
+**Decision rules pending data (TECH_APPROACH §6):**
+- **6.1** If WB2 has no 2023 → range becomes **2018–2022**, folds Train 2018–20/Test 2021 + Train 2018–21/Test 2022, case study → **Assam–Meghalaya floods June 2022**. Record as D-31 by Sat 27 noon.
+- **6.2** If no usable AI-model precipitation → **split pools** (rain: NWP+ensemble; T/wind: NWP+AI). Record as D-32 by Sat 27 noon.
+- **6.7** D-16 team allocation — **still unfilled.** Fill Sat 27 09:00.
