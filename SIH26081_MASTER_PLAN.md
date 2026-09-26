@@ -24,8 +24,9 @@
 
 ```
 SIH26081_MASTER_PLAN.md          ← THIS FILE. Single source of truth for scope, DoD, pitch.
+WORK_SPLIT.md                    ← START HERE TO BUILD: backend work list · frontend work list · how they connect.
 TECH_APPROACH_AND_TEAMS.md       ← BINDING for tech choices (§9 "or"s resolved), algorithms,
-                                    the results/ data contract, and the Team A / Team B split.
+                                    and the full JSON shapes of the results/ contract (§3).
 DECISIONS.md                       ← D-01…D-17 from §1, D-18…D-30 from TECH_APPROACH; append-only
 SIH26081_research_gaps.md         ← INTERNAL ANNEX: competitor evidence, per-repo detail, sources
 docs/archive/                     ← old blueprint + revised (historical only)
