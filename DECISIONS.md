@@ -80,3 +80,21 @@ A decision here is binding on code, slides and README. If you change one, update
 - **6.1** If WB2 has no 2023 → range becomes **2018–2022**, folds Train 2018–20/Test 2021 + Train 2018–21/Test 2022, case study → **Assam–Meghalaya floods June 2022**. Record as D-31 by Sat 27 noon.
 - **6.2** If no usable AI-model precipitation → **split pools** (rain: NWP+ensemble; T/wind: NWP+AI). Record as D-32 by Sat 27 noon.
 - **6.7** D-16 team allocation — **still unfilled.** Fill Sat 27 09:00.
+
+---
+
+## 2026-09-27 — Team is two people: one backend, one frontend
+
+**Decision:** D-16 filled — **BACKEND = 1 person, FRONTEND = 1 person.** No third.
+**Supersedes:** D-16 (blank), D-30 (2+2 ownership), D-27 (15-file contract).
+**Reason:** The 2+2 plan was sized for four. With two, scope drops ~40 %, the contract shrinks to 5 Tier-1 files, and ownership moves: `outputs/` + `api/` → backend (xarray/Python); deck + README + demo + static downloads → frontend.
+**Affects:** TECH_APPROACH_AND_TEAMS.md §4 (rewritten), MASTER_PLAN §1 D-16 row, §13.5 (now 8 core + 4 stretch per TECH_APPROACH §4.7).
+
+| # | Decision | Locked value |
+|---|---|---|
+| D-16 *(revised)* | Team | 1 backend + 1 frontend |
+| D-27 *(revised)* | Contract | **Tier 1 (must, by Sun 22:00):** `ladder.json`, `districts_L{1,3,5,7,10}.json`, `points/{5 cities}.json`, `rasters/*.png + bounds.json`, `where_we_lose.json`. Tier 2 after. `weights_L*`/`disagreement_L*` dropped (folded into `districts_L*`). |
+| D-30 *(revised)* | Ownership | Backend: all Python incl. `outputs/ api/ docker/`. Frontend: `frontend/ deck/ demo/ README.md data/static/`. |
+| D-31 | Cut for two people | GeoTIFF, CAP, cron demo, TimesFM, WD/cyclone regimes, heatwave, wind hazards, NeuralGCM, leaderboard, weather movie, minus-one table, terrain cuts → "designed, not built" on the limitations slide. |
+| D-32 | Contract deadline | `frontend/src/types/results.ts` + fixtures committed **Sat 27, 10:00**, before any adapter or map. |
+| D-33 | Integration | **Every day 20:00 from Saturday**: `make sync` → `npm run dev` → both look at one screen. |

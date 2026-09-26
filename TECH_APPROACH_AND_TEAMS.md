@@ -1,6 +1,6 @@
-# SIH26081 — Tech Approach & Two-Team Work Split
+# SIH26081 — Tech Approach & Two-Person Work Split (1 backend · 1 frontend)
 
-**Version:** v1.0 — 27 September 2026
+**Version:** v1.1 — 27 September 2026 (v1.0 assumed 2 + 2; v1.1 is sized for exactly two people)
 **Binding on:** `SIH26081_MASTER_PLAN.md` §7–§9, §13. Where MASTER_PLAN §9 says "X or Y", **this document picks one.**
 **Companion:** `DECISIONS.md` (decisions D-18 → D-30 appended from this document).
 
@@ -10,8 +10,8 @@
 
 1. **Every "or" in the tech stack becomes a single choice**, with the rejected alternative and the reason (§1).
 2. **The concrete algorithm for every module** — not just the library, but the method, the formula, the parameters (§2).
-3. **The data contract between the two teams** — exact files, exact JSON shapes, who writes, who reads (§3). This is what lets the teams work in parallel from hour one.
-4. **The two-team split** — charters, ownership, a day-by-day plan per team, sync rituals, and the fixture policy that keeps Team B productive before real numbers exist (§4).
+3. **The data contract between the two people** — exact files, exact JSON shapes, who writes, who reads (§3; tiered for two people in §4.2). This is what lets both work in parallel from hour one.
+4. **The two-person split** — one backend, one frontend: charters, ownership, half-day plans with hard cut lines, the 5-file Tier-1 contract, the exact connection mechanism, and the fixture policy that keeps the frontend productive before real numbers exist (§4).
 5. **Scaffold** — the exact `environment.yml`, `package.json` dependencies, and first commands (§5).
 6. **Open items with a decision rule** so nobody waits on a meeting (§6).
 
@@ -69,10 +69,10 @@
 
 | Area | **CHOSEN** |
 |---|---|
-| Repo | Single monorepo `sih26081-blend/` (MASTER_PLAN §8), `main` always runnable, feature branches `A/<thing>`, `B/<thing>` |
+| Repo | Single monorepo `sih26081-blend/` (MASTER_PLAN §8), `main` always runnable, feature branches `backend/<thing>`, `frontend/<thing>` |
 | Line endings | `.gitattributes` with `* text=auto eol=lf` — kills the CRLF warnings seen at first commit |
-| Data hand-off | **Files in `results/`** — never a DB, never a socket. §3 is the contract |
-| Fixtures | `frontend/fixtures/` only, `"fixture": true` flag, watermark rendered, **build step refuses to ship them** (§4.5) |
+| Data hand-off | **Files in `results/`** — never a DB, never a socket. §3 is the shape, §4.2 the mandatory subset, §4.3 the mechanism |
+| Fixtures | `frontend/fixtures/` only, `"fixture": true` flag, watermark rendered, **build step refuses to ship them** (§4.3) |
 
 ---
 
@@ -166,9 +166,10 @@ Plus `StaticFiles` mount of `results/` at `/data`. The dashboard **does not** ca
 
 ---
 
-# 3. Data Contract — the interface between the two teams
+# 3. Data Contract — the interface between backend and frontend
 
-**Team A writes `results/`. Team B reads it. Nothing else crosses the boundary.**
+**Backend writes `results/`. Frontend reads it. Nothing else crosses the boundary.**
+**For two people only the Tier-1 subset in §4.2 is mandatory; the full list below is the reference shape for every file that may exist.**
 Every file has a `meta` block. TypeScript types are generated from these shapes (`frontend/src/types/results.ts`) on day one and committed; a schema change requires a PR touching both sides.
 
 ```
@@ -289,67 +290,141 @@ results/
 
 ---
 
-# 4. Two-Team Split
+# 4. Two-Person Split — one Backend, one Frontend
+
+> **This section replaces the earlier two-*team* (2 + 2) plan.** The team is exactly two people. Everything below is sized for that. D-16 is now filled: **BACKEND = 1 person, FRONTEND = 1 person.**
+
+## 4.0 What changes when it's two people, not four
+
+| The principle (correct) | The consequence people miss |
+|---|---|
+| One person owns every number; one owns everything a judge sees. | **The frontend person also owns the deck, README, demo video and static asset downloads.** The backend person also owns `outputs/` and the API — they are xarray/Python, not UI. |
+| The two halves connect *only* through defined files. | **Fewer files = fewer things that can be wrong on Tuesday.** The contract shrinks to **5 must-have files** (§4.2). Everything else is Tier 2. |
+| Define the contract first, then build. | **The contract is written and committed by 10:00 Saturday**, with TS types and fixtures — before a single adapter or map exists. Otherwise the frontend person has nothing to build against for 36 hours. |
+| Integration is where it breaks. | **Integration is not a phase — it is a 15-minute act every evening at 20:00**, from Saturday. The first "real" integration on Tuesday is how two-person projects die. |
+| The plan must fit the people. | **Scope drops ~40 %** (§4.6 cut list). MASTER_PLAN §13.5's 12-item DoD becomes **8 core + 4 stretch** (§4.7). |
 
 ## 4.1 Charters
 
-| | **Team A — ENGINE** | **Team B — PRODUCT & PLATFORM** |
+| | **BACKEND (1 person)** | **FRONTEND (1 person)** |
 |---|---|---|
-| **Mission** | Produce **real, verified numbers**. Own every value in `results/`. | Carry the numbers to the judges. Own everything a judge *sees*. |
-| **Owns (repo)** | `ingestion/ canonical/ verification/ weighting/ blending/ regimes/ hazards/ calibration/ monitoring/ experiments/ evaluation/ tests/ environment.yml Makefile (science targets)` | `frontend/ api/ outputs/ docker/ README.md deck/ demo/ results/rasters (renderer) Makefile (serve/build targets)` |
-| **Owns (decisions)** | D-01, 02, 03, 04, 05, 06, 10, 11, 12 | D-07 (UI toggles), 13, 14, 15 |
-| **Success = ** | MASTER_PLAN §13.5 items 1–4, 7, 8 green | §13.5 items 5, 6, 9–12 green |
-| **Never does** | Frontend, slides, README prose | Change a number; write to `results/` except `rasters/` |
-| **Minimum staffing** | 2 (one on ingestion/canonical/verification, one on weighting/blending/hazards) | 2 (one frontend, one platform+deck) |
-| **If 3rd person** | → verification/FSS/REV/bootstrap specialist | → deck + case study narrative + demo video |
+| **Mission** | Real, verified numbers in `results/`, on schedule. | Everything a judge sees, reads or clicks — on real data by Sunday night. |
+| **Owns (repo)** | `ingestion/ canonical/ verification/ weighting/ blending/ hazards/ calibration/ regimes/ monitoring/ experiments/ evaluation/ outputs/ api/ tests/ environment.yml Makefile docker/` | `frontend/ deck/ demo/ README.md data/static/` (district GeoJSON, WorldPop, SRTM prep) |
+| **Owns (decisions)** | D-01–06, 10–12, 18–24, 29 | D-07 (UI side), 13 (banner), 25–26, 28 |
+| **Produces for the other** | `results/` per §4.2, pushed by `make sync` | Screenshots for slides; the popup/card copy the backend must fill; bug reports against contract files |
+| **Never does** | Slides, README prose, UI | Change a number; write anything to `results/` |
+| **Q&A on the day** | Science: ladder, leakage, accumulation window, FSS, shrinkage, calibration, "where we lose" | Product/ops: dashboard, provenance, EXERCISE status, HPC readiness story, demo |
 
-## 4.2 Day-by-day — Team A (Engine)
+## 4.2 The contract, sized for two people
 
-| Day | Focus | Deliverables (files that appear) | Checkpoint |
+**Tier 1 — must exist, real, by Sunday 22:00 (CP-2). The demo is built on these five alone.**
+
+| File | Written by | Consumed by | What it drives |
 |---|---|---|---|
-| **Sat 27 · AM** | P-2 env, P-3 inventory, canonical schema, accumulation | `environment.yml` verified; `data/raw/*.zarr` subset started; `canonical/forecast.py`, `accumulation.py` + `test_accumulation.py` green | **P-3 result → §6.1 decision by noon** |
-| **Sat 27 · PM** | Adapters, registry, QC gate, alignment, equal blend | `ingestion/{gfs,ecmwf,graphcast,registry}.py`, `quality_gate.py` + test, `grid.py`, `weighting/equal.py`, `experiments/run.py --strategy equal` → `.nc` | **CP-1:** plottable blended rain grid, window verified |
-| **Sun 28 · AM** | Truth loader, sample histogram, deterministic + FSS + floors | `verification/{deterministic,fss}.py` + `test_fss.py`, `weighting/{climatology,persistence}.py`, `results/sample_counts.json` | Sample histogram reviewed → ladder rungs confirmed |
-| **Sun 28 · PM** | Folds + leakage test, inverse-error, bootstrap, **ladder v1**, intensity CDF, **first real `results/` drop** | `experiments/folds.py` + `test_leakage.py`, `weighting/inverse_error.py`, `verification/bootstrap.py`, `results/ladder.json`, `results/districts_L*.json` (rain only), `results/points/*.json` | **CP-2:** ladder with real numbers + CIs; **Team B switches off fixtures** |
-| **Mon 29 · AM** | Context weights, shrinkage, τ, **probability matching**, physical validator | `weighting/{context,shrinkage,tau_fit}.py`, `blending/{probability_matched,physical}.py`, `results/tau.json`, ladder rungs added | PM rung on the ladder |
-| **Mon 29 · PM** | Extremes + isotonic, REV, oracle, disagreement, LOMO, regime flag + verify, terrain cuts, minus-one table | `hazards/*`, `calibration/*`, `verification/{economic_value,stratify}.py`, `weighting/oracle.py`, `regimes/*`, `results/{rev,reliability,where_we_lose,regime_agreement}.json`, `districts_L*.json` full | **CP-3:** every contract file real; `where_we_lose.json` exists |
-| **Tue 30 · AM** | Case study (July 2023 or fallback), change-point, spatial smoothing, `make reproduce` | `results/case_study/*`, `results/changepoint.json`, `Makefile reproduce` target + log | `make reproduce` runs clean end-to-end |
-| **Tue 30 · PM** | **Freeze `results/`** at 14:00. Number sweep with Team B. TimesFM only if everything above is green. | tag `v1.0-results` | Numbers in deck == numbers in `results/` |
+| `results/ladder.json` | `evaluation/ladder.py` | `LadderTable.tsx`, slide 4 | The scientific core |
+| `results/districts_L{1,3,5,7,10}.json` | `evaluation/districts.py` | `DistrictMap.tsx`, popup, `DecisionCard.tsx` | Traffic light, weights, LOMO, disagreement, population, shrinkage reason — **all in one file** |
+| `results/points/{mumbai,chennai,kolkata,delhi,guwahati}.json` | `evaluation/points.py` | `Spaghetti.tsx` | Members + blend + q05/q95 + obs |
+| `results/rasters/{field}_L{lead}.png` + `bounds.json` | `outputs/render_png.py` | `RasterLayer.tsx` | Weight map, probability map, disagreement map |
+| `results/where_we_lose.json` | `evaluation/where_we_lose.py` | `WhereWeLose.tsx`, slide 10 | Credibility |
 
-## 4.3 Day-by-day — Team B (Product & Platform)
+`meta` block (§3.1) on every file. `weights_L*.json` and `disagreement_L*.json` from §3 are **dropped** — their content already lives inside `districts_L*.json`. Five leads, not ten. Five cities, not fifty.
 
-| Day | Focus | Deliverables | Checkpoint |
+**Tier 2 — built only after every Tier 1 file is real. Frontend builds the panels on fixtures and they light up when the file lands.**
+
+| File | Drives | Backend cost |
+|---|---|---|
+| `results/rev.json` | REV curve, slide 7 | ~1 h (from contingency tables already computed) |
+| `results/reliability.json` | Reliability diagram, slide 6 | ~30 min |
+| `results/fss_curve.json` | FSS-vs-scale, slide 5 | ~30 min (FSS already computed per scale) |
+| `results/case_study/*` | Case replay, slide 11 | ~3 h |
+| `results/changepoint.json` | Slide 12 | ~2 h |
+| `results/regime_agreement.json` | Regime slide / limitations | ~1 h |
+| `results/netcdf/blend_*.nc` | Shown on slide 12 as the operational artefact | ~1 h |
+
+**Tier 3 — cut for two people:** GeoTIFF, CAP XML, cron-in-Docker demo (Dockerfile only), TimesFM, WD/cyclone regimes, heatwave, wind hazards, NeuralGCM, leaderboard, weather movie, minus-one degradation table, terrain-stratified cuts. Each is named in the limitations slide as "designed, not built."
+
+## 4.3 The connection — exactly how the two halves meet
+
+```
+BACKEND                                       FRONTEND
+make results   → results/*.json, rasters/*    fetch('/data/<file>')  via useResults(file) hook
+make sync      → copies results/ →            reads frontend/public/data/
+                 frontend/public/data/        renders; if meta.fixture → full-screen watermark
+                                              npm run build:demo → fails if any fixture remains
+```
+
+- `make sync` is `robocopy results frontend\public\data /MIR` on Windows (`rsync -a --delete` elsewhere). Backend runs it at every 20:00 sync **and** whenever a Tier 1 file changes.
+- `frontend/src/types/results.ts` is the TS mirror of §3. **Committed by 10:00 Saturday**, written by the frontend person from this document, reviewed by the backend person in 10 minutes. From then on, a backend shape change is a compile error on the frontend — which is the point.
+- `frontend/fixtures/` = one file per Tier 1/2 contract with `"fixture": true` and obviously-fake values. Frontend copies them into `public/data/` on Saturday; `make sync` overwrites them Sunday night.
+- **Contract change protocol (both people, 5 min, no exceptions):** whoever needs the change says so in chat → backend edits the writer, frontend edits `results.ts` + fixture → one commit each → done. Never a silent field rename.
+
+## 4.4 BACKEND — half-day plan with hard cut lines
+
+| Slot | Do | Output | If not done by end of slot → |
 |---|---|---|---|
-| **Sat 27 · AM** | Repo plumbing, downloads D5–D9, contract types, fixtures | `.gitattributes`, `frontend/` scaffold (Vite + React + TS + Tailwind + zustand + react-leaflet + plotly), `src/types/results.ts` generated from §3, `frontend/fixtures/*` with watermark logic, district GeoJSON simplified (`mapshaper -simplify 10%`) and keyed by the `id` scheme in §3.3 | App boots on fixtures with watermark |
-| **Sat 27 · PM** | Traffic-light board, EXPERIMENTAL banner, layout shell, raster renderer | `DistrictMap.tsx` (GeoJSON, tier colours, D-07 toggle, popup skeleton), `Banner.tsx`, app shell with variable/lead controls in zustand, `outputs/render_png.py` (colormaps fixed, `bounds.json`) tested on the CP-1 `.nc` | Board renders from fixtures; renderer produces a PNG from CP-1 output |
-| **Sun 28 · AM** | Weight map + LOMO hover, ladder panel, spaghetti | `WeightMap.tsx` (ImageOverlay + district hover from `weights_L*.json`), `LadderTable.tsx`, `Spaghetti.tsx` (Plotly with q05–q95 band) | All three on fixtures |
-| **Sun 28 · PM** | **Switch to real data (CP-2)**, decision card, API scaffold, Docker | `public/data` → real `results/`; `DecisionCard.tsx` with provenance footer; `api/main.py` 6 endpoints; `docker/Dockerfile` + `crontab` for `run_cycle.py` | Dashboard shows real ladder + real district tiers; `docker build` passes |
-| **Mon 29 · AM** | REV panel, reliability + FSS panels, attention overlay, where-we-lose map | `RevCurve.tsx`, `Reliability.tsx`, `FssCurve.tsx`, `DisagreementLayer.tsx`, `WhereWeLose.tsx` | Renders as soon as A drops the files (fixtures until then) |
-| **Mon 29 · PM** | Outputs: CF-NetCDF attrs + GeoTIFF + CAP; README; deck skeleton | `outputs/{netcdf,geotiff,cap,provenance}.py` on A's `.nc`; `README.md` with architecture + setup; 12-slide skeleton with `?.??` placeholders | **CP-3:** every panel on real data; CAP file validates against the 1.2 XSD |
-| **Tue 30 · AM** | Case-study replay panel, change-point plot, leaderboard, `build:demo` gate, guided-tour banner | `CaseStudy.tsx`, `ChangePoint.tsx`, `Leaderboard.tsx`, `npm run build:demo` refuses fixtures | Full click-through works |
-| **Tue 30 · PM** | **Number sweep with Team A**, deck final, limitations + licence slides, OBS recording, repo cleanup | deck v1.0, `demo/demo.mp4`, README final, tag `v1.0-submission` | Recording done **before** live-demo rehearsal |
+| **Sat AM** | P-2 env; P-3 inventory; `canonical/forecast.py`; **`accumulation.py` + `test_accumulation.py`** | inventory pasted into `DECISIONS.md` (§6.1/6.2 decided); accumulation test green | Nothing moves until this is green. Ask frontend to help debug env in parallel. |
+| **Sat PM** | 3 adapters, registry, QC gate, alignment, equal blend, smoke run | `experiments/run.py --strategy equal` → `.nc` **CP-1** | Drop the GraphCast adapter tonight; 2 models for CP-1, add the third Sunday AM. |
+| **Sun AM** | Truth loader; sample histogram; RMSE/MAE/bias; FSS + `test_fss.py`; climatology + persistence floors | `results/sample_counts.json`; metrics in memory | Drop persistence (keep climatology). |
+| **Sun PM** | Folds + `test_leakage.py`; inverse-error; block bootstrap; **`ladder.json` v1**; **`districts_L*.json` (rain only)**; **`points/*.json`**; **`render_png.py` + rasters**; **`where_we_lose.json` v1** (inverse vs. best single); `make sync` | **CP-2 — all 5 Tier 1 files real** | This slot cannot slip. If it does: skip bootstrap CIs tonight (add Mon AM), ship the ladder without CIs, still sync. |
+| **Mon AM** | Context weights; shrinkage; τ fit; **probability-matched blend**; physical validator; ladder rungs added; re-sync | Ladder has context + PM rungs | Fix `k=20`, `τ=1` — skip the fits, note it. Never skip probability matching. |
+| **Mon PM** | LightGBM quantiles (or empirical fallback); isotonic; `P(>thr)` → tiers into `districts_L*`; LOMO into `districts_L*`; **REV**; **oracle** rung; reliability + FSS-curve JSON; NetCDF writer; re-sync | **CP-3** — Tier 1 complete + rev/reliability/fss_curve | Empirical ensemble instead of LightGBM. Drop `regime_agreement`. |
+| **Tue AM** | **One** of: case study *or* change-point (case study preferred); `make reproduce` + log; regime flag + ablation rung only if the case study is done by 11:00 | `results/case_study/*` or `changepoint.json`; `reproduce.log` | Whichever isn't started by 10:00 is cut. |
+| **Tue 14:00** | **FREEZE `results/`** — tag `v1.0-results`; final `make sync` | | Nothing after this but the number sweep. |
+| **Tue PM** | Number sweep with frontend (every `?.??` in the deck ↔ `results/`); answer science questions for the deck; rehearse Q&A | | |
 
-## 4.4 Sync rituals (fixed, short)
+**Backend drop list, in order** (invoke without asking): regime ablation → change-point → case study → NetCDF → LightGBM (→ empirical) → τ/k fitting (→ fixed) → bootstrap CIs (→ ladder without CIs, say so) → third model at CP-1 (→ add later). **Never dropped:** accumulation test, leakage test, ladder with floor + ceiling, probability matching, `districts_L*`, `where_we_lose`.
+
+## 4.5 FRONTEND — half-day plan with hard cut lines
+
+| Slot | Do | Output | If not done → |
+|---|---|---|---|
+| **Sat AM** | Vite + React + TS + Tailwind + zustand + react-leaflet + Plotly scaffold; **`types/results.ts` from §3 (by 10:00)**; fixtures for all Tier 1/2 files; watermark; `.gitattributes`; download + simplify district GeoJSON (`mapshaper -simplify 10%`), assign `id`s per §3.3; download WorldPop + SRTM (hand SRTM to backend) | App boots on fixtures with watermark; `results.ts` committed | Skip Tailwind (plain CSS vars). Never skip `results.ts` + fixtures. |
+| **Sat PM** | App shell (variable/lead selectors in zustand); **EXPERIMENTAL banner** (non-dismissible); **`DistrictMap.tsx`**: GeoJSON, tier colours, D-07 toggle, popup with every field of §3.3 | Traffic-light board on fixtures | Popup shows fewer fields; the map itself never slips. |
+| **Sun AM** | `RasterLayer.tsx` (ImageOverlay from `rasters/` + `bounds.json`, layer switch: dominant model / P(>64.5) / disagreement); `LadderTable.tsx` (floor → ceiling, CI column, "% of achievable gain" headline); `Spaghetti.tsx` (Plotly, q05–q95 band, obs dots) | All on fixtures | Ladder table before spaghetti. |
+| **Sun 20:00** | **CP-2 integration:** backend runs `make sync`; frontend reloads — **every panel now on real data**; file bugs against contract, not against people | First real screenshots → deck folder | If a Tier 1 file is malformed, fix the *writer* tonight, not the reader. |
+| **Mon AM** | `WhereWeLose.tsx` (map + table); `DecisionCard.tsx` (printable, provenance footer, `meta.status` line); `RevCurve.tsx`, `Reliability.tsx`, `FssCurve.tsx` on Tier 2 fixtures | Panels ready; light up when files land | REV panel first (slide 7), then reliability, then FSS. |
+| **Mon PM** | README (setup, architecture diagram copied from MASTER_PLAN §7.1, ladder table pasted from `ladder.json`, limitations, licences §15.2); **12-slide deck skeleton** with real screenshots and `?.??` placeholders; `build:demo` gate; 3-step guided-tour banner | Deck v0.5; README v1 | Guided tour cut. |
+| **Tue AM** | `CaseStudy.tsx` *or* `ChangePoint.tsx` (whichever backend chose); polish 1920×1080; **OBS recording draft** | Full click-through; `demo/draft.mp4` | Case-study panel → static screenshots in the deck instead. |
+| **Tue PM** | **Number sweep with backend**; deck v1.0; final OBS recording; tag `v1.0-submission`; rehearse presentation twice | Submission | Recording before rehearsal — always. |
+
+**Frontend drop list, in order:** guided tour → leaderboard (already cut) → case-study panel (→ slide screenshots) → FSS panel → reliability panel → decision card print styling → raster layer switch (keep one raster). **Never dropped:** `results.ts` + fixtures, banner, district map, ladder table, where-we-lose, deck, recording.
+
+## 4.6 Sync ritual for two people
 
 | When | What | Length |
 |---|---|---|
-| **09:00 daily** | Contract check: did any `results/` shape change? Which files will land today, by when? | 10 min |
-| **14:00 daily** | Unblock: anything waiting on the other team? | 5 min |
-| **20:00 daily** | Integration: Team B pulls today's `results/`, runs the app, both teams look at one screen together | 15 min |
-| **Checkpoints CP-1/2/3** | Named in §4.2/4.3. **A checkpoint failing stops feature work on both teams until it passes.** | as needed |
+| **09:00** | "What lands in `results/` today, by when? Any contract change?" — in chat, written | 5 min |
+| **during the day** | Contract change protocol (§4.3) the moment it's needed; otherwise heads-down | as needed |
+| **20:00** | **`make sync` → `npm run dev` → both look at one screen.** Every day from Saturday. Log bugs against the contract file name. | 15 min |
+| **CP-1 (Sat) · CP-2 (Sun) · CP-3 (Mon)** | If a checkpoint fails, the *other* person's next morning is spent helping — a two-person project has no slack for parallel blockage. | |
 
-Communication channel: one group chat, one pinned message = today's expected `results/` drops with ETA. No DMs about contract changes.
+## 4.7 Definition of Done for two people (from MASTER_PLAN §13.5)
 
-## 4.5 Rules that keep the split from breaking
+**Core 8 — the submission is not made without these:**
+- [ ] Real data in, real numbers out (no `np.random`, no fixture in the demo build)
+- [ ] Accumulation window verified (`test_accumulation.py` green)
+- [ ] Ladder with floor + ≥ 2 singles + ≥ 2 blends + oracle ceiling (CIs if Sun PM held)
+- [ ] Leakage-free folds (`test_leakage.py` green)
+- [ ] District traffic-light map + weight raster on real data
+- [ ] Calibrated exceedance probabilities on the map (isotonic, or empirical with the caveat)
+- [ ] "Where We Lose" panel
+- [ ] Deck + 3-minute recording + provenance/EXERCISE on every screen
 
-1. **Team B never invents a number.** Fixtures are flagged, watermarked, and cannot be built into the demo. If a panel has no real data by the deck freeze, the panel is cut — not faked.
-2. **Team A never touches presentation.** If A wants a chart in the deck, A writes the JSON; B draws it.
-3. **A contract change = a PR that edits `results/` writer, `types/results.ts`, and the fixture, together.** Reviewed by one person from each team.
-4. **`results/` freezes Tue 14:00.** After that, only `where_we_lose.json` and the number sweep may change, and only by tagging a new `results` version.
-5. **Cut order is MASTER_PLAN §13.6.** Either lead can invoke it; neither needs permission.
+**Stretch 4 — each earns a slide if it lands, and is a limitations bullet if it doesn't:**
+- [ ] REV curve (cheapest — do this first)
+- [ ] GRIB2 shown live (`cfgrib` on the NOMADS file — 15 min if the env works)
+- [ ] Case study *or* change-point plot
+- [ ] CF-NetCDF artefact + limitations/licence slides
 
-## 4.6 Load balance sanity check
-Team A has the harder science; Team B has more surface area. The balance holds because B also owns *platform* (API, Docker, outputs, CAP), *narrative* (deck, README, case study), and *downloads D5–D9*. If A falls behind, the first thing moved to B is `outputs/render_png.py` → already B's. The second is `evaluation/plots.py` (matplotlib versions of REV/reliability/FSS for the deck) → B can draw those from the JSON with Plotly export instead. **Nothing in the weighting/verification chain is ever moved to B.**
+## 4.8 Where the earlier plan was over-assigned (so nobody re-adds it)
+
+| Was assigned to "Team B" | Now | Why |
+|---|---|---|
+| `outputs/netcdf.py`, `geotiff.py`, `cap.py` | Backend (NetCDF only); GeoTIFF/CAP cut | xarray work; a frontend person shouldn't learn CF conventions this week |
+| `api/` six endpoints | Backend, **or cut to `StaticFiles` only** | The demo never calls it; keep only if Tue AM is free |
+| Docker + cron | Dockerfile only, no cron demo | Story on the slide; build not required |
+| Downloads D8/D9 (GRIB2, Open-Meteo) | Backend (D8), cut (D9) | GRIB2 is a science proof; live mode is out of scope |
+| "Third person → REV/bootstrap specialist" | Backend Mon PM | There is no third person |
 
 ---
 
@@ -427,9 +502,9 @@ make reproduce  # data → test → results → rasters, logs to reproduce.log
 
 ### 5.5 First commands, in order (Sat 27 morning)
 ```bash
-git checkout -b A/env && mamba env create -f environment.yml          # Team A
-git checkout -b B/scaffold && npm create vite@latest frontend ...       # Team B
-python -m ingestion.inventory --box 6.5,38.5,66.5,100 --years 2018-2023  # Team A, P-3, output pasted into DECISIONS.md
+git checkout -b backend/env && mamba env create -f environment.yml      # backend
+git checkout -b frontend/scaffold && npm create vite@latest frontend ... # frontend
+python -m ingestion.inventory --box 6.5,38.5,66.5,100 --years 2018-2023  # backend, P-3, output pasted into DECISIONS.md
 ```
 
 ---
@@ -438,13 +513,13 @@ python -m ingestion.inventory --box 6.5,38.5,66.5,100 --years 2018-2023  # Team 
 
 | # | Question | Decision rule | Owner | Deadline |
 |---|---|---|---|---|
-| **6.1** | **Does WB2 hold 2023 for HRES/GFS/GraphCast?** The public WB2 archives are widely documented as ending in **2022**; D-02's "2020–2023" may be unfulfillable. | **If 2023 absent:** year range becomes **2018–2022** (the stretch range is now the *required* range); folds = Train 2018–20/Test 2021, Train 2018–21/Test 2022 (still 2 held-out seasons); case study becomes **Assam–Meghalaya floods, June 2022** (in the 2022 test fold), alt. Cyclone Asani May 2022. Append as D-18 in `DECISIONS.md`. | Team A | Sat 27, noon |
-| **6.2** | Does GraphCast (and any AI model) provide usable 24-h precipitation over the India box? | **If no:** activate MASTER_PLAN §7.3 split — rain pool = {GFS, IFS HRES, + IFS ENS/GEFS if present}; T/wind pool adds GraphCast. Ladder tables are per-pool. Append as D-19. | Team A | Sat 27, noon |
-| **6.3** | IMD gridded rain granted in time? | **If not by Sun 28 09:00:** ERA5 is the prototype truth for rain with the explicit caveat; `meta.ground_truth = "ERA5"` on every file so the UI footer says so automatically. | Team A | Sun 28, 09:00 |
-| **6.4** | LightGBM quantile model or empirical-ensemble fallback for the predictive distribution? | **If Mon 29 12:00 and the quantile model isn't producing calibrated output:** ship the empirical fallback; note it in limitations. | Team A | Mon 29, noon |
-| **6.5** | React unfamiliar to the frontend person? | **Decide Sat 27 09:00.** If yes → keep Vite + TS but drop to a small vanilla module per panel with a shared `store.ts`; everything else in §1.2 stands. | Team B | Sat 27, 09:00 |
-| **6.6** | Deck tool | Whatever the presenter already uses. No debate. | Team B | Sat 27 |
-| **6.7** | D-16 team allocation | **Fill now.** The tables in §4.2/4.3 assume 2 + 2. | Both leads | Sat 27, 09:00 |
+| **6.1** | **Does WB2 hold 2023 for HRES/GFS/GraphCast?** The public WB2 archives are widely documented as ending in **2022**; D-02's "2020–2023" may be unfulfillable. | **If 2023 absent:** year range becomes **2018–2022** (the stretch range is now the *required* range); folds = Train 2018–20/Test 2021, Train 2018–21/Test 2022 (still 2 held-out seasons); case study becomes **Assam–Meghalaya floods, June 2022** (in the 2022 test fold), alt. Cyclone Asani May 2022. Append as D-18 in `DECISIONS.md`. | Backend | Sat 27, noon |
+| **6.2** | Does GraphCast (and any AI model) provide usable 24-h precipitation over the India box? | **If no:** activate MASTER_PLAN §7.3 split — rain pool = {GFS, IFS HRES, + IFS ENS/GEFS if present}; T/wind pool adds GraphCast. Ladder tables are per-pool. Append as D-19. | Backend | Sat 27, noon |
+| **6.3** | IMD gridded rain granted in time? | **If not by Sun 28 09:00:** ERA5 is the prototype truth for rain with the explicit caveat; `meta.ground_truth = "ERA5"` on every file so the UI footer says so automatically. | Backend | Sun 28, 09:00 |
+| **6.4** | LightGBM quantile model or empirical-ensemble fallback for the predictive distribution? | **If Mon 29 12:00 and the quantile model isn't producing calibrated output:** ship the empirical fallback; note it in limitations. | Backend | Mon 29, noon |
+| **6.5** | React unfamiliar to the frontend person? | **Decide Sat 27 09:00.** If yes → keep Vite + TS but drop to a small vanilla module per panel with a shared `store.ts`; everything else in §1.2 stands. | Frontend | Sat 27, 09:00 |
+| **6.6** | Deck tool | Whatever the presenter already uses. No debate. | Frontend | Sat 27 |
+| **6.7** | D-16 team allocation | **Filled: 1 backend + 1 frontend.** §4.4/4.5 are sized for exactly that. | — | done |
 
 ---
 
