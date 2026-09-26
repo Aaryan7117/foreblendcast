@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+data/raw/
+data/interim/
+results/
+*.grib2
+*.idx
+.DS_Store
+node_modules/
+dist/
+.env
