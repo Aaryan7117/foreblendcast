@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "cycle": "2022-07-15T00Z",
+    "generated_utc": "2026-09-27T10:19:58.432Z",
+    "git_commit": "fixture",
+    "fixture": true,
+    "ground_truth": "IMD_0p25_rain|ERA5",
+    "models_used": [
+      "gfs",
+      "ecmwf",
+      "graphcast"
+    ],
+    "availability_pattern": "full",
+    "strategy": "context_shrink_pm",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "threshold_mm": 64.5,
+  "bins": [
+    0.5
+  ],
+  "observed_freq": {
+    "blend": [
+      0.5
+    ]
+  },
+  "counts": {
+    "blend": [
+      100
+    ]
+  }
+}

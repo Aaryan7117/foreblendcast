@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "cycle": "2022-07-15T00Z",
+    "generated_utc": "2026-09-27T10:19:58.432Z",
+    "git_commit": "fixture",
+    "fixture": true,
+    "ground_truth": "IMD_0p25_rain|ERA5",
+    "models_used": [
+      "gfs",
+      "ecmwf",
+      "graphcast"
+    ],
+    "availability_pattern": "full",
+    "strategy": "context_shrink_pm",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "lead_day": 7,
+  "districts": [
+    {
+      "id": "MH-RATNAGIRI",
+      "name": "RATNAGIRI",
+      "state": "MH",
+      "precip_p90_mm": 50,
+      "tmax_c": 30,
+      "wind_ms": 5,
+      "p_gt_64p5": 0.5,
+      "p_gt_115p6": 0.3,
+      "p_gt_204p5": 0.1,
+      "tier": "green",
+      "heatwave": false,
+      "population": 1000000,
+      "population_source": "WorldPop 2020",
+      "disagreement": 1.2,
+      "weights": {
+        "gfs": 0.4,
+        "ecmwf": 0.4,
+        "graphcast": 0.2
+      },
+      "lomo_rmse_increase_pct": {
+        "gfs": 5,
+        "ecmwf": 6,
+        "graphcast": 2
+      },
+      "shrinkage": {
+        "level_used": "district",
+        "n_eff": 50,
+        "reason": "ok"
+      }
+    },
+    {
+      "id": "TN-CHENNAI",
+      "name": "CHENNAI",
+      "state": "TN",
+      "precip_p90_mm": 70,
+      "tmax_c": 30,
+      "wind_ms": 5,
+      "p_gt_64p5": 0.5,
+      "p_gt_115p6": 0.3,
+      "p_gt_204p5": 0.1,
+      "tier": "yellow",
+      "heatwave": false,
+      "population": 2000000,
+      "population_source": "WorldPop 2020",
+      "disagreement": 1.2,
+      "weights": {
+        "gfs": 0.4,
+        "ecmwf": 0.4,
+        "graphcast": 0.2
+      },
+      "lomo_rmse_increase_pct": {
+        "gfs": 5,
+        "ecmwf": 6,
+        "graphcast": 2
+      },
+      "shrinkage": {
+        "level_used": "district",
+        "n_eff": 50,
+        "reason": "ok"
+      }
+    },
+    {
+      "id": "DL-DELHI",
+      "name": "DELHI",
+      "state": "DL",
+      "precip_p90_mm": 90,
+      "tmax_c": 30,
+      "wind_ms": 5,
+      "p_gt_64p5": 0.5,
+      "p_gt_115p6": 0.3,
+      "p_gt_204p5": 0.1,
+      "tier": "orange",
+      "heatwave": false,
+      "population": 3000000,
+      "population_source": "WorldPop 2020",
+      "disagreement": 1.2,
+      "weights": {
+        "gfs": 0.4,
+        "ecmwf": 0.4,
+        "graphcast": 0.2
+      },
+      "lomo_rmse_increase_pct": {
+        "gfs": 5,
+        "ecmwf": 6,
+        "graphcast": 2
+      },
+      "shrinkage": {
+        "level_used": "district",
+        "n_eff": 50,
+        "reason": "ok"
+      }
+    },
+    {
+      "id": "AS-KAMRUP",
+      "name": "KAMRUP",
+      "state": "AS",
+      "precip_p90_mm": 110,
+      "tmax_c": 30,
+      "wind_ms": 5,
+      "p_gt_64p5": 0.5,
+      "p_gt_115p6": 0.3,
+      "p_gt_204p5": 0.1,
+      "tier": "red",
+      "heatwave": false,
+      "population": 4000000,
+      "population_source": "WorldPop 2020",
+      "disagreement": 1.2,
+      "weights": {
+        "gfs": 0.4,
+        "ecmwf": 0.4,
+        "graphcast": 0.2
+      },
+      "lomo_rmse_increase_pct": {
+        "gfs": 5,
+        "ecmwf": 6,
+        "graphcast": 2
+      },
+      "shrinkage": {
+        "level_used": "district",
+        "n_eff": 50,
+        "reason": "ok"
+      }
+    },
+    {
+      "id": "WB-KOLKATA",
+      "name": "KOLKATA",
+      "state": "WB",
+      "precip_p90_mm": 130,
+      "tmax_c": 30,
+      "wind_ms": 5,
+      "p_gt_64p5": 0.5,
+      "p_gt_115p6": 0.3,
+      "p_gt_204p5": 0.1,
+      "tier": "orange",
+      "heatwave": false,
+      "population": 5000000,
+      "population_source": "WorldPop 2020",
+      "disagreement": 1.2,
+      "weights": {
+        "gfs": 0.4,
+        "ecmwf": 0.4,
+        "graphcast": 0.2
+      },
+      "lomo_rmse_increase_pct": {
+        "gfs": 5,
+        "ecmwf": 6,
+        "graphcast": 2
+      },
+      "shrinkage": {
+        "level_used": "district",
+        "n_eff": 50,
+        "reason": "ok"
+      }
+    }
+  ]
+}
