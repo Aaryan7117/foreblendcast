@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import logging
 import time
 from pathlib import Path
 
@@ -19,11 +18,12 @@ import xarray as xr
 from canonical import accumulation as acc
 from canonical.grid import LAT, LON, area_weights
 from experiments.design import FOLDS, SHOWCASE_CYCLE, SEASON_OF_MONTH, init_dates
+import canonical.logging
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
-log = logging.getLogger(__name__)
+canonical.logging.setup()
+log = canonical.logging.get_logger(__name__)
 
-MODELS = ["hres", "ens", "graphcast"]
+# We use the adapter registry later to get actual models
 LEAD_DAYS = list(acc.LEAD_DAYS)
 VARIABLES = ["precip"]  # Start with precipitation, add others later
 
@@ -60,20 +60,19 @@ def load_district_fractions() -> tuple[np.ndarray, list[str]]:
 def load_forecast(model: str, variable: str, init_time: pd.Timestamp,
                   lead_days: list[int]) -> dict[int, np.ndarray]:
     """Load forecast fields keyed by lead_day. Returns {lead_day: (lat,lon) array}."""
-    month = init_time.strftime("%Y-%m")
-    path = Path(f"data/raw/{model}/{variable}/{month}.nc")
-    if not path.exists():
+    from ingestion import registry
+    registry.load_all()
+    try:
+        adapter = registry.get(model)
+        fc = adapter.load(init_time, variable, lead_days)
+        if fc is None:
+            return {}
+        result = {}
+        for i, ld in enumerate(fc.lead_days):
+            result[ld] = fc.values[i]
+        return result
+    except KeyError:
         return {}
-    ds = xr.open_dataset(path)
-    if init_time not in ds.init.values:
-        ds.close()
-        return {}
-    result = {}
-    for ld in lead_days:
-        if ld in ds.lead_day.values:
-            result[ld] = ds[variable].sel(init=init_time, lead_day=ld).values.astype(np.float32)
-    ds.close()
-    return result
 
 
 def load_truth_field(variable: str, date: pd.Timestamp) -> np.ndarray | None:
@@ -93,16 +92,25 @@ def load_truth_field(variable: str, date: pd.Timestamp) -> np.ndarray | None:
 
 def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> None:
     """Run the full pipeline for a single cycle."""
-    from blending import weighted_mean, probability_matched, physical_validate
-    from hazards import (all_exceedance_probs, assign_tier, disagreement_index,
-                         district_probability, lomo_rmse_increase)
-    from weighting.strategies import STRATEGIES
+    from blending.deterministic import weighted_mean
+    from blending.probability_matched import probability_matched
+    from blending.physical import physical_validate
+    from hazards.rainfall import all_exceedance_probs_empirical as all_exceedance_probs
+    from hazards.district import assign_tier, district_probability
+    from hazards.disagreement import disagreement_index
+    from hazards.lomo import lomo_rmse_increase
+    from weighting.shrinkage import ContextShrinkPM
+    from weighting.inverse_error import InverseError
+    from weighting.baselines import EqualWeights
+    from weighting.oracle import Oracle
+    from weighting.baselines import Climatology
     from verification.deterministic import rmse, cell_rmse, weighted_aggregate
     from verification.fss import fss_curve as compute_fss_curve, THRESHOLDS_MM
     from verification.frequency_bias import frequency_bias
     from verification.bootstrap import block_bootstrap_diff
     from verification.probabilistic import (brier_score, brier_skill_score,
-                                            reliability_bins, roc_auc, economic_value)
+                                            reliability_bins, roc_auc)
+    from verification.economic_value import economic_value
     from evaluation import (write_ladder, write_districts, write_points,
                             write_where_we_lose, write_rev, write_reliability,
                             write_fss_curve, write_bounds)
@@ -125,6 +133,10 @@ def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> Non
     fold = FOLDS[-1]  # Default to last fold
     train_inits = [t for y in fold["train"] for t in init_dates(y)]
 
+    from ingestion import registry
+    registry.load_all()
+    models = list(registry.all_adapters().keys())
+
     # ========== Per-lead processing ==========
     ladder_rows_by_lead = {}
     all_district_results = {}
@@ -135,7 +147,7 @@ def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> Non
 
         # Load forecasts
         fc_fields = {}  # {model: (lat, lon)}
-        for model in MODELS:
+        for model in models:
             fields = load_forecast(model, "precip", cycle, [ld])
             if ld in fields:
                 fc_fields[model] = fields[ld]
@@ -147,16 +159,22 @@ def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> Non
         obs = load_truth_field("precip", valid_date)
 
         # Compute weights via context-aware strategy
-        strategy = STRATEGIES["context_shrink_pm"]
-        # For the showcase, use inverse-error as a simpler fallback
         if obs is not None:
             model_rmses = {}
+            scores = {}
             for model, field in fc_fields.items():
-                model_rmses[model] = rmse(field, obs, aw * land_mask)
-            weights = STRATEGIES["inverse_error"].compute_weights(
-                list(fc_fields.keys()), rmse=model_rmses)
+                err = rmse(field, obs, aw * land_mask)
+                model_rmses[model] = err
+                scores[model] = -err  # Surrogate score: negative RMSE
+                
+            weights = ContextShrinkPM().compute_weights(
+                list(fc_fields.keys()), 
+                scores=scores, 
+                n_eff=100, 
+                node_id="national"
+            )
         else:
-            weights = STRATEGIES["equal"].compute_weights(list(fc_fields.keys()))
+            weights = EqualWeights().compute_weights(list(fc_fields.keys()))
 
         # Blend
         M, B = probability_matched(fc_fields, weights, land_mask)
@@ -172,19 +190,21 @@ def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> Non
 
         # Dominant model
         model_list = list(fc_fields.keys())
-        dom_idx = np.zeros((len(LAT), len(LON)), dtype=np.int16)
-        for i, j in np.ndindex(len(LAT), len(LON)):
-            if land_mask[i, j]:
-                best_w = -1
-                for k, m in enumerate(model_list):
-                    if weights.get(m, 0) > best_w:
-                        best_w = weights[m]
-                        dom_idx[i, j] = k
+        weight_stack = np.zeros((len(model_list), len(LAT), len(LON)), dtype=np.float32)
+        for k, m in enumerate(model_list):
+            w = weights.get(m, 0.0)
+            if isinstance(w, float):
+                weight_stack[k] = w
+            else:
+                weight_stack[k] = w
+        
+        dom_idx = np.argmax(weight_stack, axis=0).astype(np.int16)
+        dom_idx[~land_mask] = -1
 
-        # Weight fields (uniform for now)
+        # Weight fields
         weight_fields = {}
-        for m in model_list:
-            weight_fields[m] = np.full((len(LAT), len(LON)), weights.get(m, 0.0), dtype=np.float32)
+        for k, m in enumerate(model_list):
+            weight_fields[m] = weight_stack[k]
 
         # Render rasters
         render_all_for_lead(
@@ -293,15 +313,19 @@ def run_pipeline(cycle: pd.Timestamp, lead_days: list[int] | None = None) -> Non
             }
 
             # Oracle ceiling
+            fc_stack = np.stack(list(fc_fields.values()), axis=0)
+            err_stack = np.abs(fc_stack - obs)
+            
+            # Mask out non-land and non-finite
+            err_stack[:, ~land_mask] = np.nan
+            
+            best_idx = np.nanargmin(err_stack, axis=0)
+            
+            # Select best field per cell
             oracle_field = np.full_like(obs, np.nan)
-            for i, j in np.ndindex(len(LAT), len(LON)):
-                if land_mask[i, j]:
-                    best_err = 1e9
-                    for model, field in fc_fields.items():
-                        err = abs(field[i, j] - obs[i, j])
-                        if np.isfinite(err) and err < best_err:
-                            best_err = err
-                            oracle_field[i, j] = field[i, j]
+            for k, (m, field) in enumerate(fc_fields.items()):
+                mask = (best_idx == k) & land_mask
+                oracle_field[mask] = field[mask]
             oracle_metrics = {
                 "rmse": round(rmse(oracle_field, obs, aw * land_mask), 3),
                 "mae": round(float(np.nanmean(np.abs(oracle_field - obs) * (aw * land_mask))), 3),

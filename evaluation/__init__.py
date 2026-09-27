@@ -14,7 +14,6 @@ from pathlib import Path
 import numpy as np
 
 RESULTS = Path("results")
-RESULTS.mkdir(exist_ok=True)
 
 # Five showcase cities (§3.5)
 CITIES = {

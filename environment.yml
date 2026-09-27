@@ -1,0 +1,36 @@
+name: sih26081
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - xarray
+  - dask
+  - zarr
+  - gcsfs
+  - netcdf4
+  - h5netcdf
+  - cfgrib
+  - eccodes
+  - scipy
+  - scikit-learn
+  - lightgbm
+  - geopandas
+  - shapely>=2
+  - regionmask
+  - rioxarray
+  - rasterio
+  - matplotlib
+  - pydantic>=2
+  - structlog
+  - pyyaml
+  - fastapi
+  - uvicorn
+  - pytest
+  - lxml
+  - pip
+  - pip:
+    - properscoring
+    - xskillscore

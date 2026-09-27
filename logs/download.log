@@ -1,0 +1,61 @@
+[1/708] era5/precip/2017-12: 62 chunks in 46s | total 62 chunks, 1.3/s, 0.8 min
+[2/708] era5/precip/2018-01: 62 chunks in 24s | total 124 chunks, 1.8/s, 1.2 min
+[3/708] era5/precip/2018-02: 56 chunks in 23s | total 180 chunks, 1.9/s, 1.6 min
+[4/708] era5/precip/2018-03: 62 chunks in 18s | total 242 chunks, 2.2/s, 1.9 min
+[5/708] era5/precip/2018-04: 60 chunks in 19s | total 302 chunks, 2.3/s, 2.2 min
+[6/708] era5/precip/2018-05: 62 chunks in 18s | total 364 chunks, 2.5/s, 2.5 min
+[7/708] era5/precip/2018-06: 60 chunks in 26s | total 424 chunks, 2.4/s, 2.9 min
+[8/708] era5/precip/2018-07: 62 chunks in 19s | total 486 chunks, 2.5/s, 3.2 min
+[9/708] era5/precip/2018-08: 62 chunks in 20s | total 548 chunks, 2.6/s, 3.5 min
+[10/708] era5/precip/2018-09: 60 chunks in 18s | total 608 chunks, 2.6/s, 3.8 min
+[11/708] era5/precip/2018-10: 62 chunks in 19s | total 670 chunks, 2.7/s, 4.2 min
+[12/708] era5/precip/2018-11: 60 chunks in 23s | total 730 chunks, 2.7/s, 4.5 min
+[13/708] era5/precip/2018-12: 62 chunks in 20s | total 792 chunks, 2.7/s, 4.9 min
+[14/708] era5/precip/2019-01: 62 chunks in 18s | total 854 chunks, 2.8/s, 5.2 min
+[15/708] era5/precip/2019-12: 62 chunks in 29s | total 916 chunks, 2.7/s, 5.6 min
+[16/708] era5/precip/2020-01: 62 chunks in 28s | total 978 chunks, 2.7/s, 6.1 min
+[17/708] era5/precip/2020-02: 58 chunks in 30s | total 1036 chunks, 2.6/s, 6.6 min
+[18/708] era5/precip/2020-03: 62 chunks in 25s | total 1098 chunks, 2.6/s, 7.0 min
+[19/708] era5/precip/2020-04: 60 chunks in 27s | total 1158 chunks, 2.6/s, 7.5 min
+[20/708] era5/precip/2020-05: 62 chunks in 26s | total 1220 chunks, 2.6/s, 7.9 min
+[21/708] era5/precip/2020-06: 60 chunks in 16s | total 1280 chunks, 2.6/s, 8.2 min
+[22/708] era5/precip/2020-07: 62 chunks in 18s | total 1342 chunks, 2.6/s, 8.5 min
+[23/708] era5/precip/2020-08: 62 chunks in 17s | total 1404 chunks, 2.7/s, 8.8 min
+[24/708] era5/precip/2020-09: 60 chunks in 18s | total 1464 chunks, 2.7/s, 9.1 min
+[25/708] era5/precip/2020-10: 62 chunks in 28s | total 1526 chunks, 2.7/s, 9.6 min
+[26/708] era5/precip/2020-11: 60 chunks in 29s | total 1586 chunks, 2.6/s, 10.0 min
+[27/708] era5/precip/2020-12: 62 chunks in 20s | total 1648 chunks, 2.6/s, 10.4 min
+[28/708] era5/precip/2021-01: 62 chunks in 19s | total 1710 chunks, 2.7/s, 10.7 min
+[29/708] era5/precip/2021-12: 62 chunks in 19s | total 1772 chunks, 2.7/s, 11.0 min
+[30/708] era5/precip/2022-01: 62 chunks in 19s | total 1834 chunks, 2.7/s, 11.3 min
+[31/708] era5/precip/2022-02: 56 chunks in 20s | total 1890 chunks, 2.7/s, 11.7 min
+[32/708] era5/precip/2022-03: 62 chunks in 26s | total 1952 chunks, 2.7/s, 12.1 min
+[33/708] era5/precip/2022-04: 60 chunks in 34s | total 2012 chunks, 2.7/s, 12.7 min
+[34/708] era5/precip/2022-05: 62 chunks in 18s | total 2074 chunks, 2.7/s, 13.0 min
+[36/708] era5/precip/2022-07: 62 chunks in 18s | total 2136 chunks, 2.7/s, 13.3 min
+[37/708] era5/precip/2022-08: 62 chunks in 18s | total 2198 chunks, 2.7/s, 13.6 min
+[38/708] era5/precip/2022-09: 60 chunks in 18s | total 2258 chunks, 2.7/s, 13.9 min
+[39/708] era5/precip/2022-10: 62 chunks in 26s | total 2320 chunks, 2.7/s, 14.3 min
+[40/708] era5/precip/2022-11: 60 chunks in 27s | total 2380 chunks, 2.7/s, 14.8 min
+[41/708] era5/precip/2022-12: 62 chunks in 24s | total 2442 chunks, 2.7/s, 15.2 min
+  retry 1 era5/precip/2023-01: KeyError(Timestamp('2023-01-11 00:00:00'))
+  retry 2 era5/precip/2023-01: KeyError(Timestamp('2023-01-11 00:00:00'))
+  retry 3 era5/precip/2023-01: KeyError(Timestamp('2023-01-11 00:00:00'))
+  retry 4 era5/precip/2023-01: KeyError(Timestamp('2023-01-11 00:00:00'))
+FAILED era5/precip/2023-01
+[43/708] hres/precip/2018-01: 160 chunks in 33s | total 2602 chunks, 2.6/s, 16.5 min
+[44/708] hres/precip/2018-02: 140 chunks in 22s | total 2742 chunks, 2.7/s, 16.9 min
+[45/708] hres/precip/2018-03: 150 chunks in 25s | total 2892 chunks, 2.8/s, 17.3 min
+[46/708] hres/precip/2018-04: 150 chunks in 24s | total 3042 chunks, 2.9/s, 17.7 min
+[47/708] hres/precip/2018-05: 160 chunks in 22s | total 3202 chunks, 3.0/s, 18.1 min
+[48/708] hres/precip/2018-06: 150 chunks in 20s | total 3352 chunks, 3.0/s, 18.4 min
+[49/708] hres/precip/2018-07: 150 chunks in 18s | total 3502 chunks, 3.1/s, 18.7 min
+[50/708] hres/precip/2018-08: 160 chunks in 19s | total 3662 chunks, 3.2/s, 19.0 min
+[51/708] hres/precip/2018-09: 150 chunks in 19s | total 3812 chunks, 3.3/s, 19.3 min
+[52/708] hres/precip/2018-10: 150 chunks in 19s | total 3962 chunks, 3.4/s, 19.7 min
+[53/708] hres/precip/2018-11: 150 chunks in 19s | total 4112 chunks, 3.4/s, 20.0 min
+[54/708] hres/precip/2018-12: 160 chunks in 24s | total 4272 chunks, 3.5/s, 20.4 min
+[55/708] hres/precip/2020-01: 160 chunks in 22s | total 4432 chunks, 3.6/s, 20.7 min
+[56/708] hres/precip/2020-02: 140 chunks in 25s | total 4572 chunks, 3.6/s, 21.2 min
+[57/708] hres/precip/2020-03: 160 chunks in 29s | total 4732 chunks, 3.6/s, 21.6 min
+[58/708] hres/precip/2020-04: 150 chunks in 21s | total 4882 chunks, 3.7/s, 22.0 min
