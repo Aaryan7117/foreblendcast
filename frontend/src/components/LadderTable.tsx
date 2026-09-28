@@ -32,20 +32,23 @@ export const LadderTable: React.FC = () => {
   });
 
   return (
-    <div className="bg-surfaceHighlight p-4 rounded-xl border border-surfaceHighlight">
+    <div className="bg-surface rounded-card border border-border p-5 shadow-card">
       <div className="flex justify-between items-end mb-4">
         <div>
-          <h2 className="text-xl font-bold tracking-wide">Performance Ladder</h2>
-          <p className="text-sm text-textMuted uppercase mt-1">
-            Validating Lead Day {leadDay} • {ladder.headline.pct_of_achievable_gain[leadKey] ?? 0}% of achievable gain captured
+          <h2 className="text-lg font-bold text-textMain">Performance Ladder</h2>
+          <p className="text-xs text-textMuted mt-1">
+            Lead Day {leadDay} • {ladder.headline.pct_of_achievable_gain[leadKey] ?? 0}% of achievable gain captured
           </p>
         </div>
+        <div className="text-xs text-textMuted bg-surfaceHighlight border border-border px-2.5 py-1 rounded-md">
+          Strategy: <span className="font-semibold text-textMain">{ladder.meta.strategy}</span>
+        </div>
       </div>
-      
+
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-xs uppercase tracking-wider text-textMuted border-b border-surface/50">
+            <tr className="text-[11px] uppercase tracking-wider text-textMuted border-b border-border">
               <th className="pb-3 pl-3 font-semibold">Model / Strategy</th>
               <th className="pb-3 font-semibold">RMSE</th>
               <th className="pb-3 font-semibold">MAE</th>
@@ -57,40 +60,46 @@ export const LadderTable: React.FC = () => {
             {sortedRows.map((row, i) => {
               const m = row.metrics[leadKey];
               if (!m) return null;
-              
+
               const isBlend = row.rung === 'blend';
               const isCeiling = row.rung === 'ceiling';
               const isFloor = row.rung === 'floor';
-              
+
               return (
-                <tr 
+                <tr
                   key={row.strategy + i}
                   className={clsx(
-                    "border-b border-surface/30 transition-colors hover:bg-surface/50",
-                    isBlend && "bg-blue-900/20 border-l-4 border-l-blue-500",
-                    isCeiling && "opacity-70",
-                    isFloor && "opacity-50"
+                    "border-b border-borderLight transition-colors hover:bg-surfaceHighlight/50",
+                    isBlend && "bg-brand-leafPale/50 border-l-3 border-l-brand-forest",
+                    isCeiling && "opacity-60",
+                    isFloor && "opacity-45"
                   )}
                 >
                   <td className="py-3 pl-3">
                     <div className="flex items-center gap-2">
                       <span className={clsx(
-                        "font-semibold",
-                        isBlend && "text-blue-400 font-bold",
-                        isCeiling && "text-purple-400",
-                        isFloor && "text-gray-500"
+                        "font-semibold text-sm",
+                        isBlend && "text-brand-forest font-bold",
+                        isCeiling && "text-brand-rain",
+                        isFloor && "text-textLight"
                       )}>
                         {row.strategy.toUpperCase()}
                       </span>
-                      <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-surface text-textMuted">
+                      <span className={clsx(
+                        "text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded font-medium",
+                        isBlend ? "bg-brand-forest/10 text-brand-forest" :
+                        isCeiling ? "bg-brand-rainPale text-brand-rain" :
+                        isFloor ? "bg-surfaceHighlight text-textLight" :
+                        "bg-surfaceHighlight text-textMuted"
+                      )}>
                         {row.rung}
                       </span>
                     </div>
                   </td>
-                  <td className="py-3 font-mono">{m.rmse.toFixed(2)}</td>
-                  <td className="py-3 font-mono">{m.mae.toFixed(2)}</td>
-                  <td className="py-3 font-mono">{m.fss50.toFixed(2)}</td>
-                  <td className="py-3 font-mono">{m.rev_cl0p1.toFixed(2)}</td>
+                  <td className="py-3 font-mono text-sm">{m.rmse.toFixed(2)}</td>
+                  <td className="py-3 font-mono text-sm">{m.mae.toFixed(2)}</td>
+                  <td className="py-3 font-mono text-sm">{m.fss50.toFixed(2)}</td>
+                  <td className="py-3 font-mono text-sm">{m.rev_cl0p1.toFixed(2)}</td>
                 </tr>
               );
             })}

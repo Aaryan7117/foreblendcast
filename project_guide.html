@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ForeBlendCast (SIH26081) — Comprehensive Project Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.55;
+      font-size: 13.5px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .badge-primary { background: #38bdf8; color: #082f49; }
+    .badge-success { background: #34d399; color: #064e3b; }
+    .badge-warning { background: #fbbf24; color: #78350f; }
+    .badge-secondary { background: rgba(255, 255, 255, 0.18); color: #f8fafc; }
+
+    .header-card h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+
+    .header-card p.subtitle {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin: 0 0 16px 0;
+      font-weight: 400;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 11.5px;
+    }
+
+    .meta-item span.label {
+      color: #94a3b8;
+      display: block;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      font-size: 9.5px;
+      font-weight: 600;
+    }
+
+    .meta-item span.val {
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f172a;
+      border-left: 4px solid #0284c7;
+      padding-left: 10px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      color: #334155;
+    }
+
+    .card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .card-accent {
+      border-left: 4px solid #0284c7;
+    }
+
+    .card-alert {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+      color: #166534;
+    }
+
+    .card-info {
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+    }
+
+    .card-warning {
+      background-color: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #d97706;
+      color: #92400e;
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+    }
+
+    pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      line-height: 1.45;
+      overflow-x: auto;
+      margin: 8px 0 12px 0;
+      page-break-inside: avoid;
+    }
+
+    p code, li code, td code {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      border: 1px solid #e2e8f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin: 10px 0 16px 0;
+      page-break-inside: avoid;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 11.5px;
+    }
+
+    td {
+      padding: 8px 10px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    ul, ol {
+      margin: 0 0 12px 0;
+      padding-left: 20px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      page-break-inside: avoid;
+    }
+
+    .key-metric-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 10.5px;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-card">
+    <div class="badge-row">
+      <span class="badge badge-primary">Problem ID: SIH26081</span>
+      <span class="badge badge-success">Ministry of Earth Sciences (MoES)</span>
+      <span class="badge badge-warning">NCMRWF</span>
+      <span class="badge badge-secondary">Theme: Disaster Management</span>
+    </div>
+    <h1>ForeBlendCast: Multi-Model Weather Blend</h1>
+    <p class="subtitle">Hybrid AI–NWP Multi-Model Forecast Blending & Calibrated Disaster Risk Early Warning System</p>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <span class="label">Repository</span>
+        <span class="val">foreblendcast</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Frontend Tech</span>
+        <span class="val">React 19, TS, Vite, Leaflet</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Backend Tech</span>
+        <span class="val">Python 3.11, xarray, zarr</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Credentials Needed</span>
+        <span class="val" style="color: #34d399;">None (Open & Public)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: WHAT THE PROJECT IS -->
+  <h2>1. What the Project Is (Core Overview)</h2>
+  <p>
+    <strong>ForeBlendCast</strong> solves a critical national challenge posed by the <strong>Ministry of Earth Sciences (MoES)</strong> and <strong>NCMRWF</strong>: how to intelligently blend multiple weather forecasting systems—combining modern deep-learning AI weather models with traditional physical Numerical Weather Prediction (NWP) systems.
+  </p>
+
+  <div class="grid-2">
+    <div class="card card-accent">
+      <h3 style="margin-top:0;">The Scientific Dilemma</h3>
+      <p style="font-size:12.5px;">
+        Different models excel under different conditions:
+      </p>
+      <ul style="font-size:12px; padding-left:16px;">
+        <li><strong>ECMWF IFS HRES (NWP):</strong> High spatial fidelity; reliable for orographic rainfall.</li>
+        <li><strong>ECMWF IFS ENS (Ensemble Mean):</strong> Smooth, reliable long-lead tracking.</li>
+        <li><strong>Google DeepMind GraphCast (AI):</strong> Superior speed and mid-range synoptic tracking, but smooths local extremes.</li>
+        <li><strong>Traditional Arithmetic Mean:</strong> Fails catastrophically during monsoons because averaging smooths out the highest rain peaks, causing missed flood warnings!</li>
+      </ul>
+    </div>
+
+    <div class="card card-accent">
+      <h3 style="margin-top:0;">The ForeBlendCast Solution</h3>
+      <p style="font-size:12.5px;">
+        An end-to-end operational pipeline that achieves:
+      </p>
+      <ul style="font-size:12px; padding-left:16px;">
+        <li><strong>Canonical IMD 0.25° Alignment:</strong> Standardizes all models to the official <code>03:00 UTC → 03:00 UTC</code> (08:30–08:30 IST) rainfall accumulation cycle.</li>
+        <li><strong>Context-Aware Adaptive Weights:</strong> Weights change dynamically by lead day, terrain zone, season, and active/break monsoon regime.</li>
+        <li><strong>Probability-Matched (PM) Blending:</strong> Preserves heavy rainfall distributions so disaster thresholds remain intact.</li>
+        <li><strong>District Risk Tiers:</strong> Assigns Green, Yellow, Orange, and Red alerts to all 730+ Indian districts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2: SYSTEM ARCHITECTURE -->
+  <h2>2. System Architecture & Data Contract</h2>
+  <p>
+    The project is engineered as a clean, decoupled system where backend data science and frontend user experience operate independently via a strict, file-based JSON/raster contract:
+  </p>
+
+  <div class="card card-info" style="font-size:12px;">
+    <strong>Architecture Workflow:</strong><br>
+    <code>WeatherBench 2 (GCS)</code> + <code>ERA5 / IMD Reanalysis</code> → <strong>Ingestion & Alignment</strong> (<code>canonical/</code>) → <strong>Adaptive Weighting Engine</strong> (<code>weighting/</code>) → <strong>Probability-Matched Blending</strong> (<code>blending/</code>) → <strong>Calibrated Hazard Tiers</strong> (<code>hazards/</code>) → <strong><code>results/*.json</code> + <code>results/rasters/*.png</code></strong> → <strong><code>frontend/public/data/</code></strong> → <strong>React Leaflet / Plotly Dashboard</strong>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Contract File</th>
+        <th style="width: 35%;">Generated By</th>
+        <th>Purpose in Frontend Dashboard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>results/ladder.json</code></td>
+        <td><code>experiments/run.py</code> (Evaluation)</td>
+        <td>Renders the Evaluation Ladder (Climatology → Single Models → Blend → Oracle ceiling).</td>
+      </tr>
+      <tr>
+        <td><code>results/districts_L{1..10}.json</code></td>
+        <td><code>hazards/district.py</code></td>
+        <td>Drives the interactive India Map: district polygons, risk tiers (Yellow/Orange/Red), population affected, and model weights.</td>
+      </tr>
+      <tr>
+        <td><code>results/points/{city}.json</code></td>
+        <td><code>experiments/run.py</code></td>
+        <td>Ensemble spaghetti plots & confidence bands (q05–q95) for Delhi, Mumbai, Kolkata, Chennai, and Guwahati.</td>
+      </tr>
+      <tr>
+        <td><code>results/rasters/*.png</code></td>
+        <td><code>outputs/render_png.py</code></td>
+        <td>Georeferenced PNG overlays for rain intensity, exceedance probabilities, and model disagreement.</td>
+      </tr>
+      <tr>
+        <td><code>results/where_we_lose.json</code></td>
+        <td><code>evaluation/where_we_lose.py</code></td>
+        <td>Scientific integrity panel detailing exactly which regimes/districts the blend loses to single models.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3: CREDENTIALS AND .ENV (HIGH PRIORITY) -->
+  <div class="page-break"></div>
+  <h2>3. Credentials, Keys & .env — What to Ask Your Friend</h2>
+
+  <div class="card card-alert">
+    <h3 style="margin-top:0; color:#166534; font-size:15px;">✓ No Private API Keys or Cloud Credentials Required!</h3>
+    <p style="margin-bottom:6px; font-size:13px;">
+      You <strong>do not need to ask your friend for any API keys, secrets, or cloud tokens</strong> to run this project. All data sources used in the repository are completely public and open:
+    </p>
+    <ul style="margin-bottom:0; font-size:12.5px;">
+      <li><strong>Google Cloud WeatherBench 2 (WB2):</strong> Accessed with public anonymous access (<code>storage_options={"token": "anon"}</code> in <code>ingestion/wb2.py</code>). No Google Cloud account, IAM key, or service account JSON is needed.</li>
+      <li><strong>Boundary & Demographic Data:</strong> GeoJSON district boundaries download from open <code>geoBoundaries</code> (GitHub raw), and UN population rasters download from <code>WorldPop.org</code>.</li>
+      <li><strong>Map Tiles:</strong> Uses open Leaflet tiles with OpenStreetMap. No Mapbox tokens or Google Maps keys are required.</li>
+      <li><strong>The <code>.env</code> file:</strong> Listed in <code>.gitignore</code> purely as standard security hygiene. No environment variable files are used or required by either the backend or the frontend.</li>
+    </ul>
+  </div>
+
+  <div class="card card-warning">
+    <h3 style="margin-top:0; color:#92400e; font-size:14px;">💡 What You SHOULD Ask Your Friend For Instead:</h3>
+    <p style="font-size:12.5px;">
+      While no keys are needed, running the data pipeline from scratch downloads gigabytes of meteorological data and performs compute-heavy array operations. <strong>Ask your friend for these pre-generated folders:</strong>
+    </p>
+    <ol style="font-size:12.5px; margin-bottom:0;">
+      <li><strong>The <code>results/</code> folder:</strong> If your friend has already run the experiment, get their generated <code>results/</code> folder. Copying it into your root directory will give you instant real outputs without waiting hours for downloads.</li>
+      <li><strong>The <code>data/static/</code> folder:</strong> Contains pre-rendered district masks (<code>districts.geojson</code>, <code>districts_index.json</code>, <code>grid_static.nc</code>).</li>
+    </ol>
+  </div>
+
+  <!-- SECTION 4: HOW TO RUN FRONTEND -->
+  <h2>4. Commands to Run the Frontend</h2>
+  <p>
+    The frontend is fully built with <strong>Vite, React 19, TypeScript, Tailwind CSS, Leaflet, and Plotly.js</strong>. It already comes equipped with pre-bundled public data fixtures in <code>frontend/public/data/</code>, meaning <strong>you can launch it immediately without running the backend!</strong>
+  </p>
+
+  <div class="card card-accent">
+    <h3 style="margin-top:0;">Step-by-Step Frontend Launch (PowerShell)</h3>
+    <pre><code># 1. Open PowerShell and navigate to the frontend directory:
+cd e:\foreblendcast\frontend
+
+# 2. Install dependencies (Node.js & npm are already on your machine):
+npm install
+
+# 3. Start the Vite development server:
+npm run dev</code></pre>
+    <p style="font-size:12px; margin-bottom:0;">
+      Once launched, open your web browser at: <code>http://localhost:5173</code> (or the URL displayed in your terminal).
+    </p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Available Frontend Script</th>
+        <th>Command</th>
+        <th>What It Does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dev Server</strong></td>
+        <td><code>npm run dev</code></td>
+        <td>Starts the local Vite server with Hot Module Replacement (HMR).</td>
+      </tr>
+      <tr>
+        <td><strong>Production Build</strong></td>
+        <td><code>npm run build</code></td>
+        <td>Compiles TypeScript and outputs optimized production assets to <code>dist/</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Demo Build Gate</strong></td>
+        <td><code>npm run build:demo</code></td>
+        <td>Safety check: verifies that real data is present and rejects fixture data.</td>
+      </tr>
+      <tr>
+        <td><strong>Linter</strong></td>
+        <td><code>npm run lint</code></td>
+        <td>Runs Oxlint for high-speed code quality checks.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 5: HOW TO RUN BACKEND -->
+  <div class="page-break"></div>
+  <h2>5. Commands to Run the Backend Science Pipeline</h2>
+  <p>
+    The backend is designed as a modular Python pipeline that pulls WeatherBench 2 inputs, computes weights and blends, categorizes district hazards, and generates output JSONs and PNG rasters.
+  </p>
+
+  <div class="card card-accent">
+    <h3 style="margin-top:0;">A. Setup Environment</h3>
+    <p style="font-size:12px;"><strong>Option A (Conda / Mamba — Recommended for geospatial C-libraries):</strong></p>
+    <pre><code># Create the environment with all geospatial C-libraries:
+mamba env create -f environment.yml --force
+conda activate sih26081</code></pre>
+
+    <p style="font-size:12px;"><strong>Option B (Standard Python Virtual Environment):</strong></p>
+    <pre><code>cd e:\foreblendcast
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install numpy pandas xarray dask zarr gcsfs netcdf4 h5netcdf scipy scikit-learn lightgbm geopandas shapely regionmask rioxarray rasterio matplotlib pydantic structlog pyyaml fastapi uvicorn pytest lxml
+pip install properscoring xskillscore</code></pre>
+  </div>
+
+  <div class="card card-accent">
+    <h3 style="margin-top:0;">B. Running Pipeline Stages</h3>
+    <pre><code># Step 1: Ingest static layers (district polygons, land mask, population)
+python -m ingestion.static
+
+# Step 2: Download raw forecast chunks from WeatherBench2 (GCS)
+python -m ingestion.download
+
+# Step 3: Run the full experiment pipeline for a forecast cycle
+python -m experiments.run --cycle 2022-06-14
+
+# Step 4: Render georeferenced raster PNGs
+python -c "from outputs.render_png import write_bounds; write_bounds()"
+
+# Step 5: Sync results into frontend public data folder (Windows PowerShell)
+robocopy results frontend\public\data /MIR /NFL /NDL /NJH /NJS
+
+# Step 6: Run test suite to verify accumulation windows & zero data leakage
+python -m pytest tests/ -v</code></pre>
+  </div>
+
+  <!-- SECTION 6: KEY DIRECTORIES -->
+  <h2>6. Repository Structure Reference</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Directory</th>
+        <th>Role & Key Modules</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>canonical/</code></td>
+        <td>Defines India 0.25° grid bounds, accumulation window (03Z–03Z), unit converters, and quality gates.</td>
+      </tr>
+      <tr>
+        <td><code>ingestion/</code></td>
+        <td>WeatherBench 2 adapters (<code>wb2.py</code>, <code>ecmwf.py</code>, <code>graphcast.py</code>) and static data fetcher (<code>static.py</code>).</td>
+      </tr>
+      <tr>
+        <td><code>weighting/</code></td>
+        <td>Error tracking, inverse-error weights, empirical Bayes shrinkage, and human forecaster override handling.</td>
+      </tr>
+      <tr>
+        <td><code>blending/</code></td>
+        <td>Deterministic weighted mean and Probability-Matched (PM) blending algorithm (<code>probability_matched.py</code>).</td>
+      </tr>
+      <tr>
+        <td><code>hazards/</code></td>
+        <td>Precipitation exceedance probabilities, district aggregation, and model disagreement indexing.</td>
+      </tr>
+      <tr>
+        <td><code>verification/</code></td>
+        <td>Scientific verification: RMSE, MAE, Fractions Skill Score (FSS), Relative Economic Value (REV), and Reliability curves.</td>
+      </tr>
+      <tr>
+        <td><code>frontend/</code></td>
+        <td>Vite + React 19 interactive operational dashboard with Leaflet map, city spaghetti plots, and decision cards.</td>
+      </tr>
+      <tr>
+        <td><code>tests/</code></td>
+        <td>Guard tests preventing data leakage (<code>test_leakage.py</code>) and accumulation offset errors (<code>test_accumulation.py</code>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>ForeBlendCast — SIH26081 Canonical Architecture & Operations Manual</span>
+    <span>Generated: 2026-09-27 · Ministry of Earth Sciences (MoES)</span>
+  </div>
+
+</body>
+</html>
