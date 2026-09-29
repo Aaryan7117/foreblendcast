@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Approach - ForeBlendCast (SIH26081)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f172a;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  /* 16:9 Slide Canvas */
+  .slide-container {
+    width: 1333px;
+    height: 750px;
+    background: radial-gradient(circle at 50% 0%, #ffffff 0%, #f0f6ff 60%, #e8f0fe 100%);
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px 28px 32px;
+  }
+
+  /* Watermark map background */
+  .slide-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/India_relief_location_map.jpg') center/cover no-repeat;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  /* Header */
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(148, 163, 184, 0.25);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .team-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #1e293b;
+    border-radius: 40px;
+    padding: 6px 14px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  .team-badge span {
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #0f172a;
+  }
+
+  .slide-title {
+    text-align: center;
+  }
+  .slide-title h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #0f172a;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .slide-title p {
+    font-size: 11px;
+    font-weight: 600;
+    color: #2563eb;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .sih-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sih-badge img {
+    height: 42px;
+  }
+  .sih-text {
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ea580c;
+    letter-spacing: 0.5px;
+    text-align: right;
+  }
+
+  /* 5 Pillars Layout */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    flex: 1;
+    position: relative;
+    z-index: 10;
+  }
+
+  .pillar-card {
+    background: white;
+    border-radius: 14px;
+    border: 1.5px solid;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Pillar Headers */
+  .pillar-header {
+    padding: 10px 10px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1.5px solid;
+  }
+
+  .pillar-body {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .section-block {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+  }
+  .bullet-list li {
+    font-size: 10px;
+    line-height: 1.35;
+    color: #1e293b;
+    position: relative;
+    padding-left: 10px;
+  }
+  .bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+  }
+  .bullet-list li strong {
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .highlight-badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-top: 3px;
+    border: 1px solid #bfdbfe;
+  }
+
+  /* Pillar Themes */
+  /* Pillar 1: Mint */
+  .p-1 { border-color: #a7f3d0; }
+  .p-1 .pillar-header { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+  .p-1 .section-block { border-left: 3px solid #10b981; }
+
+  /* Pillar 2: Sky Blue */
+  .p-2 { border-color: #bae6fd; }
+  .p-2 .pillar-header { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+  .p-2 .section-block { border-left: 3px solid #0284c7; }
+
+  /* Pillar 3: Amber/Orange */
+  .p-3 { border-color: #fed7aa; }
+  .p-3 .pillar-header { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+  .p-3 .section-block { border-left: 3px solid #ea580c; }
+
+  /* Pillar 4: Rose/Coral */
+  .p-4 { border-color: #fbcfe8; }
+  .p-4 .pillar-header { background: #fdf2f8; color: #9d174d; border-color: #fbcfe8; }
+  .p-4 .section-block { border-left: 3px solid #db2777; }
+
+  /* Pillar 5: Purple */
+  .p-5 { border-color: #ddd6fe; }
+  .p-5 .pillar-header { background: #faf5ff; color: #6b21a8; border-color: #ddd6fe; }
+  .p-5 .section-block { border-left: 3px solid #9333ea; }
+
+  /* Connector Arrows */
+  .connector-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    right: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 900;
+    z-index: 20;
+  }
+
+  /* Bottom Closed-Loop Bar */
+  .closed-loop-bar {
+    margin-top: 14px;
+    background: linear-gradient(90deg, #ecfdf5 0%, #eff6ff 50%, #fdf4ff 100%);
+    border: 1.5px dashed #3b82f6;
+    border-radius: 10px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+  }
+  .loop-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+  .loop-steps {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #334155;
+  }
+  .loop-step {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+  }
+  .loop-arrow { color: #2563eb; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="slide-container">
+  
+  <!-- Header -->
+  <div class="slide-header">
+    <div class="team-badge">
+      <span>SIXTH_SENSE_CODERS</span>
+    </div>
+    <div class="slide-title">
+      <h1>TECHNICAL APPROACH</h1>
+      <p>ForeBlendCast (SIH26081) — Operational Hybrid AI-NWP Multi-Model Weather Blending</p>
+    </div>
+    <div class="sih-badge">
+      <div class="sih-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <!-- 5 Pillars -->
+  <div class="pillars-grid">
+
+    <!-- 1. DATA SOURCES -->
+    <div class="pillar-card p-1">
+      <div class="pillar-header">
+        <span>🌐 1. DATA SOURCES</span>
+      </div>
+      <div class="pillar-body">
+        <div class="section-block">
+          <div class="section-title">☁️ Weather Archives & Feeds</div>
+          <ul class="bullet-list">
+            <li><strong>WeatherBench2</strong>: ERA5 Reanalysis</li>
+            <li><strong>Live Feeds</strong>: Operational GRIB2 Adapter</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">🤖 NWP & AI Models</div>
+          <ul class="bullet-list">
+            <li><strong>ECMWF HRES</strong> & <strong>IFS Ensemble</strong></li>
+            <li><strong>GraphCast</strong> & <strong>Huawei Pangu</strong></li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">📊 Multi-Variable Ingestion</div>
+          <ul class="bullet-list">
+            <li><strong>Rainfall</strong> (03Z-03Z accumulation)</li>
+            <li><strong>2m Temp (t2m)</strong> & <strong>10m Wind</strong></li>
+          </ul>
+          <div class="highlight-badge">📍 736 Districts · WorldPop 2020</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. INGESTION & REGIMES -->
+    <div class="pillar-card p-2">
+      <div class="pillar-header">
+        <span>⚙️ 2. INGESTION & REGIMES</span>
+      </div>
+      <div class="pillar-body">
+        <div class="section-block">
+          <div class="section-title">⚡ Pre-Processing Engine</div>
+          <ul class="bullet-list">
+            <li><code>xarray</code> · <code>dask</code> · <code>cfgrib</code></li>
+            <li>Missing model dynamic fallback</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">📐 Canonical Grid Aligner</div>
+          <ul class="bullet-list">
+            <li>Bilinear to <strong>IMD 0.25° grid</strong></li>
+            <li>Vector wind magnitude & physical checks</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">🌪️ Weather Regimes</div>
+          <ul class="bullet-list">
+            <li>Monsoon <strong>Active vs Break</strong></li>
+            <li>Western Disturbances & Cyclonic flow</li>
+            <li>Changepoint calibration detector</li>
+          </ul>
+          <div class="highlight-badge">🛡️ Strict Physical QC Gate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. CORE SCIENCE ENGINE -->
+    <div class="pillar-card p-3">
+      <div class="pillar-header">
+        <span>🔬 3. CORE SCIENCE ENGINE</span>
+      </div>
+      <div class="pillar-body">
+        <div class="section-block">
+          <div class="section-title">🔒 Leakage-Free Validation</div>
+          <ul class="bullet-list">
+            <li><strong>Strict 5-step rolling window</strong></li>
+            <li>Zero in-sample truth leakage</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">⚖️ Context Weighting</div>
+          <ul class="bullet-list">
+            <li><strong>Empirical Bayes Shrinkage</strong></li>
+            <li>Historical <code>SkillDB</code> by Lead (L1-9), Region & Regime</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">🎯 Calibrated Quantiles</div>
+          <ul class="bullet-list">
+            <li><strong>LightGBM Quantiles</strong> (q05, q50, q95)</li>
+            <li>Preserves extreme hazard tails</li>
+          </ul>
+          <div class="highlight-badge">📈 CRPS · Brier · FSS · REV Curves</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. OUTPUT & TELEMETRY -->
+    <div class="pillar-card p-4">
+      <div class="pillar-header">
+        <span>📡 4. OUTPUT & TELEMETRY</span>
+      </div>
+      <div class="pillar-body">
+        <div class="section-block">
+          <div class="section-title">🚀 FastAPI Operational Core</div>
+          <ul class="bullet-list">
+            <li>Microsecond district weather API</li>
+            <li>GeoTIFF & NetCDF product export</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">👨‍💼 Forecaster Sign-Off</div>
+          <ul class="bullet-list">
+            <li>Official duty bulletin authoring</li>
+            <li>Digital approval audit trail</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">🚨 Telemetry & Feeds</div>
+          <ul class="bullet-list">
+            <li><strong>Live Ops Telemetry</strong> (latency/RAM)</li>
+            <li><strong>CAP 1.2 XML</strong> & <strong>NDMA SACHET</strong></li>
+          </ul>
+          <div class="highlight-badge">⚡ Production Ready Backend</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. FRONTEND & MOBILE APP -->
+    <div class="pillar-card p-5">
+      <div class="pillar-header">
+        <span>📱 5. FRONTEND & MOBILE APP</span>
+      </div>
+      <div class="pillar-body">
+        <div class="section-block">
+          <div class="section-title">🖥️ React 18 Cockpit</div>
+          <ul class="bullet-list">
+            <li><strong>LiveBlender</strong>: Real-time slider re-weights with instant RMSE</li>
+            <li><strong>Attribution Card</strong>: AI vs NWP split</li>
+            <li><strong>Assam 2022 Replay</strong>: Case scrubber</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">📲 Native Android App</div>
+          <ul class="bullet-list">
+            <li><strong>"Mera Sthan"</strong> GPS Auto-Detection</li>
+            <li><strong>6.2 MB Offline Disaster Snapshot</strong> (Zero-network operational mode)</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <div class="section-title">👥 End Users</div>
+          <ul class="bullet-list">
+            <li>Duty Forecasters · SDMAs · Citizens</li>
+          </ul>
+          <div class="highlight-badge">✨ 100% Offline Flood Resilience</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Closed-Loop Bar -->
+  <div class="closed-loop-bar">
+    <div class="loop-title">
+      <span>🔄 CLOSED-LOOP GROUND TRUTH (VGI)</span>
+      <span style="font-size: 9px; font-weight: normal; color: #475569;">Continuous Verification & Calibration</span>
+    </div>
+    <div class="loop-steps">
+      <div class="loop-step">📱 Citizen Field Rain & Photo Report</div>
+      <div class="loop-arrow">➔</div>
+      <div class="loop-step">🛡️ Spatial Clustering & Credibility QC</div>
+      <div class="loop-arrow">➔</div>
+      <div class="loop-step">📊 Verification Engine (CRPS / Brier)</div>
+      <div class="loop-arrow">➔</div>
+      <div class="loop-step">🎯 Updates Historical SkillDB Weights</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
