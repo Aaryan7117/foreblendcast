@@ -37,16 +37,24 @@ def _git_commit() -> str:
 def provenance(cycle: str = "2022-06-14T00Z", models: list[str] | None = None,
                strategy: str = "context_shrink_pm",
                ground_truth: str = "ERA5",
-               fixture: bool = False) -> dict:
-    """Build the common meta block for every results JSON."""
+               fixture: bool = False,
+               availability_pattern: str = "full",
+               **extra) -> dict:
+    """Build the common meta block for every results JSON.
+
+    ground_truth is ERA5 reanalysis read from WeatherBench2. No IMD gridded observation
+    is used anywhere in the pipeline.
+    """
     return {
+        **extra,
         "cycle": cycle,
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "git_commit": _git_commit(),
         "fixture": fixture,
         "ground_truth": ground_truth,
         "models_used": models or ["hres", "ens", "graphcast"],
-        "availability_pattern": "full",
+        "availability_pattern": availability_pattern,
+        "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
         "strategy": strategy,
         "accumulation_window_utc": "03:00-03:00",
         "district_aggregation": "area_weighted_p90",
@@ -62,17 +70,41 @@ def _write_json(obj: dict, path: Path) -> None:
             if isinstance(o, (np.integer,)):
                 return int(o)
             if isinstance(o, (np.floating,)):
-                return round(float(o), 6)
+                return round(float(o), 6) if np.isfinite(o) else None
+            if isinstance(o, (np.bool_,)):
+                return bool(o)
             if isinstance(o, np.ndarray):
                 return o.tolist()
             return super().default(o)
 
-    path.write_text(json.dumps(obj, indent=2, cls=NumpyEncoder))
+    path.write_text(json.dumps(_strict(obj), indent=2, cls=NumpyEncoder, allow_nan=False))
+
+
+def _strict(obj):
+    """NaN / Infinity are not JSON: write them as null."""
+    if isinstance(obj, (float, np.floating)):
+        return float(obj) if np.isfinite(obj) else None
+    if isinstance(obj, dict):
+        return {str(k): _strict(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_strict(v) for v in obj]
+    if isinstance(obj, np.ndarray):
+        return _strict(obj.tolist())
+    return obj
+
+
+def write_json(name: str, obj: dict, **meta_kwargs) -> Path:
+    """Write results/<name> with the provenance block."""
+    path = RESULTS / name
+    _write_json({"meta": provenance(**meta_kwargs), **obj}, path)
+    return path
 
 
 def write_ladder(rows: list[dict], headline: dict,
                  variable: str = "precip",
                  lead_days: list[int] = None,
+                 filename: str = "ladder.json",
+                 extra: dict | None = None,
                  **meta_kwargs) -> Path:
     """Write results/ladder.json per TECH_APPROACH §3.2."""
     lead_days = lead_days or [1, 3, 5, 7, 9]
@@ -82,8 +114,9 @@ def write_ladder(rows: list[dict], headline: dict,
         "lead_days": lead_days,
         "rows": rows,
         "headline": headline,
+        **(extra or {}),
     }
-    path = RESULTS / "ladder.json"
+    path = RESULTS / filename
     _write_json(obj, path)
     return path
 

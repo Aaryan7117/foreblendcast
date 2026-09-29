@@ -1,10 +1,10 @@
 # SIH26081 — Multi-Model Weather Blend
-# make env · make data · make inventory · make test · make results · make rasters · make sync · make reproduce
+# make env · make data · make inventory · make test · make results · make rasters · make cycle · make sync · make reproduce
 
 PYTHON = python
 FRONTEND = frontend
 
-.PHONY: env data inventory static test results rasters sync reproduce clean
+.PHONY: env data inventory static test results rasters cycle sync reproduce clean
 
 ## Environment
 env:
@@ -31,9 +31,14 @@ test:
 results:
 	$(PYTHON) -m experiments.run --cycle 2022-06-14
 
-## Rasters only (re-render from existing results)
+## Showcase products only, from the frozen weights (no re-evaluation)
 rasters:
-	$(PYTHON) -c "from outputs.render_png import write_bounds; write_bounds()"
+	$(PYTHON) -m experiments.run --cycle 2022-06-14 --showcase_only
+
+## One forecast cycle through the operational path: make cycle CYCLE=2022-08-10
+CYCLE ?= 2022-06-14
+cycle:
+	$(PYTHON) -m experiments.cycle --cycle $(CYCLE)
 
 ## Sync results → frontend/public/data/
 sync:

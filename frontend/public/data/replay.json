@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "cycle": "2022-06-16",
+    "generated_utc": "2026-09-29T12:48:15Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
+    "models_used": [
+      "hres",
+      "ens",
+      "graphcast"
+    ],
+    "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
+    "strategy": "context_shrink_pm",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "event": "Assam-Meghalaya extreme rainfall, June 2022",
+  "target_date": "2022-06-16",
+  "states": [
+    "Assam",
+    "Meghalaya"
+  ],
+  "steps": [
+    {
+      "lead_day": 5,
+      "init": "2022-06-12",
+      "valid": "2022-06-16",
+      "raster": "replay_L5.png",
+      "blend_peak_mm": 122.8,
+      "member_peak_mm": {
+        "hres": 271.0,
+        "ens": 188.8,
+        "graphcast": 82.6
+      },
+      "max_p_gt_64p5": 0.687,
+      "max_p_gt_115p6": 0.227,
+      "mean_disagreement": 4.75,
+      "tiers": {
+        "red": 0,
+        "orange": 5,
+        "yellow": 12,
+        "green": 16
+      },
+      "weights_mean": {
+        "hres": 0.005,
+        "ens": 0.158,
+        "graphcast": 0.836
+      },
+      "model_status": {
+        "hres": "ok",
+        "ens": "ok",
+        "graphcast": "ok"
+      },
+      "verification": {
+        "hits": 16,
+        "misses": 11,
+        "false_alarms": 1,
+        "rmse_mm": 34.35
+      }
+    },
+    {
+      "lead_day": 3,
+      "init": "2022-06-14",
+      "valid": "2022-06-16",
+      "raster": "replay_L3.png",
+      "blend_peak_mm": 143.3,
+      "member_peak_mm": {
+        "hres": 264.6,
+        "ens": 214.1,
+        "graphcast": 125.7
+      },
+      "max_p_gt_64p5": 0.681,
+      "max_p_gt_115p6": 0.285,
+      "mean_disagreement": 5.89,
+      "tiers": {
+        "red": 0,
+        "orange": 13,
+        "yellow": 16,
+        "green": 4
+      },
+      "weights_mean": {
+        "hres": 0.006,
+        "ens": 0.121,
+        "graphcast": 0.873
+      },
+      "model_status": {
+        "hres": "ok",
+        "ens": "ok",
+        "graphcast": "ok"
+      },
+      "verification": {
+        "hits": 26,
+        "misses": 1,
+        "false_alarms": 3,
+        "rmse_mm": 21.71
+      }
+    },
+    {
+      "lead_day": 1,
+      "init": "2022-06-16",
+      "valid": "2022-06-16",
+      "raster": "replay_L1.png",
+      "blend_peak_mm": 140.6,
+      "member_peak_mm": {
+        "hres": 233.2,
+        "ens": 165.3,
+        "graphcast": 135.6
+      },
+      "max_p_gt_64p5": 0.93,
+      "max_p_gt_115p6": 0.595,
+      "mean_disagreement": 2.14,
+      "tiers": {
+        "red": 0,
+        "orange": 9,
+        "yellow": 17,
+        "green": 7
+      },
+      "weights_mean": {
+        "hres": 0.003,
+        "ens": 0.089,
+        "graphcast": 0.908
+      },
+      "model_status": {
+        "hres": "ok",
+        "ens": "ok",
+        "graphcast": "ok"
+      },
+      "verification": {
+        "hits": 24,
+        "misses": 3,
+        "false_alarms": 2,
+        "rmse_mm": 15.39
+      }
+    }
+  ],
+  "verification": {
+    "raster": "replay_truth.png",
+    "observed_peak_mm": 158.2,
+    "districts_with_heavy_rain": 27,
+    "districts_in_focus": 33,
+    "definition": "district 90th-percentile cell of ERA5 rainfall >= 64.5 mm"
+  },
+  "note": "ERA5 on a 0.25 degree grid under-represents station extremes such as the Cherrapunji totals of this event."
+}

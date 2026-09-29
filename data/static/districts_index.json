@@ -1,0 +1,5147 @@
+[
+ {
+  "id": "MP-ASHOKNAGAR",
+  "name": "Ashoknagar",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-RAISEN",
+  "name": "Raisen",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-CHHINDWARA",
+  "name": "Chhindwara",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BETUL",
+  "name": "Betul",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-HOSHANGABAD",
+  "name": "Hoshangabad",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SEHORE",
+  "name": "Sehore",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-JABALPUR",
+  "name": "Jabalpur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-NARSIMHAPUR",
+  "name": "Narsimhapur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-PANNA",
+  "name": "Panna",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-UJJAIN",
+  "name": "Ujjain",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-REWA",
+  "name": "Rewa",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-DINDORI",
+  "name": "Dindori",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BALAGHAT",
+  "name": "Balaghat",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BARWANI",
+  "name": "Barwani",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SATNA",
+  "name": "Satna",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-CHHATARPUR",
+  "name": "Chhatarpur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-INDORE",
+  "name": "Indore",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-RATLAM",
+  "name": "Ratlam",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-HARDA",
+  "name": "Harda",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SAGAR",
+  "name": "Sagar",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-NEEMUCH",
+  "name": "Neemuch",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-TIKAMGARH",
+  "name": "Tikamgarh",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-GUNA",
+  "name": "Guna",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-DEWAS",
+  "name": "Dewas",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-MANDSAUR",
+  "name": "Mandsaur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-KHARGONE-WEST-NIMAR",
+  "name": "Khargone (West Nimar)",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SHEOPUR",
+  "name": "Sheopur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-MORENA",
+  "name": "Morena",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BHIND",
+  "name": "Bhind",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-JHABUA",
+  "name": "Jhabua",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SEONI",
+  "name": "Seoni",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-KHANDWA-EAST-NIMAR",
+  "name": "Khandwa (East Nimar)",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-UMARIA",
+  "name": "Umaria",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-GWALIOR",
+  "name": "Gwalior",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-DAMOH",
+  "name": "Damoh",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-DHAR",
+  "name": "Dhar",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-KATNI",
+  "name": "Katni",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SIDHI",
+  "name": "Sidhi",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-ALIRAJPUR",
+  "name": "Alirajpur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SINGRAULI",
+  "name": "Singrauli",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BHOPAL",
+  "name": "Bhopal",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-RAJGARH",
+  "name": "Rajgarh",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-MANDLA",
+  "name": "Mandla",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SHAJAPUR",
+  "name": "Shajapur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SHIVPURI",
+  "name": "Shivpuri",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-DATIA",
+  "name": "Datia",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-BURHANPUR",
+  "name": "Burhanpur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-ANUPPUR",
+  "name": "Anuppur",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-SHAHDOL",
+  "name": "Shahdol",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MP-VIDISHA",
+  "name": "Vidisha",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "HP-UNA",
+  "name": "Una",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-SOLAN",
+  "name": "Solan",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-SIRMAUR",
+  "name": "Sirmaur",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-KINNAUR",
+  "name": "Kinnaur",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-KULLU",
+  "name": "Kullu",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-CHAMBA",
+  "name": "Chamba",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-SHIMLA",
+  "name": "Shimla",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-BILASPUR",
+  "name": "Bilaspur",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-KANGRA",
+  "name": "Kangra",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-LAHUL-SPITI",
+  "name": "Lahul & Spiti",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-MANDI",
+  "name": "Mandi",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "HP-HAMIRPUR",
+  "name": "Hamirpur",
+  "state": "Him\u0101chal Pradesh",
+  "state_code": "HP",
+  "region": "NW"
+ },
+ {
+  "id": "LA-DATA-NOT-AVAILABLE",
+  "name": "DATA NOT AVAILABLE",
+  "state": "Lad\u0101kh",
+  "state_code": "LA",
+  "region": "NW"
+ },
+ {
+  "id": "JK-ANANTNAG",
+  "name": "Anantnag",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-BARAMULA",
+  "name": "Baramula",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-KULGAM",
+  "name": "Kulgam",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-SHUPIYAN",
+  "name": "Shupiyan",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-REASI",
+  "name": "Reasi",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-RAJOURI",
+  "name": "Rajouri",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-JAMMU",
+  "name": "Jammu",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "LA-LEH-LADAKH",
+  "name": "Leh(Ladakh)",
+  "state": "Lad\u0101kh",
+  "state_code": "LA",
+  "region": "NW"
+ },
+ {
+  "id": "JK-SRINAGAR",
+  "name": "Srinagar",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-DODA",
+  "name": "Doda",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-PULWAMA",
+  "name": "Pulwama",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-RAMBAN",
+  "name": "Ramban",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-GANDERBAL",
+  "name": "Ganderbal",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-UDHAMPUR",
+  "name": "Udhampur",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-BADGAM",
+  "name": "Badgam",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-PUNCH",
+  "name": "Punch",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-KUPWARA",
+  "name": "Kupwara",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-SAMBA",
+  "name": "Samba",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-BANDIPORE",
+  "name": "Bandipore",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "JK-KATHUA",
+  "name": "Kathua",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "LA-KARGIL",
+  "name": "Kargil",
+  "state": "Lad\u0101kh",
+  "state_code": "LA",
+  "region": "NW"
+ },
+ {
+  "id": "JK-KISHTWAR",
+  "name": "Kishtwar",
+  "state": "Jammu and Kashm\u012br",
+  "state_code": "JK",
+  "region": "NW"
+ },
+ {
+  "id": "DH-DAMAN",
+  "name": "Daman",
+  "state": "D\u0101dra and Nagar Haveli and Dam\u0101n and Diu",
+  "state_code": "DH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "DH-DIU",
+  "name": "Diu",
+  "state": "D\u0101dra and Nagar Haveli and Dam\u0101n and Diu",
+  "state_code": "DH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-BHAVNAGAR",
+  "name": "Bhavnagar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-AHMADABAD",
+  "name": "Ahmadabad",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-CHHOTA-UDAIPUR",
+  "name": "Chhota Udaipur",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-BATOD",
+  "name": "Batod",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-VADODARA",
+  "name": "Vadodara",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-ARAVALI",
+  "name": "Aravali",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-SABAR-KANTHA",
+  "name": "Sabar Kantha",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-BANAS-KANTHA",
+  "name": "Banas Kantha",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-SURENDRANAGAR",
+  "name": "Surendranagar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-ANAND",
+  "name": "Anand",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-NARMADA",
+  "name": "Narmada",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-AMRELI",
+  "name": "Amreli",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-DOHAD",
+  "name": "Dohad",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-RAJKOT",
+  "name": "Rajkot",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-KACHCHH",
+  "name": "Kachchh",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-THE-DANGS",
+  "name": "The Dangs",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-MAHESANA",
+  "name": "Mahesana",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-PATAN",
+  "name": "Patan",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-BHARUCH",
+  "name": "Bharuch",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-GIR-SOMNATH",
+  "name": "Gir Somnath",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-JUNAGADH",
+  "name": "Junagadh",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-DEVBHUMI-DWARKA",
+  "name": "Devbhumi Dwarka",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-NAVSARI",
+  "name": "Navsari",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-SURAT",
+  "name": "Surat",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-JAMNAGAR",
+  "name": "Jamnagar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-TAPI",
+  "name": "Tapi",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-PORBANDAR",
+  "name": "Porbandar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-VALSAD",
+  "name": "Valsad",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-GANDHINAGAR",
+  "name": "Gandhinagar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-MAHISAGAR",
+  "name": "Mahisagar",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-MORBI",
+  "name": "Morbi",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-PANCH-MAHALS",
+  "name": "Panch Mahals",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GJ-KHEDA",
+  "name": "Kheda",
+  "state": "Gujar\u0101t",
+  "state_code": "GJ",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "DH-DADRA-NAGAR-HAVELI",
+  "name": "Dadra & Nagar Haveli",
+  "state": "D\u0101dra and Nagar Haveli and Dam\u0101n and Diu",
+  "state_code": "DH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "AP-PRAKASAM",
+  "name": "Prakasam",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-KRISHNA",
+  "name": "Krishna",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-EAST-GODAVARI",
+  "name": "East Godavari",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-VISAKHAPATNAM",
+  "name": "Visakhapatnam",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-SRI-POTTI-SRIRAMULU-NELLORE",
+  "name": "Sri Potti Sriramulu Nellore",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-CHITTOOR",
+  "name": "Chittoor",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-SRIKAKULAM",
+  "name": "Srikakulam",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-KURNOOL",
+  "name": "Kurnool",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-GUNTUR",
+  "name": "Guntur",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-VIZIANAGARAM",
+  "name": "Vizianagaram",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-ANANTAPUR",
+  "name": "Anantapur",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-WEST-GODAVARI",
+  "name": "West Godavari",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AP-KADAPA-YSR",
+  "name": "Kadapa(YSR)",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "JH-JAMTARA",
+  "name": "Jamtara",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-SARAIKELA-KHARSAWAN",
+  "name": "Saraikela-Kharsawan",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-SIMDEGA",
+  "name": "Simdega",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-LATEHAR",
+  "name": "Latehar",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-KHUNTI",
+  "name": "Khunti",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-PASHCHIMI-SINGHBHUM",
+  "name": "Pashchimi Singhbhum",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-HAZARIBAGH",
+  "name": "Hazaribagh",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-CHATRA",
+  "name": "Chatra",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-PURBI-SINGHBHUM",
+  "name": "Purbi Singhbhum",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-KODARMA",
+  "name": "Kodarma",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-GIRIDIH",
+  "name": "Giridih",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-LOHARDAGA",
+  "name": "Lohardaga",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-SAHIBGANJ",
+  "name": "Sahibganj",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-GODDA",
+  "name": "Godda",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-PALAMU",
+  "name": "Palamu",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-DHANBAD",
+  "name": "Dhanbad",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-DUMKA",
+  "name": "Dumka",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-BOKARO",
+  "name": "Bokaro",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-DEOGHAR",
+  "name": "Deoghar",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-GUMLA",
+  "name": "Gumla",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-RAMGARH",
+  "name": "Ramgarh",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-GARHWA",
+  "name": "Garhwa",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-RANCHI",
+  "name": "Ranchi",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "JH-PAKUR",
+  "name": "Pakur",
+  "state": "Jh\u0101rkhand",
+  "state_code": "JH",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-ARWAL",
+  "name": "Arwal",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-BHAGALPUR",
+  "name": "Bhagalpur",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-PURNIA",
+  "name": "Purnia",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-MADHEPURA",
+  "name": "Madhepura",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-KISHANGANJ",
+  "name": "Kishanganj",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-GAYA",
+  "name": "Gaya",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-BANKA",
+  "name": "Banka",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-AURANGABAD",
+  "name": "Aurangabad",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-NAWADA",
+  "name": "Nawada",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-ARARIA",
+  "name": "Araria",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-PASHCHIM-CHAMPARAN",
+  "name": "Pashchim Champaran",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-MUZAFFARPUR",
+  "name": "Muzaffarpur",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SARAN",
+  "name": "Saran",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SHEIKHPURA",
+  "name": "Sheikhpura",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-JEHANABAD",
+  "name": "Jehanabad",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SAHARSA",
+  "name": "Saharsa",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-GOPALGANJ",
+  "name": "Gopalganj",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-VAISHALI",
+  "name": "Vaishali",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SIWAN",
+  "name": "Siwan",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SHEOHAR",
+  "name": "Sheohar",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-BUXAR",
+  "name": "Buxar",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-MADHUBANI",
+  "name": "Madhubani",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SUPAUL",
+  "name": "Supaul",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-PATNA",
+  "name": "Patna",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-BHOJPUR",
+  "name": "Bhojpur",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-DARBHANGA",
+  "name": "Darbhanga",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SAMASTIPUR",
+  "name": "Samastipur",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-KAIMUR-BHABUA",
+  "name": "Kaimur (Bhabua)",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-ROHTAS",
+  "name": "Rohtas",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-KHAGARIA",
+  "name": "Khagaria",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-MUNGER",
+  "name": "Munger",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-SITAMARHI",
+  "name": "Sitamarhi",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-PURBA-CHAMPARAN",
+  "name": "Purba Champaran",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-LAKHISARAI",
+  "name": "Lakhisarai",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-JAMUI",
+  "name": "Jamui",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-BEGUSARAI",
+  "name": "Begusarai",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-NALANDA",
+  "name": "Nalanda",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "BR-KATIHAR",
+  "name": "Katihar",
+  "state": "Bih\u0101r",
+  "state_code": "BR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "HR-GURGAON",
+  "name": "Gurgaon",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-YAMUNANAGAR",
+  "name": "Yamunanagar",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-PALWAL",
+  "name": "Palwal",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-PANCHKULA",
+  "name": "Panchkula",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-MEWAT",
+  "name": "Mewat",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-JHAJJAR",
+  "name": "Jhajjar",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-BHIWANI",
+  "name": "Bhiwani",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-KAITHAL",
+  "name": "Kaithal",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-SONIPAT",
+  "name": "Sonipat",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-KARNAL",
+  "name": "Karnal",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-KURUKSHETRA",
+  "name": "Kurukshetra",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-JIND",
+  "name": "Jind",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-PANIPAT",
+  "name": "Panipat",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-MAHENDRAGARH",
+  "name": "Mahendragarh",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-FATEHABAD",
+  "name": "Fatehabad",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-FARIDABAD",
+  "name": "Faridabad",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-SIRSA",
+  "name": "Sirsa",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-HISAR",
+  "name": "Hisar",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-REWARI",
+  "name": "Rewari",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-ROHTAK",
+  "name": "Rohtak",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "HR-AMBALA",
+  "name": "Ambala",
+  "state": "Hary\u0101na",
+  "state_code": "HR",
+  "region": "NW"
+ },
+ {
+  "id": "CH-CHANDIGARH",
+  "name": "Chandigarh",
+  "state": "Chand\u012bgarh",
+  "state_code": "CH",
+  "region": "NW"
+ },
+ {
+  "id": "GA-NORTH-GOA",
+  "name": "North Goa",
+  "state": "Goa",
+  "state_code": "GA",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "GA-SOUTH-GOA",
+  "name": "South Goa",
+  "state": "Goa",
+  "state_code": "GA",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "AN-NORTH-MIDDLE-ANDAMAN",
+  "name": "North  & Middle Andaman",
+  "state": "Andaman and Nicobar Islands",
+  "state_code": "AN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AN-SOUTH-ANDAMAN",
+  "name": "South Andaman",
+  "state": "Andaman and Nicobar Islands",
+  "state_code": "AN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AN-NICOBARS",
+  "name": "Nicobars",
+  "state": "Andaman and Nicobar Islands",
+  "state_code": "AN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AR-LOHIT",
+  "name": "Lohit",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-WEST-SIANG",
+  "name": "West Siang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-UPPER-SUBANSIRI",
+  "name": "Upper Subansiri",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-CHANGLANG",
+  "name": "Changlang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-LONGDING",
+  "name": "Longding",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-LOWER-SUBANSIRI",
+  "name": "Lower Subansiri",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-EAST-KAMENG",
+  "name": "East Kameng",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-UPPER-SIANG",
+  "name": "Upper Siang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-ANJAW",
+  "name": "Anjaw",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-SIANG",
+  "name": "Siang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-DIBANG-VALLEY",
+  "name": "Dibang Valley",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-KURUNG-KUMEY",
+  "name": "Kurung Kumey",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-WEST-KAMENG",
+  "name": "West Kameng",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-LOWER-DIBANG-VALLEY",
+  "name": "Lower Dibang Valley",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-TAWANG",
+  "name": "Tawang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-PAPUM-PARE",
+  "name": "Papum Pare",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-GOALPARA",
+  "name": "Goalpara",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-NALBARI",
+  "name": "Nalbari",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-DHUBRI",
+  "name": "Dhubri",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-SIVASAGAR",
+  "name": "Sivasagar",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KARIMGANJ",
+  "name": "Karimganj",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-TINSUKIA",
+  "name": "Tinsukia",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-HAILAKANDI",
+  "name": "Hailakandi",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-CHIRANG",
+  "name": "Chirang",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-DHEMAJI",
+  "name": "Dhemaji",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-MORIGAON",
+  "name": "Morigaon",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KARBI-ANGLONG-EAST",
+  "name": "Karbi Anglong East",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-LAKHIMPUR",
+  "name": "Lakhimpur",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-BONGAIGAON",
+  "name": "Bongaigaon",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-BAKSA",
+  "name": "Baksa",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-NAGAON",
+  "name": "Nagaon",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-CACHAR",
+  "name": "Cachar",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-DARRANG",
+  "name": "Darrang",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KAMRUP",
+  "name": "Kamrup",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-DIBRUGARH",
+  "name": "Dibrugarh",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-BARPETA",
+  "name": "Barpeta",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-SONITPUR",
+  "name": "Sonitpur",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-UDALGURI",
+  "name": "Udalguri",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-GOLAGHAT",
+  "name": "Golaghat",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KAMRUP-METROPOLITAN",
+  "name": "Kamrup Metropolitan",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-DIMA-HASAO",
+  "name": "Dima Hasao",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KOKRAJHAR",
+  "name": "Kokrajhar",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-JORHAT",
+  "name": "Jorhat",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AP-YANAM",
+  "name": "Yanam",
+  "state": "Andhra Pradesh",
+  "state_code": "AP",
+  "region": "SOUTH"
+ },
+ {
+  "id": "PY-KARAIKAL",
+  "name": "Karaikal",
+  "state": "Puducherry",
+  "state_code": "PY",
+  "region": "SOUTH"
+ },
+ {
+  "id": "PY-PUDUCHERRY",
+  "name": "Puducherry",
+  "state": "Puducherry",
+  "state_code": "PY",
+  "region": "SOUTH"
+ },
+ {
+  "id": "PY-MAHE",
+  "name": "Mahe",
+  "state": "Puducherry",
+  "state_code": "PY",
+  "region": "SOUTH"
+ },
+ {
+  "id": "MZ-LUNGLEI",
+  "name": "Lunglei",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-KOLASIB",
+  "name": "Kolasib",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-LAWNGTLAI",
+  "name": "Lawngtlai",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-SAIHA",
+  "name": "Saiha",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-CHAMPHAI",
+  "name": "Champhai",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-SERCHHIP",
+  "name": "Serchhip",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-AIZAWL",
+  "name": "Aizawl",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-MAMIT",
+  "name": "Mamit",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-CHANDEL",
+  "name": "Chandel",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-TAMENGLONG",
+  "name": "Tamenglong",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-UKHRUL",
+  "name": "Ukhrul",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-BISHNUPUR",
+  "name": "Bishnupur",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-CHURACHANDPUR",
+  "name": "Churachandpur",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-THOUBAL",
+  "name": "Thoubal",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-IMPHAL-EAST",
+  "name": "Imphal East",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-KANGPOKPI",
+  "name": "Kangpokpi",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-IMPHAL-WEST",
+  "name": "Imphal West",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-MON",
+  "name": "Mon",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-TUENSANG",
+  "name": "Tuensang",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-MOKOKCHUNG",
+  "name": "Mokokchung",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-LONGLENG",
+  "name": "Longleng",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-PHEK",
+  "name": "Phek",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-KOHIMA",
+  "name": "Kohima",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-WOKHA",
+  "name": "Wokha",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-ZUNHEBOTO",
+  "name": "Zunheboto",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-KIPHIRE",
+  "name": "Kiphire",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-DIMAPUR",
+  "name": "Dimapur",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "NL-PEREN",
+  "name": "Peren",
+  "state": "N\u0101g\u0101land",
+  "state_code": "NL",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-KHOWAI",
+  "name": "Khowai",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-SIPAHIJULA",
+  "name": "Sipahijula",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-WEST-TRIPURA",
+  "name": "West Tripura",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-DHALAI",
+  "name": "Dhalai",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-UNOKOTI",
+  "name": "Unokoti",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-NORTH-TRIPURA",
+  "name": "North Tripura",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-GOMATI",
+  "name": "Gomati",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TR-SOUTH-TRIPURA",
+  "name": "South Tripura",
+  "state": "Tripura",
+  "state_code": "TR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-SOUTH-GARO-HILLS",
+  "name": "South Garo Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-RIBHOI",
+  "name": "Ribhoi",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-EAST-KHASI-HILLS",
+  "name": "East Khasi Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-WEST-KHASI-HILLS",
+  "name": "West Khasi Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-SOUTH-WEST-KHASI-HILLS",
+  "name": "South West Khasi Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-WEST-GARO-HILLS",
+  "name": "West Garo Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-SOUTH-WEST-GARO-HILLS",
+  "name": "South West Garo Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-EAST-JAINTIA-HILLS",
+  "name": "East Jaintia Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-WEST-JAINTIA-HILLS",
+  "name": "West Jaintia Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-EAST-GARO-HILLS",
+  "name": "East Garo Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "ML-NORTH-GARO-HILLS",
+  "name": "North Garo Hills",
+  "state": "Megh\u0101laya",
+  "state_code": "ML",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "CT-BEMETRA",
+  "name": "Bemetra",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BASTAR",
+  "name": "Bastar",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-MUNGELI",
+  "name": "Mungeli",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BILASPUR",
+  "name": "Bilaspur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-GARIABAND",
+  "name": "Gariaband",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-KABEERDHAM",
+  "name": "Kabeerdham",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-SUKMA",
+  "name": "Sukma",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-UTTAR-BASTAR-KANKER",
+  "name": "Uttar Bastar Kanker",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-DAKSHIN-BASTAR-DANTEWADA",
+  "name": "Dakshin Bastar Dantewada",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-SURGUJA",
+  "name": "Surguja",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BALRAMPUR",
+  "name": "Balrampur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-KONDAGAON",
+  "name": "Kondagaon",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-NARAYANPUR",
+  "name": "Narayanpur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-DURG",
+  "name": "Durg",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-SURAJPUR",
+  "name": "Surajpur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BIJAPUR",
+  "name": "Bijapur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-RAIPUR",
+  "name": "Raipur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BALODA-BAZAR",
+  "name": "Baloda Bazar",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-BALOD",
+  "name": "Balod",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-KORIYA",
+  "name": "Koriya",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-DHAMTARI",
+  "name": "Dhamtari",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-KORBA",
+  "name": "Korba",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-RAIGARH",
+  "name": "Raigarh",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-JASHPUR",
+  "name": "Jashpur",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-MAHASAMUND",
+  "name": "Mahasamund",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-JANJGIR-CHAMPA",
+  "name": "Janjgir-Champa",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "CT-RAJNANDGAON",
+  "name": "Rajnandgaon",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "UT-NAINITAL",
+  "name": "Nainital",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-DEHRADUN",
+  "name": "Dehradun",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-ALMORA",
+  "name": "Almora",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-CHAMPAWAT",
+  "name": "Champawat",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-UTTARKASHI",
+  "name": "Uttarkashi",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-GARHWAL",
+  "name": "Garhwal",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-HARDWAR",
+  "name": "Hardwar",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-RUDRAPRAYAG",
+  "name": "Rudraprayag",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-TEHRI-GARHWAL",
+  "name": "Tehri Garhwal",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-BAGESHWAR",
+  "name": "Bageshwar",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-PITHORAGARH",
+  "name": "Pithoragarh",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-CHAMOLI",
+  "name": "Chamoli",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "UT-UDHAM-SINGH-NAGAR",
+  "name": "Udham Singh Nagar",
+  "state": "Uttar\u0101khand",
+  "state_code": "UT",
+  "region": "NW"
+ },
+ {
+  "id": "KL-KANNUR",
+  "name": "Kannur",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-PATHANAMTHITTA",
+  "name": "Pathanamthitta",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-ALAPPUZHA",
+  "name": "Alappuzha",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-ERNAKULAM",
+  "name": "Ernakulam",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-KOLLAM",
+  "name": "Kollam",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-KASARAGOD",
+  "name": "Kasaragod",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-IDUKKI",
+  "name": "Idukki",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-KOZHIKODE",
+  "name": "Kozhikode",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-KOTTAYAM",
+  "name": "Kottayam",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-THRISSUR",
+  "name": "Thrissur",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-PALAKKAD",
+  "name": "Palakkad",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-THIRUVANANTHAPURAM",
+  "name": "Thiruvananthapuram",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-MALAPPURAM",
+  "name": "Malappuram",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KL-WAYANAD",
+  "name": "Wayanad",
+  "state": "Kerala",
+  "state_code": "KL",
+  "region": "SOUTH"
+ },
+ {
+  "id": "LD-LAKSHADWEEP",
+  "name": "Lakshadweep",
+  "state": "Lakshadweep",
+  "state_code": "LD",
+  "region": "SOUTH"
+ },
+ {
+  "id": "SK-NORTH-DISTRICT",
+  "name": "North District",
+  "state": "Sikkim",
+  "state_code": "SK",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "SK-SOUTH-DISTRICT",
+  "name": "South District",
+  "state": "Sikkim",
+  "state_code": "SK",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "SK-WEST-DISTRICT",
+  "name": "West District",
+  "state": "Sikkim",
+  "state_code": "SK",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "SK-EAST-DISTRICT",
+  "name": "East District",
+  "state": "Sikkim",
+  "state_code": "SK",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-NADIA",
+  "name": "Nadia",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-DAKSHIN-DINAJPUR",
+  "name": "Dakshin Dinajpur",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-MURSHIDABAD",
+  "name": "Murshidabad",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-KOLKATA",
+  "name": "Kolkata",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-MALDAH",
+  "name": "Maldah",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-SOUTH-TWENTY-FOUR-PARGANAS",
+  "name": "South Twenty Four Parganas",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-DARJILING",
+  "name": "Darjiling",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-JALPAIGURI",
+  "name": "Jalpaiguri",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-UTTAR-DINAJPUR",
+  "name": "Uttar Dinajpur",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-PURBA-MEDINIPUR",
+  "name": "Purba Medinipur",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-HAORA",
+  "name": "Haora",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-NORTH-TWENTY-FOUR-PARGANAS",
+  "name": "North Twenty Four Parganas",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-BIRBHUM",
+  "name": "Birbhum",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-BARDDHAMAN",
+  "name": "Barddhaman",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-BANKURA",
+  "name": "Bankura",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-PURULIYA",
+  "name": "Puruliya",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-KOCH-BIHAR",
+  "name": "Koch Bihar",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-PASCHIM-MEDINIPUR",
+  "name": "Paschim Medinipur",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-HUGLI",
+  "name": "Hugli",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "PB-PATHANKOT",
+  "name": "Pathankot",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-GURDASPUR",
+  "name": "Gurdaspur",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-PATIALA",
+  "name": "Patiala",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-TARN-TARAN",
+  "name": "Tarn Taran",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-KAPURTHALA",
+  "name": "Kapurthala",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-FATEHGARH-SAHIB",
+  "name": "Fatehgarh Sahib",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-SANGRUR",
+  "name": "Sangrur",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-MANSA",
+  "name": "Mansa",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-AMRITSAR",
+  "name": "Amritsar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-FARIDKOT",
+  "name": "Faridkot",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-LUDHIANA",
+  "name": "Ludhiana",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-BATHINDA",
+  "name": "Bathinda",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-JALANDHAR",
+  "name": "Jalandhar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-MUKTSAR",
+  "name": "Muktsar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-MOGA",
+  "name": "Moga",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-HOSHIARPUR",
+  "name": "Hoshiarpur",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-RUPNAGAR",
+  "name": "Rupnagar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-FIROZPUR",
+  "name": "Firozpur",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-FAZILKA",
+  "name": "Fazilka",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-BARNALA",
+  "name": "Barnala",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-SAHIBZADA-AJIT-SINGH-NAGAR",
+  "name": "Sahibzada Ajit Singh Nagar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "PB-SHAHID-BHAGAT-SINGH-NAGAR",
+  "name": "Shahid Bhagat Singh Nagar",
+  "state": "Punjab",
+  "state_code": "PB",
+  "region": "NW"
+ },
+ {
+  "id": "KA-MANDYA",
+  "name": "Mandya",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-MYSORE",
+  "name": "Mysore",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-CHIKKABALLAPURA",
+  "name": "Chikkaballapura",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-YADGIR",
+  "name": "Yadgir",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-CHIKMAGALUR",
+  "name": "Chikmagalur",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-CHITRADURGA",
+  "name": "Chitradurga",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-HAVERI",
+  "name": "Haveri",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-DAKSHINA-KANNADA",
+  "name": "Dakshina Kannada",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-RAICHUR",
+  "name": "Raichur",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-KOLAR",
+  "name": "Kolar",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BIJAPUR",
+  "name": "Bijapur",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-UTTARA-KANNADA",
+  "name": "Uttara Kannada",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-DAVANAGERE",
+  "name": "Davanagere",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-DHARWAD",
+  "name": "Dharwad",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BIDAR",
+  "name": "Bidar",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-CHAMARAJANAGAR",
+  "name": "Chamarajanagar",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-GULBARGA",
+  "name": "Gulbarga",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-GADAG",
+  "name": "Gadag",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-UDUPI",
+  "name": "Udupi",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BAGALKOT",
+  "name": "Bagalkot",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-HASSAN",
+  "name": "Hassan",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-SHIMOGA",
+  "name": "Shimoga",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BELLARY",
+  "name": "Bellary",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-KODAGU",
+  "name": "Kodagu",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BANGALORE-RURAL",
+  "name": "Bangalore Rural",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-TUMKUR",
+  "name": "Tumkur",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BELGAUM",
+  "name": "Belgaum",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-KOPPAL",
+  "name": "Koppal",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-BANGALORE",
+  "name": "Bangalore",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "KA-RAMANAGARA",
+  "name": "Ramanagara",
+  "state": "Karn\u0101taka",
+  "state_code": "KA",
+  "region": "SOUTH"
+ },
+ {
+  "id": "MH-WASHIM",
+  "name": "Washim",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-AHMADNAGAR",
+  "name": "Ahmadnagar",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-LATUR",
+  "name": "Latur",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-SOLAPUR",
+  "name": "Solapur",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-NASHIK",
+  "name": "Nashik",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-OSMANABAD",
+  "name": "Osmanabad",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-SINDHUDURG",
+  "name": "Sindhudurg",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-KOLHAPUR",
+  "name": "Kolhapur",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-CHANDRAPUR",
+  "name": "Chandrapur",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-AKOLA",
+  "name": "Akola",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-PARBHANI",
+  "name": "Parbhani",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-YAVATMAL",
+  "name": "Yavatmal",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-NANDED",
+  "name": "Nanded",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-DHULE",
+  "name": "Dhule",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-SATARA",
+  "name": "Satara",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-SANGLI",
+  "name": "Sangli",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-HINGOLI",
+  "name": "Hingoli",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-PUNE",
+  "name": "Pune",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-GONDIYA",
+  "name": "Gondiya",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-AMRAVATI",
+  "name": "Amravati",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-NANDURBAR",
+  "name": "Nandurbar",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-RATNAGIRI",
+  "name": "Ratnagiri",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-WARDHA",
+  "name": "Wardha",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-AURANGABAD",
+  "name": "Aurangabad",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-BULDANA",
+  "name": "Buldana",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-GADCHIROLI",
+  "name": "Gadchiroli",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-JALGAON",
+  "name": "Jalgaon",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-RAIGARH",
+  "name": "Raigarh",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-BHANDARA",
+  "name": "Bhandara",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-BID",
+  "name": "Bid",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-JALNA",
+  "name": "Jalna",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-THANE",
+  "name": "Thane",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-PALGHAR",
+  "name": "Palghar",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-MUMBAI",
+  "name": "Mumbai",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-MUMBAI-SUBURBAN",
+  "name": "Mumbai Suburban",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MH-NAGPUR",
+  "name": "Nagpur",
+  "state": "Mah\u0101r\u0101shtra",
+  "state_code": "MH",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-SUBARNAPUR",
+  "name": "Subarnapur",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-PURI",
+  "name": "Puri",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-ANUGUL",
+  "name": "Anugul",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-DEBAGARH",
+  "name": "Debagarh",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KORAPUT",
+  "name": "Koraput",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-NABARANGAPUR",
+  "name": "Nabarangapur",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-BARGARH",
+  "name": "Bargarh",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-JAGATSINGHAPUR",
+  "name": "Jagatsinghapur",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KANDHAMAL",
+  "name": "Kandhamal",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KHORDHA",
+  "name": "Khordha",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-MAYURBHANJ",
+  "name": "Mayurbhanj",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-MALKANGIRI",
+  "name": "Malkangiri",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-BALESHWAR",
+  "name": "Baleshwar",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-SAMBALPUR",
+  "name": "Sambalpur",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-GAJAPATI",
+  "name": "Gajapati",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-DHENKANAL",
+  "name": "Dhenkanal",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-NAYAGARH",
+  "name": "Nayagarh",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-CUTTACK",
+  "name": "Cuttack",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-JAJAPUR",
+  "name": "Jajapur",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KALAHANDI",
+  "name": "Kalahandi",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-BAUDH",
+  "name": "Baudh",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KENDRAPARA",
+  "name": "Kendrapara",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-KENDUJHAR",
+  "name": "Kendujhar",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-GANJAM",
+  "name": "Ganjam",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-SUNDARGARH",
+  "name": "Sundargarh",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-BHADRAK",
+  "name": "Bhadrak",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-NUAPADA",
+  "name": "Nuapada",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-JHARSUGUDA",
+  "name": "Jharsuguda",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-RAYAGADA",
+  "name": "Rayagada",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "OR-BALANGIR",
+  "name": "Balangir",
+  "state": "Odisha",
+  "state_code": "OR",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "RJ-JHUNJHUNUN",
+  "name": "Jhunjhunun",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-JAISALMER",
+  "name": "Jaisalmer",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-SIKAR",
+  "name": "Sikar",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-HANUMANGARH",
+  "name": "Hanumangarh",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-NAGAUR",
+  "name": "Nagaur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BARMER",
+  "name": "Barmer",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-GANGANAGAR",
+  "name": "Ganganagar",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-JODHPUR",
+  "name": "Jodhpur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-CHURU",
+  "name": "Churu",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BIKANER",
+  "name": "Bikaner",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-PRATAPGARH",
+  "name": "Pratapgarh",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BHILWARA",
+  "name": "Bhilwara",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-TONK",
+  "name": "Tonk",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BUNDI",
+  "name": "Bundi",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-JAIPUR",
+  "name": "Jaipur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-KOTA",
+  "name": "Kota",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-PALI",
+  "name": "Pali",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-RAJSAMAND",
+  "name": "Rajsamand",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-AJMER",
+  "name": "Ajmer",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BHARATPUR",
+  "name": "Bharatpur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-DUNGARPUR",
+  "name": "Dungarpur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-CHITTAURGARH",
+  "name": "Chittaurgarh",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-UDAIPUR",
+  "name": "Udaipur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-JALOR",
+  "name": "Jalor",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-DAUSA",
+  "name": "Dausa",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-SIROHI",
+  "name": "Sirohi",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "TN-ARIYALUR",
+  "name": "Ariyalur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-SIVAGANGA",
+  "name": "Sivaganga",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THANJAVUR",
+  "name": "Thanjavur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-TIRUVANNAMALAI",
+  "name": "Tiruvannamalai",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-RAMANATHAPURAM",
+  "name": "Ramanathapuram",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-TIRUNELVELI",
+  "name": "Tirunelveli",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-VIRUDHUNAGAR",
+  "name": "Virudhunagar",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THIRUVARUR",
+  "name": "Thiruvarur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THIRUVALLUR",
+  "name": "Thiruvallur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-TIRUCHIRAPPALLI",
+  "name": "Tiruchirappalli",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-TIRUPPUR",
+  "name": "Tiruppur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THENI",
+  "name": "Theni",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-SALEM",
+  "name": "Salem",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-MADURAI",
+  "name": "Madurai",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-PERAMBALUR",
+  "name": "Perambalur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-DINDIGUL",
+  "name": "Dindigul",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-KARUR",
+  "name": "Karur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-DHARMAPURI",
+  "name": "Dharmapuri",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-NAMAKKAL",
+  "name": "Namakkal",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "UP-MORADABAD",
+  "name": "Moradabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SAMBHAL",
+  "name": "Sambhal",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BUDAUN",
+  "name": "Budaun",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KANSHIRAM-NAGAR",
+  "name": "Kanshiram Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BAHRAICH",
+  "name": "Bahraich",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-HAPUR",
+  "name": "Hapur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SITAPUR",
+  "name": "Sitapur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SAMLI",
+  "name": "Samli",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SHRAWASTI",
+  "name": "Shrawasti",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MEERUT",
+  "name": "Meerut",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-ALIGARH",
+  "name": "Aligarh",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BULANDSHAHR",
+  "name": "Bulandshahr",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BIJNOR",
+  "name": "Bijnor",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BAGHPAT",
+  "name": "Baghpat",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KHERI",
+  "name": "Kheri",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-RAMPUR",
+  "name": "Rampur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BAREILLY",
+  "name": "Bareilly",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MATHURA",
+  "name": "Mathura",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-ETAH",
+  "name": "Etah",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-HARDOI",
+  "name": "Hardoi",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BALRAMPUR",
+  "name": "Balrampur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MAHAMAYA-NAGAR",
+  "name": "Mahamaya Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SHAHJAHANPUR",
+  "name": "Shahjahanpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-FARRUKHABAD",
+  "name": "Farrukhabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KANNAUJ",
+  "name": "Kannauj",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-PILIBHIT",
+  "name": "Pilibhit",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MAINPURI",
+  "name": "Mainpuri",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-JYOTIBA-PHULE-NAGAR",
+  "name": "Jyotiba Phule Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-FIROZABAD",
+  "name": "Firozabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SULTANPUR",
+  "name": "Sultanpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-CHITRAKOOT",
+  "name": "Chitrakoot",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BASTI",
+  "name": "Basti",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-GORAKHPUR",
+  "name": "Gorakhpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-LUCKNOW",
+  "name": "Lucknow",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-AZAMGARH",
+  "name": "Azamgarh",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-FAIZABAD",
+  "name": "Faizabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-AMBEDKAR-NAGAR",
+  "name": "Ambedkar Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BALLIA",
+  "name": "Ballia",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KANPUR-NAGAR",
+  "name": "Kanpur Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SANT-RAVIDAS-NAGAR-BHADOHI",
+  "name": "Sant Ravidas Nagar (Bhadohi)",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SIDDHARTHNAGAR",
+  "name": "Siddharthnagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-AURAIYA",
+  "name": "Auraiya",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SANT-KABIR-NAGAR",
+  "name": "Sant Kabir Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KAUSHAMBI",
+  "name": "Kaushambi",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-JALAUN",
+  "name": "Jalaun",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-VARANASI",
+  "name": "Varanasi",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-PRATAPGARH",
+  "name": "Pratapgarh",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-HAMIRPUR",
+  "name": "Hamirpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-GONDA",
+  "name": "Gonda",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KANPUR-DEHAT",
+  "name": "Kanpur Dehat",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-JAUNPUR",
+  "name": "Jaunpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BARA-BANKI",
+  "name": "Bara Banki",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MAHOBA",
+  "name": "Mahoba",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MAHRAJGANJ",
+  "name": "Mahrajganj",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MIRZAPUR",
+  "name": "Mirzapur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-KUSHINAGAR",
+  "name": "Kushinagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-DEORIA",
+  "name": "Deoria",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-UNNAO",
+  "name": "Unnao",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-FATEHPUR",
+  "name": "Fatehpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MAU",
+  "name": "Mau",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-RAE-BARELI",
+  "name": "Rae Bareli",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-AMETHI",
+  "name": "Amethi",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-GHAZIABAD",
+  "name": "Ghaziabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-MUZAFFARNAGAR",
+  "name": "Muzaffarnagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-GAUTAM-BUDDHA-NAGAR",
+  "name": "Gautam Buddha Nagar",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SAHARANPUR",
+  "name": "Saharanpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-ETAWAH",
+  "name": "Etawah",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-AGRA",
+  "name": "Agra",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "TN-CUDDALORE",
+  "name": "Cuddalore",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-PUDUKKOTTAI",
+  "name": "Pudukkottai",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-VELLORE",
+  "name": "Vellore",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-CHENNAI",
+  "name": "Chennai",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-NAGAPATTINAM",
+  "name": "Nagapattinam",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-VILUPPURAM",
+  "name": "Viluppuram",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-KANCHEEPURAM",
+  "name": "Kancheepuram",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-KANNIYAKUMARI",
+  "name": "Kanniyakumari",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THOOTHUKKUDI",
+  "name": "Thoothukkudi",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "UP-ALLAHABAD",
+  "name": "Allahabad",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-CHANDAULI",
+  "name": "Chandauli",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-JHANSI",
+  "name": "Jhansi",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-BANDA",
+  "name": "Banda",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-SONBHADRA",
+  "name": "Sonbhadra",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-LALITPUR",
+  "name": "Lalitpur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "UP-GHAZIPUR",
+  "name": "Ghazipur",
+  "state": "Uttar Pradesh",
+  "state_code": "UP",
+  "region": "NW"
+ },
+ {
+  "id": "TN-KRISHNAGIRI",
+  "name": "Krishnagiri",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-ERODE",
+  "name": "Erode",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-COIMBATORE",
+  "name": "Coimbatore",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-THE-NILGIRIS",
+  "name": "The Nilgiris",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "RJ-JHALAWAR",
+  "name": "Jhalawar",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-ALWAR",
+  "name": "Alwar",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BARAN",
+  "name": "Baran",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-DHAULPUR",
+  "name": "Dhaulpur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-SAWAI-MADHOPUR",
+  "name": "Sawai Madhopur",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-BANSWARA",
+  "name": "Banswara",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "RJ-KARAULI",
+  "name": "Karauli",
+  "state": "R\u0101jasth\u0101n",
+  "state_code": "RJ",
+  "region": "NW"
+ },
+ {
+  "id": "TG-JANGAON",
+  "name": "Jangaon",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-BHADRADRI",
+  "name": "Bhadradri",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-HYDRABAD",
+  "name": "Hydrabad",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MANCHERIAL",
+  "name": "Mancherial",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-KARIMNAGAR",
+  "name": "Karimnagar",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-NIZAMABAD",
+  "name": "Nizamabad",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MEDAK",
+  "name": "Medak",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-RANGAREDDY",
+  "name": "Rangareddy",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-NALGONDA",
+  "name": "Nalgonda",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-NAGARKURNOOL",
+  "name": "Nagarkurnool",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-ADILABAD",
+  "name": "Adilabad",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-KOMARAM-BHEEM",
+  "name": "Komaram Bheem",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-NIRMAL",
+  "name": "Nirmal",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-KAMAREDDY",
+  "name": "Kamareddy",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-JAGTIAL",
+  "name": "Jagtial",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-JAYASHANKAR",
+  "name": "Jayashankar",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-PEDDAPALLI",
+  "name": "Peddapalli",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-RAJANNA-SIRCILLA",
+  "name": "Rajanna Sircilla",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-SANGAREDDY",
+  "name": "Sangareddy",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-SIDDIPET",
+  "name": "Siddipet",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-KHAMMAM",
+  "name": "Khammam",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MAHABUBABAD",
+  "name": "Mahabubabad",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-WARANGAL-R",
+  "name": "Warangal (R)",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-WARANGAL-U",
+  "name": "Warangal (U)",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-SURYAPET",
+  "name": "Suryapet",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-YADADRI-BHONGIRI",
+  "name": "Yadadri Bhongiri",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MEDCHAL",
+  "name": "Medchal",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-VIKARABAD",
+  "name": "Vikarabad",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-JOGULAMBA",
+  "name": "Jogulamba",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-WANAPARTHY",
+  "name": "Wanaparthy",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MAHABUBNAGAR",
+  "name": "Mahabubnagar",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "AR-TIRAP",
+  "name": "Tirap",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-NAMSAI",
+  "name": "Namsai",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-EAST-SIANG",
+  "name": "East Siang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-KRA-DAADI",
+  "name": "Kra Daadi",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-CHARAIDEO",
+  "name": "Charaideo",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-MAJULI",
+  "name": "Majuli",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-BISWANATH",
+  "name": "Biswanath",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-HOJAI",
+  "name": "Hojai",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-KARBI-ANGLONG-WEST",
+  "name": "Karbi Anglong West",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AS-SOUTH-SALMARA-MANKACHAR",
+  "name": "South Salmara-Mankachar",
+  "state": "Assam",
+  "state_code": "AS",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MP-AGAR",
+  "name": "Agar",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "MN-PHERZAWL",
+  "name": "Pherzawl",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-NONEY",
+  "name": "Noney",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-TENGNOUPAL",
+  "name": "Tengnoupal",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-KAMJONG",
+  "name": "Kamjong",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-SENAPATI",
+  "name": "Senapati",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-KAKCHING",
+  "name": "Kakching",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MN-JIRIBAM",
+  "name": "Jiribam",
+  "state": "Manipur",
+  "state_code": "MN",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "DL-NORTH-WEST",
+  "name": "North West",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-NEW-DELHI",
+  "name": "New Delhi",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-EAST",
+  "name": "East",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-SOUTH-WEST",
+  "name": "South West",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-WEST",
+  "name": "West",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-SOUTH",
+  "name": "South",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-NORTH",
+  "name": "North ",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-NORTH-EAST",
+  "name": "North East",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-SOUTH-EAST",
+  "name": "South East",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-CENTRAL",
+  "name": "Central",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "DL-SHAHDARA",
+  "name": "Shahdara",
+  "state": "Delhi",
+  "state_code": "DL",
+  "region": "NW"
+ },
+ {
+  "id": "WB-ALIPURDUAR",
+  "name": "Alipurduar",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-JHARGRAM",
+  "name": "Jhargram",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-PASCHIM-BARDDHAMAN",
+  "name": "Paschim Barddhaman",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "WB-KALIMPONG",
+  "name": "Kalimpong",
+  "state": "West Bengal",
+  "state_code": "WB",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TG-NARAYANPET",
+  "name": "Narayanpet",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TG-MULUGU",
+  "name": "Mulugu",
+  "state": "Telang\u0101na",
+  "state_code": "TG",
+  "region": "SOUTH"
+ },
+ {
+  "id": "MP-NIWARI",
+  "name": "Niwari",
+  "state": "Madhya Pradesh",
+  "state_code": "MP",
+  "region": "CENTRAL"
+ },
+ {
+  "id": "AR-PAKKE-KESSANG",
+  "name": "Pakke Kessang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-KAMLE",
+  "name": "Kamle",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-SHI-YOMI",
+  "name": "Shi Yomi",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-LEPARADA",
+  "name": "Leparada",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "AR-LOWER-SIANG",
+  "name": "Lower Siang",
+  "state": "Arun\u0101chal Pradesh",
+  "state_code": "AR",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-HNAHTHIAL",
+  "name": "Hnahthial",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-SAITUAL",
+  "name": "Saitual",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "MZ-KHAWZAWL",
+  "name": "Khawzawl",
+  "state": "Mizoram",
+  "state_code": "MZ",
+  "region": "EAST_NE"
+ },
+ {
+  "id": "TN-TIRUPATHUR",
+  "name": "Tirupathur",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-RANIPET",
+  "name": "Ranipet",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-CHENGALPUTTU",
+  "name": "Chengalputtu",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-KALLAKURICHI",
+  "name": "Kallakurichi",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-MAYILADUTHURAI",
+  "name": "Mayiladuthurai",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "TN-TENKASI",
+  "name": "Tenkasi",
+  "state": "Tamil N\u0101du",
+  "state_code": "TN",
+  "region": "SOUTH"
+ },
+ {
+  "id": "CT-GAURELLA-PENDRA-MARWAHI",
+  "name": "Gaurella Pendra Marwahi",
+  "state": "Chhatt\u012bsgarh",
+  "state_code": "CT",
+  "region": "CENTRAL"
+ }
+]

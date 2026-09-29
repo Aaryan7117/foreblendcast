@@ -1,0 +1,19 @@
+[
+  {
+    "bulletin_id": "BULLETIN-FBC-20260929-105627",
+    "issued_at_utc": "2026-09-29T10:56:27.535264+00:00",
+    "forecaster_name": "Dr. M. Mohapatra (DGM IMD Test)",
+    "forecaster_role": "Chief Forecaster",
+    "lead_day": 1,
+    "weights_applied": {
+      "hres": 0.45,
+      "ens": 0.35,
+      "graphcast": 0.2
+    },
+    "remarks": "Monsoon surge confirmed. Multi-model probability match approved for CAP dissemination.",
+    "cap_feed_endpoint": "/api/alerts/cap?lead_day=1",
+    "status": "APPROVED & DISPATCHED",
+    "compliance": "WMO Impact-Based Forecasting Guidelines & NDMA SACHET Standard",
+    "disclaimer": "⚠️ EXERCISE — Operational test bulletin from SIH26081 ForeBlendCast."
+  }
+]

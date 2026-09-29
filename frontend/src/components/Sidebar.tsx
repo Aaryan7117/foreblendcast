@@ -1,22 +1,32 @@
 import React from 'react';
 import { useAppStore } from '../store';
-import type { LayerId, ModelId } from '../store';
+import type { LayerId, ModelId, RegionId } from '../store';
 import { Cloud, TrendingUp, GitBranch, MapPin, ShieldCheck } from 'lucide-react';
+import { LiveBlender } from './LiveBlender';
 
 const LAYERS: { id: LayerId; label: string; icon: React.ReactNode; desc: string }[] = [
-  { id: 'rainfall', label: 'Rainfall (mm)', icon: <Cloud size={15} />, desc: '24h calibrated precipitation' },
-  { id: 'exceedance', label: 'Exceedance Probability', icon: <TrendingUp size={15} />, desc: 'P(Rain > 64.5mm threshold)' },
-  { id: 'disagreement', label: 'Model Disagreement', icon: <GitBranch size={15} />, desc: 'Inter-model spread σ' },
+  { id: 'rainfall', label: 'Rainfall (mm)', icon: <Cloud size={15} />, desc: '24h blended precipitation' },
+  { id: 'exceedance', label: 'Exceedance Probability', icon: <TrendingUp size={15} />, desc: 'Calibrated P(rain ≥ 64.5 mm)' },
+  { id: 'disagreement', label: 'Model Disagreement', icon: <GitBranch size={15} />, desc: 'Spread ÷ training-period spread' },
   { id: 'risk_tiers', label: 'Risk Tiers (District)', icon: <MapPin size={15} />, desc: 'Disaster warning levels' },
 ];
 
-// Corresponds directly to available fixture lead days: L1, L3, L5, L7, L10
-const LEAD_DAYS = [1, 3, 5, 7, 10];
+// Lead days the pipeline produces (canonical/accumulation.py)
+const LEAD_DAYS = [1, 3, 5, 7, 9];
+
+// IMD homogeneous regions, the same ones the weights are conditioned on
+const REGIONS: { id: RegionId; label: string }[] = [
+  { id: 'all', label: 'Pan-India (all districts)' },
+  { id: 'NW', label: 'Northwest India' },
+  { id: 'CENTRAL', label: 'Central India' },
+  { id: 'SOUTH', label: 'South Peninsula' },
+  { id: 'EAST_NE', label: 'East & Northeast India' },
+];
 
 const MODELS: { id: ModelId; label: string; sublabel: string; badge: string }[] = [
   { id: 'blend', label: 'Blended Forecast', sublabel: 'ForeBlendCast', badge: 'Active' },
-  { id: 'hres', label: 'ECMWF IFS HRES', sublabel: 'High-Res NWP', badge: '0.1°' },
-  { id: 'ens', label: 'ECMWF IFS ENS', sublabel: '50-Member Mean', badge: '0.25°' },
+  { id: 'hres', label: 'ECMWF IFS HRES', sublabel: 'High-Res NWP', badge: '0.25°' },
+  { id: 'ens', label: 'ECMWF IFS ENS', sublabel: 'Ensemble Mean', badge: '0.25°' },
   { id: 'graphcast', label: 'DeepMind GraphCast', sublabel: 'AI-NWP Model', badge: 'ML' },
   { id: 'baseline', label: 'Arithmetic Mean', sublabel: 'Equal Weights', badge: 'Base' },
 ];
@@ -26,6 +36,7 @@ export const Sidebar: React.FC = () => {
     activeLayer, setActiveLayer,
     leadDay, setLeadDay,
     selectedModel, setSelectedModel,
+    region, setRegion,
   } = useAppStore();
 
   return (
@@ -160,6 +171,9 @@ export const Sidebar: React.FC = () => {
               );
             })}
           </div>
+
+          {/* Live Blender Component */}
+          <LiveBlender />
         </section>
 
         {/* Divider */}
@@ -170,12 +184,14 @@ export const Sidebar: React.FC = () => {
           <h3 className="text-[11px] font-bold uppercase tracking-wider text-textMuted mb-2">
             Region / Sub-Division
           </h3>
-          <select className="w-full bg-surfaceHighlight hover:bg-slate-100 border border-border hover:border-slate-300 text-xs font-medium rounded-lg px-3 py-2 text-textMain outline-none focus:ring-2 focus:ring-brand-forest/30 transition-all cursor-pointer">
-            <option value="all">Pan-India (All 700+ Districts)</option>
-            <option value="west_coast">West Coast & Western Ghats</option>
-            <option value="north_east">North East India</option>
-            <option value="central">Central India Monsoon Core</option>
-            <option value="gangetic">Gangetic Plains</option>
+          <select
+            value={region}
+            onChange={(e) => setRegion(e.target.value as RegionId)}
+            className="w-full bg-surfaceHighlight hover:bg-slate-100 border border-border hover:border-slate-300 text-xs font-medium rounded-lg px-3 py-2 text-textMain outline-none focus:ring-2 focus:ring-brand-forest/30 transition-all cursor-pointer"
+          >
+            {REGIONS.map((r) => (
+              <option key={r.id} value={r.id}>{r.label}</option>
+            ))}
           </select>
         </section>
       </div>
@@ -188,7 +204,7 @@ export const Sidebar: React.FC = () => {
           </div>
           <div className="text-[11px] leading-tight">
             <span className="font-semibold text-textMain block">ForeBlendCast</span>
-            <span className="text-[10px] text-textMuted">Calibrated Disaster Risk Warning</span>
+            <span className="text-[10px] text-textMuted">Prototype — not an official warning</span>
           </div>
         </div>
       </div>

@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "cycle": "2022-06-14T00Z",
+    "generated_utc": "2026-09-29T12:46:09Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
+    "models_used": [
+      "hres",
+      "ens",
+      "graphcast",
+      "pangu"
+    ],
+    "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
+    "strategy": "context_shrink",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "variable": "wind",
+  "leads": {
+    "L1": {
+      "deterministic": [
+        {
+          "step": "Equal-weight mean",
+          "strategy": "equal_weight",
+          "rmse": 0.569,
+          "mae": 0.422,
+          "bias": 0.006,
+          "fss": null,
+          "freq_bias": 0.961,
+          "rmse_change_vs_previous_pct": null
+        },
+        {
+          "step": "+ inverse-error weights",
+          "strategy": "inverse_error",
+          "rmse": 0.551,
+          "mae": 0.41,
+          "bias": -0.018,
+          "fss": null,
+          "freq_bias": 0.903,
+          "rmse_change_vs_previous_pct": -3.16
+        },
+        {
+          "step": "+ context (region, season, lead, regime)",
+          "strategy": "context",
+          "rmse": 0.529,
+          "mae": 0.393,
+          "bias": -0.076,
+          "fss": null,
+          "freq_bias": 0.774,
+          "rmse_change_vs_previous_pct": -3.99
+        },
+        {
+          "step": "+ hierarchical shrinkage and smoothing",
+          "strategy": "context_shrink",
+          "rmse": 0.525,
+          "mae": 0.389,
+          "bias": -0.067,
+          "fss": null,
+          "freq_bias": 0.769,
+          "rmse_change_vs_previous_pct": -0.76
+        }
+      ],
+      "probabilistic": {
+        "event": "p_wind_8",
+        "brier": {
+          "equal_weight_members": 0.00192,
+          "adaptive_weights_members": 0.001761,
+          "adaptive_weights_calibrated": 0.001112
+        },
+        "crps": {
+          "equal_weight_3_member_ensemble": 0.3295,
+          "deterministic_blend_mae": 0.389,
+          "equal_weight_with_quantiles": 0.3143,
+          "adaptive_blend_with_quantiles": 0.2912
+        },
+        "crps_change_vs_equal_weight_pct": -7.35,
+        "crps_change_vs_raw_ensemble_pct": -11.62,
+        "interval_90_coverage": 0.9091,
+        "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
+      }
+    },
+    "L3": {
+      "deterministic": [
+        {
+          "step": "Equal-weight mean",
+          "strategy": "equal_weight",
+          "rmse": 0.683,
+          "mae": 0.501,
+          "bias": -0.029,
+          "fss": null,
+          "freq_bias": 0.813,
+          "rmse_change_vs_previous_pct": null
+        },
+        {
+          "step": "+ inverse-error weights",
+          "strategy": "inverse_error",
+          "rmse": 0.675,
+          "mae": 0.496,
+          "bias": -0.049,
+          "fss": null,
+          "freq_bias": 0.768,
+          "rmse_change_vs_previous_pct": -1.17
+        },
+        {
+          "step": "+ context (region, season, lead, regime)",
+          "strategy": "context",
+          "rmse": 0.668,
+          "mae": 0.489,
+          "bias": -0.105,
+          "fss": null,
+          "freq_bias": 0.648,
+          "rmse_change_vs_previous_pct": -1.04
+        },
+        {
+          "step": "+ hierarchical shrinkage and smoothing",
+          "strategy": "context_shrink",
+          "rmse": 0.664,
+          "mae": 0.485,
+          "bias": -0.093,
+          "fss": null,
+          "freq_bias": 0.643,
+          "rmse_change_vs_previous_pct": -0.6
+        }
+      ],
+      "probabilistic": {
+        "event": "p_wind_8",
+        "brier": {
+          "equal_weight_members": 0.002205,
+          "adaptive_weights_members": 0.002103,
+          "adaptive_weights_calibrated": 0.001606
+        },
+        "crps": {
+          "equal_weight_3_member_ensemble": 0.3969,
+          "deterministic_blend_mae": 0.4853,
+          "equal_weight_with_quantiles": 0.3729,
+          "adaptive_blend_with_quantiles": 0.3621
+        },
+        "crps_change_vs_equal_weight_pct": -2.9,
+        "crps_change_vs_raw_ensemble_pct": -8.77,
+        "interval_90_coverage": 0.9079,
+        "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
+      }
+    },
+    "L5": {
+      "deterministic": [
+        {
+          "step": "Equal-weight mean",
+          "strategy": "equal_weight",
+          "rmse": 0.752,
+          "mae": 0.547,
+          "bias": -0.056,
+          "fss": null,
+          "freq_bias": 0.667,
+          "rmse_change_vs_previous_pct": null
+        },
+        {
+          "step": "+ inverse-error weights",
+          "strategy": "inverse_error",
+          "rmse": 0.746,
+          "mae": 0.543,
+          "bias": -0.075,
+          "fss": null,
+          "freq_bias": 0.637,
+          "rmse_change_vs_previous_pct": -0.8
+        },
+        {
+          "step": "+ context (region, season, lead, regime)",
+          "strategy": "context",
+          "rmse": 0.741,
+          "mae": 0.539,
+          "bias": -0.092,
+          "fss": null,
+          "freq_bias": 0.608,
+          "rmse_change_vs_previous_pct": -0.67
+        },
+        {
+          "step": "+ hierarchical shrinkage and smoothing",
+          "strategy": "context_shrink",
+          "rmse": 0.738,
+          "mae": 0.536,
+          "bias": -0.09,
+          "fss": null,
+          "freq_bias": 0.604,
+          "rmse_change_vs_previous_pct": -0.4
+        }
+      ],
+      "probabilistic": {
+        "event": "p_wind_8",
+        "brier": {
+          "equal_weight_members": 0.002435,
+          "adaptive_weights_members": 0.002354,
+          "adaptive_weights_calibrated": 0.001965
+        },
+        "crps": {
+          "equal_weight_3_member_ensemble": 0.4332,
+          "deterministic_blend_mae": 0.536,
+          "equal_weight_with_quantiles": 0.4072,
+          "adaptive_blend_with_quantiles": 0.4
+        },
+        "crps_change_vs_equal_weight_pct": -1.77,
+        "crps_change_vs_raw_ensemble_pct": -7.66,
+        "interval_90_coverage": 0.9052,
+        "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
+      }
+    },
+    "L7": {
+      "deterministic": [
+        {
+          "step": "Equal-weight mean",
+          "strategy": "equal_weight",
+          "rmse": 0.818,
+          "mae": 0.591,
+          "bias": -0.077,
+          "fss": null,
+          "freq_bias": 0.564,
+          "rmse_change_vs_previous_pct": null
+        },
+        {
+          "step": "+ inverse-error weights",
+          "strategy": "inverse_error",
+          "rmse": 0.813,
+          "mae": 0.588,
+          "bias": -0.095,
+          "fss": null,
+          "freq_bias": 0.528,
+          "rmse_change_vs_previous_pct": -0.61
+        },
+        {
+          "step": "+ context (region, season, lead, regime)",
+          "strategy": "context",
+          "rmse": 0.808,
+          "mae": 0.584,
+          "bias": -0.113,
+          "fss": null,
+          "freq_bias": 0.494,
+          "rmse_change_vs_previous_pct": -0.62
+        },
+        {
+          "step": "+ hierarchical shrinkage and smoothing",
+          "strategy": "context_shrink",
+          "rmse": 0.806,
+          "mae": 0.581,
+          "bias": -0.11,
+          "fss": null,
+          "freq_bias": 0.499,
+          "rmse_change_vs_previous_pct": -0.25
+        }
+      ],
+      "probabilistic": {
+        "event": "p_wind_8",
+        "brier": {
+          "equal_weight_members": 0.002623,
+          "adaptive_weights_members": 0.002515,
+          "adaptive_weights_calibrated": 0.002148
+        },
+        "crps": {
+          "equal_weight_3_member_ensemble": 0.4687,
+          "deterministic_blend_mae": 0.5815,
+          "equal_weight_with_quantiles": 0.4402,
+          "adaptive_blend_with_quantiles": 0.4336
+        },
+        "crps_change_vs_equal_weight_pct": -1.5,
+        "crps_change_vs_raw_ensemble_pct": -7.49,
+        "interval_90_coverage": 0.9012,
+        "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
+      }
+    },
+    "L9": {
+      "deterministic": [
+        {
+          "step": "Equal-weight mean",
+          "strategy": "equal_weight",
+          "rmse": 0.885,
+          "mae": 0.64,
+          "bias": -0.1,
+          "fss": null,
+          "freq_bias": 0.455,
+          "rmse_change_vs_previous_pct": null
+        },
+        {
+          "step": "+ inverse-error weights",
+          "strategy": "inverse_error",
+          "rmse": 0.881,
+          "mae": 0.637,
+          "bias": -0.119,
+          "fss": null,
+          "freq_bias": 0.428,
+          "rmse_change_vs_previous_pct": -0.45
+        },
+        {
+          "step": "+ context (region, season, lead, regime)",
+          "strategy": "context",
+          "rmse": 0.877,
+          "mae": 0.634,
+          "bias": -0.135,
+          "fss": null,
+          "freq_bias": 0.402,
+          "rmse_change_vs_previous_pct": -0.45
+        },
+        {
+          "step": "+ hierarchical shrinkage and smoothing",
+          "strategy": "context_shrink",
+          "rmse": 0.875,
+          "mae": 0.632,
+          "bias": -0.133,
+          "fss": null,
+          "freq_bias": 0.399,
+          "rmse_change_vs_previous_pct": -0.23
+        }
+      ],
+      "probabilistic": {
+        "event": "p_wind_8",
+        "brier": {
+          "equal_weight_members": 0.002829,
+          "adaptive_weights_members": 0.002734,
+          "adaptive_weights_calibrated": 0.002396
+        },
+        "crps": {
+          "equal_weight_3_member_ensemble": 0.5071,
+          "deterministic_blend_mae": 0.6316,
+          "equal_weight_with_quantiles": 0.4747,
+          "adaptive_blend_with_quantiles": 0.4691
+        },
+        "crps_change_vs_equal_weight_pct": -1.18,
+        "crps_change_vs_raw_ensemble_pct": -7.49,
+        "interval_90_coverage": 0.8987,
+        "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
+      }
+    }
+  }
+}

@@ -1,16 +1,17 @@
 {
   "meta": {
-    "cycle": "2022-07-15T00Z",
-    "generated_utc": "2026-09-27T10:19:58.432Z",
-    "git_commit": "fixture",
-    "fixture": true,
-    "ground_truth": "IMD_0p25_rain|ERA5",
+    "cycle": "2022-06-14T00Z",
+    "generated_utc": "2026-09-29T12:45:50Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
     "models_used": [
-      "gfs",
-      "ecmwf",
+      "hres",
+      "ens",
       "graphcast"
     ],
     "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
     "strategy": "context_shrink_pm",
     "accumulation_window_utc": "03:00-03:00",
     "district_aggregation": "area_weighted_p90",
@@ -18,19 +19,1812 @@
   },
   "cells": [
     {
-      "district": "MH-RATNAGIRI",
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.086,
+      "best_single": "ens",
+      "best_single_rmse": 0.058,
+      "loss_pct": 48.16,
+      "ci": [
+        0.0059,
+        0.0557
+      ],
+      "significant": true,
+      "n_days": 22,
+      "reason": "ens had the lowest RMSE in Central India, JF, regime break over 22 held-out days; the blend was 48.2% worse",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.091,
+      "best_single": "ens",
+      "best_single_rmse": 0.065,
+      "loss_pct": 39.42,
+      "ci": [
+        0.0096,
+        0.0499
+      ],
+      "significant": true,
+      "n_days": 19,
+      "reason": "ens had the lowest RMSE in Central India, JF, regime break over 19 held-out days; the blend was 39.4% worse",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.105,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.87,
+      "loss_pct": 27.1,
+      "ci": [
+        0.0205,
+        0.432
+      ],
+      "significant": true,
+      "n_days": 16,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime normal over 16 held-out days; the blend was 27.1% worse",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.809,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.594,
+      "loss_pct": 13.5,
+      "ci": [
+        0.0224,
+        0.3306
+      ],
+      "significant": true,
+      "n_days": 16,
+      "reason": "graphcast had the lowest RMSE in Northwest India, JF, regime normal over 16 held-out days; the blend was 13.5% worse",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 9,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 2.827,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.56,
+      "loss_pct": 10.45,
+      "ci": [
+        0.0763,
+        0.4721
+      ],
+      "significant": true,
+      "n_days": 24,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime normal over 24 held-out days; the blend was 10.5% worse",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 3,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.945,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.864,
+      "loss_pct": 9.46,
+      "ci": [
+        0.0006,
+        0.1648
+      ],
+      "significant": true,
+      "n_days": 26,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, OND, regime break over 26 held-out days; the blend was 9.5% worse",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 3,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.119,
+      "best_single": "ens",
+      "best_single_rmse": 0.109,
+      "loss_pct": 8.93,
+      "ci": [
+        0.006,
+        0.0259
+      ],
+      "significant": true,
+      "n_days": 22,
+      "reason": "ens had the lowest RMSE in Central India, JF, regime break over 22 held-out days; the blend was 8.9% worse",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.773,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.658,
+      "loss_pct": 6.96,
+      "ci": [
+        0.0341,
+        0.1525
+      ],
+      "significant": true,
+      "n_days": 15,
+      "reason": "graphcast had the lowest RMSE in All India, JF, regime normal over 15 held-out days; the blend was 7.0% worse",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 3,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.891,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.814,
+      "loss_pct": 4.25,
+      "ci": [
+        0.0037,
+        0.1926
+      ],
+      "significant": true,
+      "n_days": 25,
+      "reason": "graphcast had the lowest RMSE in All India, OND, regime normal over 25 held-out days; the blend was 4.2% worse",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 9,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.144,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.111,
+      "loss_pct": 2.94,
+      "ci": [
+        0.0063,
+        0.0633
+      ],
+      "significant": true,
+      "n_days": 42,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime break over 42 held-out days; the blend was 2.9% worse",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 1.771,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.723,
+      "loss_pct": 2.8,
+      "ci": [
+        0.0218,
+        0.1165
+      ],
+      "significant": true,
+      "n_days": 22,
+      "reason": "graphcast had the lowest RMSE in Central India, MAM, regime active over 22 held-out days; the blend was 2.8% worse",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.544,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.537,
+      "loss_pct": 1.36,
+      "ci": [
+        0.0021,
+        0.0123
+      ],
+      "significant": true,
+      "n_days": 43,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime break over 43 held-out days; the blend was 1.4% worse",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 9,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.072,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.97,
+      "loss_pct": 10.56,
+      "ci": [
+        -0.068,
+        0.2031
+      ],
+      "significant": false,
+      "n_days": 16,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime normal over 16 held-out days; the blend was 10.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.194,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.09,
+      "loss_pct": 9.54,
+      "ci": [
+        -0.0062,
+        0.1719
+      ],
+      "significant": false,
+      "n_days": 19,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime break over 19 held-out days; the blend was 9.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 0.41,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.38,
+      "loss_pct": 8.06,
+      "ci": [
+        -0.019,
+        0.0824
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "graphcast had the lowest RMSE in Northwest India, OND, regime normal over 27 held-out days; the blend was 8.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 3,
+      "season": "MAM",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.621,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.511,
+      "loss_pct": 7.27,
+      "ci": [
+        -0.1099,
+        0.1237
+      ],
+      "significant": false,
+      "n_days": 38,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime break over 38 held-out days; the blend was 7.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 9,
+      "season": "OND",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 6.129,
+      "best_single": "ens",
+      "best_single_rmse": 5.801,
+      "loss_pct": 5.66,
+      "ci": [
+        -0.0947,
+        0.8685
+      ],
+      "significant": false,
+      "n_days": 38,
+      "reason": "ens had the lowest RMSE in Northwest India, OND, regime active over 38 held-out days; the blend was 5.7% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 0.88,
+      "best_single": "ens",
+      "best_single_rmse": 0.836,
+      "loss_pct": 5.33,
+      "ci": [
+        -0.0645,
+        0.1042
+      ],
+      "significant": false,
+      "n_days": 17,
+      "reason": "ens had the lowest RMSE in South Peninsula, JF, regime normal over 17 held-out days; the blend was 5.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 9,
+      "season": "OND",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 4.039,
+      "best_single": "ens",
+      "best_single_rmse": 3.84,
+      "loss_pct": 5.17,
+      "ci": [
+        -0.0967,
+        0.4651
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "ens had the lowest RMSE in Northwest India, OND, regime all over 92 held-out days; the blend was 5.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 5,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.286,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.231,
+      "loss_pct": 4.4,
+      "ci": [
+        -0.0174,
+        0.1305
+      ],
+      "significant": false,
+      "n_days": 21,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, OND, regime break over 21 held-out days; the blend was 4.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 7,
+      "season": "OND",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 10.327,
+      "best_single": "graphcast",
+      "best_single_rmse": 9.897,
+      "loss_pct": 4.34,
+      "ci": [
+        -0.4087,
+        1.7339
+      ],
+      "significant": false,
+      "n_days": 31,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime active over 31 held-out days; the blend was 4.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 7,
+      "season": "OND",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 6.07,
+      "best_single": "graphcast",
+      "best_single_rmse": 5.823,
+      "loss_pct": 4.24,
+      "ci": [
+        -0.2166,
+        0.888
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime all over 92 held-out days; the blend was 4.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 7,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 7.868,
+      "best_single": "graphcast",
+      "best_single_rmse": 7.562,
+      "loss_pct": 4.04,
+      "ci": [
+        -0.364,
+        0.8754
+      ],
+      "significant": false,
+      "n_days": 33,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, MAM, regime active over 33 held-out days; the blend was 4.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 5,
+      "season": "MAM",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.645,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.588,
+      "loss_pct": 3.55,
+      "ci": [
+        -0.1392,
+        0.1011
+      ],
+      "significant": false,
+      "n_days": 36,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime break over 36 held-out days; the blend was 3.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 9,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.175,
+      "best_single": "hres",
+      "best_single_rmse": 0.169,
+      "loss_pct": 3.25,
+      "ci": [
+        -0.0214,
+        0.0309
+      ],
+      "significant": false,
+      "n_days": 31,
+      "reason": "hres had the lowest RMSE in Central India, OND, regime break over 31 held-out days; the blend was 3.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 5,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.164,
+      "best_single": "hres",
+      "best_single_rmse": 0.16,
+      "loss_pct": 2.79,
+      "ci": [
+        -0.0099,
+        0.0285
+      ],
+      "significant": false,
+      "n_days": 46,
+      "reason": "hres had the lowest RMSE in Central India, OND, regime break over 46 held-out days; the blend was 2.8% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 2.082,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.026,
+      "loss_pct": 2.75,
+      "ci": [
+        -0.0556,
+        0.1601
+      ],
+      "significant": false,
+      "n_days": 31,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime active over 31 held-out days; the blend was 2.7% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.476,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.439,
+      "loss_pct": 2.58,
+      "ci": [
+        -0.0265,
+        0.0952
+      ],
+      "significant": false,
+      "n_days": 34,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime normal over 34 held-out days; the blend was 2.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 3,
+      "season": "JF",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 1.911,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.864,
+      "loss_pct": 2.48,
+      "ci": [
+        -0.1181,
+        0.1743
+      ],
+      "significant": false,
+      "n_days": 29,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime active over 29 held-out days; the blend was 2.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 7,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 4.936,
+      "best_single": "graphcast",
+      "best_single_rmse": 4.818,
+      "loss_pct": 2.46,
+      "ci": [
+        -0.2581,
+        0.4965
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, MAM, regime all over 92 held-out days; the blend was 2.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 5,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.041,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.017,
+      "loss_pct": 2.38,
+      "ci": [
+        -0.0574,
+        0.1224
+      ],
+      "significant": false,
+      "n_days": 25,
+      "reason": "graphcast had the lowest RMSE in All India, OND, regime break over 25 held-out days; the blend was 2.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 3,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 1.349,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.318,
+      "loss_pct": 2.35,
+      "ci": [
+        -0.0731,
+        0.1196
+      ],
+      "significant": false,
+      "n_days": 59,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime all over 59 held-out days; the blend was 2.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.828,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.809,
+      "loss_pct": 2.33,
+      "ci": [
+        -0.0181,
+        0.0388
+      ],
+      "significant": false,
+      "n_days": 18,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime break over 18 held-out days; the blend was 2.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 1.596,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.562,
+      "loss_pct": 2.16,
+      "ci": [
+        -0.042,
+        0.1069
+      ],
+      "significant": false,
+      "n_days": 58,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime all over 58 held-out days; the blend was 2.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 5,
+      "season": "JJAS",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 5.312,
+      "best_single": "graphcast",
+      "best_single_rmse": 5.214,
+      "loss_pct": 1.88,
+      "ci": [
+        -0.0396,
+        0.265
+      ],
+      "significant": false,
+      "n_days": 32,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime break over 32 held-out days; the blend was 1.9% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 0.989,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.972,
+      "loss_pct": 1.8,
+      "ci": [
+        -0.0131,
+        0.0478
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in Central India, MAM, regime all over 92 held-out days; the blend was 1.8% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 7,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.794,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.781,
+      "loss_pct": 1.65,
+      "ci": [
+        -0.0384,
+        0.0504
+      ],
+      "significant": false,
+      "n_days": 41,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime break over 41 held-out days; the blend was 1.7% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 9,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 5.179,
+      "best_single": "ens",
+      "best_single_rmse": 5.098,
+      "loss_pct": 1.58,
+      "ci": [
+        -0.0934,
+        0.3266
+      ],
+      "significant": false,
+      "n_days": 26,
+      "reason": "ens had the lowest RMSE in Northwest India, MAM, regime active over 26 held-out days; the blend was 1.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 0.814,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.801,
+      "loss_pct": 1.54,
+      "ci": [
+        -0.0176,
+        0.0634
+      ],
+      "significant": false,
+      "n_days": 26,
+      "reason": "graphcast had the lowest RMSE in Central India, MAM, regime normal over 26 held-out days; the blend was 1.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 7,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.14,
+      "best_single": "hres",
+      "best_single_rmse": 0.138,
+      "loss_pct": 1.48,
+      "ci": [
+        -0.0204,
+        0.0446
+      ],
+      "significant": false,
+      "n_days": 35,
+      "reason": "hres had the lowest RMSE in Central India, OND, regime break over 35 held-out days; the blend was 1.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 9,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 3.851,
+      "best_single": "graphcast",
+      "best_single_rmse": 3.797,
+      "loss_pct": 1.4,
+      "ci": [
+        -0.1079,
+        0.2749
+      ],
+      "significant": false,
+      "n_days": 56,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime all over 56 held-out days; the blend was 1.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.042,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.028,
+      "loss_pct": 1.31,
+      "ci": [
+        -0.015,
+        -0.001
+      ],
+      "significant": false,
+      "n_days": 18,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, OND, regime normal over 18 held-out days; the blend was 1.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.118,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.116,
+      "loss_pct": 1.21,
+      "ci": [
+        -0.0122,
+        0.0088
+      ],
+      "significant": false,
+      "n_days": 15,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime break over 15 held-out days; the blend was 1.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 7,
+      "season": "MAM",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 2.364,
+      "best_single": "ens",
+      "best_single_rmse": 2.335,
+      "loss_pct": 1.21,
+      "ci": [
+        -0.1004,
+        0.114
+      ],
+      "significant": false,
+      "n_days": 23,
+      "reason": "ens had the lowest RMSE in South Peninsula, MAM, regime normal over 23 held-out days; the blend was 1.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 2.001,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.978,
+      "loss_pct": 1.16,
+      "ci": [
+        -0.1056,
+        0.1075
+      ],
+      "significant": false,
+      "n_days": 16,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime normal over 16 held-out days; the blend was 1.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.72,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.7,
+      "loss_pct": 1.14,
+      "ci": [
+        -0.0109,
+        0.0387
+      ],
+      "significant": false,
+      "n_days": 33,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, OND, regime normal over 33 held-out days; the blend was 1.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 5,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.655,
+      "best_single": "ens",
+      "best_single_rmse": 0.647,
+      "loss_pct": 1.12,
+      "ci": [
+        -0.0784,
+        0.0311
+      ],
+      "significant": false,
+      "n_days": 17,
+      "reason": "ens had the lowest RMSE in Northwest India, JF, regime break over 17 held-out days; the blend was 1.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 3,
+      "season": "OND",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.766,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.759,
+      "loss_pct": 0.99,
+      "ci": [
+        -0.0224,
+        0.0424
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "graphcast had the lowest RMSE in All India, OND, regime break over 27 held-out days; the blend was 1.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 9,
+      "season": "MAM",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.541,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.527,
+      "loss_pct": 0.95,
+      "ci": [
+        -0.1426,
+        0.0966
+      ],
+      "significant": false,
+      "n_days": 34,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime break over 34 held-out days; the blend was 1.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 7,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.526,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.512,
+      "loss_pct": 0.93,
+      "ci": [
+        -0.0608,
+        0.0666
+      ],
+      "significant": false,
+      "n_days": 26,
+      "reason": "graphcast had the lowest RMSE in Central India, OND, regime normal over 26 held-out days; the blend was 0.9% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 7.333,
+      "best_single": "graphcast",
+      "best_single_rmse": 7.266,
+      "loss_pct": 0.92,
+      "ci": [
+        -0.0019,
+        0.1516
+      ],
+      "significant": false,
+      "n_days": 37,
+      "reason": "graphcast had the lowest RMSE in Northwest India, JJAS, regime active over 37 held-out days; the blend was 0.9% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 9,
+      "season": "JF",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 3.127,
+      "best_single": "ens",
+      "best_single_rmse": 3.098,
+      "loss_pct": 0.91,
+      "ci": [
+        -0.1338,
+        0.2035
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "ens had the lowest RMSE in South Peninsula, JF, regime active over 27 held-out days; the blend was 0.9% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.133,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.125,
+      "loss_pct": 0.71,
+      "ci": [
+        -0.0038,
+        0.0237
+      ],
+      "significant": false,
+      "n_days": 26,
+      "reason": "graphcast had the lowest RMSE in All India, OND, regime normal over 26 held-out days; the blend was 0.7% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 1.591,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.581,
+      "loss_pct": 0.6,
+      "ci": [
+        -0.0175,
+        0.0408
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime all over 92 held-out days; the blend was 0.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 4.961,
+      "best_single": "graphcast",
+      "best_single_rmse": 4.932,
+      "loss_pct": 0.59,
+      "ci": [
+        -0.0069,
+        0.0719
+      ],
+      "significant": false,
+      "n_days": 122,
+      "reason": "graphcast had the lowest RMSE in Northwest India, JJAS, regime all over 122 held-out days; the blend was 0.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 2.777,
+      "best_single": "ens",
+      "best_single_rmse": 2.761,
+      "loss_pct": 0.59,
+      "ci": [
+        -0.0314,
+        0.0688
+      ],
+      "significant": false,
+      "n_days": 28,
+      "reason": "ens had the lowest RMSE in South Peninsula, JF, regime active over 28 held-out days; the blend was 0.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 9,
+      "season": "JJAS",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 9.033,
+      "best_single": "graphcast",
+      "best_single_rmse": 8.981,
+      "loss_pct": 0.58,
+      "ci": [
+        -0.1245,
+        0.2944
+      ],
+      "significant": false,
+      "n_days": 41,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JJAS, regime normal over 41 held-out days; the blend was 0.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 1.431,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.424,
+      "loss_pct": 0.55,
+      "ci": [
+        -0.004,
+        0.0192
+      ],
+      "significant": false,
+      "n_days": 25,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, MAM, regime normal over 25 held-out days; the blend was 0.6% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 5,
+      "season": "OND",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 2.199,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.187,
+      "loss_pct": 0.5,
+      "ci": [
+        -0.0242,
+        0.0603
+      ],
+      "significant": false,
+      "n_days": 26,
+      "reason": "graphcast had the lowest RMSE in All India, OND, regime normal over 26 held-out days; the blend was 0.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 3,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.811,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.807,
+      "loss_pct": 0.49,
+      "ci": [
+        -0.0248,
+        0.02
+      ],
+      "significant": false,
+      "n_days": 18,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime break over 18 held-out days; the blend was 0.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 2.317,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.306,
+      "loss_pct": 0.48,
+      "ci": [
+        -0.0311,
+        0.0345
+      ],
+      "significant": false,
+      "n_days": 30,
+      "reason": "graphcast had the lowest RMSE in Northwest India, OND, regime active over 30 held-out days; the blend was 0.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 9,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 2.295,
+      "best_single": "ens",
+      "best_single_rmse": 2.284,
+      "loss_pct": 0.47,
+      "ci": [
+        -0.1081,
+        0.1259
+      ],
+      "significant": false,
+      "n_days": 56,
+      "reason": "ens had the lowest RMSE in South Peninsula, JF, regime all over 56 held-out days; the blend was 0.5% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 3,
+      "season": "OND",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 4.214,
+      "best_single": "graphcast",
+      "best_single_rmse": 4.198,
+      "loss_pct": 0.4,
+      "ci": [
+        -0.1443,
+        0.1285
+      ],
+      "significant": false,
+      "n_days": 31,
+      "reason": "graphcast had the lowest RMSE in Central India, OND, regime active over 31 held-out days; the blend was 0.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "OND",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 2.704,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.694,
+      "loss_pct": 0.37,
+      "ci": [
+        -0.0067,
+        0.0354
+      ],
+      "significant": false,
+      "n_days": 32,
+      "reason": "graphcast had the lowest RMSE in Central India, OND, regime active over 32 held-out days; the blend was 0.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 1.904,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.897,
+      "loss_pct": 0.37,
+      "ci": [
+        -0.0193,
+        0.0299
+      ],
+      "significant": false,
+      "n_days": 40,
+      "reason": "graphcast had the lowest RMSE in Northwest India, JJAS, regime break over 40 held-out days; the blend was 0.4% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 5,
+      "season": "MAM",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.444,
+      "best_single": "ens",
+      "best_single_rmse": 0.443,
+      "loss_pct": 0.31,
+      "ci": [
+        -0.0132,
+        0.029
+      ],
+      "significant": false,
+      "n_days": 42,
+      "reason": "ens had the lowest RMSE in Central India, MAM, regime break over 42 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 9,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 3.023,
+      "best_single": "ens",
+      "best_single_rmse": 3.013,
+      "loss_pct": 0.31,
+      "ci": [
+        -0.3484,
+        0.4484
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "ens had the lowest RMSE in Central India, MAM, regime active over 27 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 4.642,
+      "best_single": "graphcast",
+      "best_single_rmse": 4.629,
+      "loss_pct": 0.29,
+      "ci": [
+        -0.0134,
+        0.0466
+      ],
+      "significant": false,
+      "n_days": 23,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, MAM, regime active over 23 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 3,
+      "season": "OND",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 2.454,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.446,
+      "loss_pct": 0.29,
+      "ci": [
+        -0.0795,
+        0.075
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in Central India, OND, regime all over 92 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 7,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 2.751,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.743,
+      "loss_pct": 0.29,
+      "ci": [
+        -0.2197,
+        0.2228
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "graphcast had the lowest RMSE in Central India, MAM, regime active over 27 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 1,
+      "season": "JF",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 0.722,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.72,
+      "loss_pct": 0.26,
+      "ci": [
+        -0.0028,
+        0.0086
+      ],
+      "significant": false,
+      "n_days": 21,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime break over 21 held-out days; the blend was 0.3% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 2.531,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.525,
+      "loss_pct": 0.25,
+      "ci": [
+        -0.0069,
+        0.0211
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, MAM, regime all over 92 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 4.912,
+      "best_single": "graphcast",
+      "best_single_rmse": 4.901,
+      "loss_pct": 0.24,
+      "ci": [
+        -0.0045,
+        0.034
+      ],
+      "significant": false,
+      "n_days": 41,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime normal over 41 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 7.654,
+      "best_single": "graphcast",
+      "best_single_rmse": 7.636,
+      "loss_pct": 0.24,
+      "ci": [
+        -0.0145,
+        0.0528
+      ],
+      "significant": false,
+      "n_days": 51,
+      "reason": "graphcast had the lowest RMSE in All India, JJAS, regime active over 51 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 3.53,
+      "best_single": "graphcast",
+      "best_single_rmse": 3.523,
+      "loss_pct": 0.21,
+      "ci": [
+        -0.0072,
+        0.0254
+      ],
+      "significant": false,
+      "n_days": 41,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JJAS, regime normal over 41 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 7.129,
+      "best_single": "graphcast",
+      "best_single_rmse": 7.115,
+      "loss_pct": 0.19,
+      "ci": [
+        -0.0225,
+        0.0527
+      ],
+      "significant": false,
+      "n_days": 122,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime all over 122 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 10.632,
+      "best_single": "graphcast",
+      "best_single_rmse": 10.611,
+      "loss_pct": 0.19,
+      "ci": [
+        -0.0526,
+        0.0964
+      ],
+      "significant": false,
+      "n_days": 44,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime active over 44 held-out days; the blend was 0.2% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 0.832,
+      "best_single": "graphcast",
+      "best_single_rmse": 0.831,
+      "loss_pct": 0.15,
+      "ci": [
+        -0.0172,
+        0.0173
+      ],
+      "significant": false,
+      "n_days": 60,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime all over 60 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "JF",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 1.112,
+      "best_single": "graphcast",
+      "best_single_rmse": 1.111,
+      "loss_pct": 0.14,
+      "ci": [
+        -0.0239,
+        0.0234
+      ],
+      "significant": false,
+      "n_days": 33,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JF, regime active over 33 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 6.217,
+      "best_single": "graphcast",
+      "best_single_rmse": 6.208,
+      "loss_pct": 0.14,
+      "ci": [
+        -0.011,
+        0.0298
+      ],
+      "significant": false,
+      "n_days": 122,
+      "reason": "graphcast had the lowest RMSE in All India, JJAS, regime all over 122 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 3,
+      "season": "JJAS",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 6.061,
+      "best_single": "graphcast",
+      "best_single_rmse": 6.053,
+      "loss_pct": 0.13,
+      "ci": [
+        -0.1051,
+        0.0787
+      ],
+      "significant": false,
+      "n_days": 41,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JJAS, regime normal over 41 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 9,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 2.061,
+      "best_single": "ens",
+      "best_single_rmse": 2.059,
+      "loss_pct": 0.09,
+      "ci": [
+        -0.1555,
+        0.2249
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "ens had the lowest RMSE in Central India, MAM, regime all over 92 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
+      "lead_day": 3,
+      "season": "MAM",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 2.084,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.083,
+      "loss_pct": 0.07,
+      "ci": [
+        -0.0735,
+        0.0874
+      ],
+      "significant": false,
+      "n_days": 92,
+      "reason": "graphcast had the lowest RMSE in Northwest India, MAM, regime all over 92 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 2.531,
+      "best_single": "graphcast",
+      "best_single_rmse": 2.529,
+      "loss_pct": 0.06,
+      "ci": [
+        -0.0065,
+        0.0138
+      ],
+      "significant": false,
+      "n_days": 37,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime break over 37 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 9,
+      "season": "MAM",
+      "regime": "normal",
+      "variable": "precip",
+      "blend_rmse": 2.403,
+      "best_single": "ens",
+      "best_single_rmse": 2.402,
+      "loss_pct": 0.06,
+      "ci": [
+        -0.2413,
+        0.0676
+      ],
+      "significant": false,
+      "n_days": 27,
+      "reason": "ens had the lowest RMSE in South Peninsula, MAM, regime normal over 27 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Central India",
+      "region": "CENTRAL",
+      "lead_day": 3,
+      "season": "JJAS",
+      "regime": "break",
+      "variable": "precip",
+      "blend_rmse": 3.822,
+      "best_single": "graphcast",
+      "best_single_rmse": 3.82,
+      "loss_pct": 0.05,
+      "ci": [
+        -0.0856,
+        0.0966
+      ],
+      "significant": false,
+      "n_days": 33,
+      "reason": "graphcast had the lowest RMSE in Central India, JJAS, regime break over 33 held-out days; the blend was 0.1% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "All India",
+      "region": "NATIONAL",
+      "lead_day": 1,
+      "season": "MAM",
+      "regime": "active",
+      "variable": "precip",
+      "blend_rmse": 3.692,
+      "best_single": "graphcast",
+      "best_single_rmse": 3.69,
+      "loss_pct": 0.04,
+      "ci": [
+        -0.017,
+        0.0227
+      ],
+      "significant": false,
+      "n_days": 28,
+      "reason": "graphcast had the lowest RMSE in All India, MAM, regime active over 28 held-out days; the blend was 0.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "South Peninsula",
+      "region": "SOUTH",
+      "lead_day": 1,
+      "season": "JJAS",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 5.382,
+      "best_single": "graphcast",
+      "best_single_rmse": 5.381,
+      "loss_pct": 0.02,
+      "ci": [
+        -0.0121,
+        0.0151
+      ],
+      "significant": false,
+      "n_days": 122,
+      "reason": "graphcast had the lowest RMSE in South Peninsula, JJAS, regime all over 122 held-out days; the blend was 0.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "Northwest India",
+      "region": "NW",
       "lead_day": 3,
       "season": "JJAS",
       "regime": "active",
-      "blend_rmse": 10,
-      "best_single": "ecmwf",
-      "best_single_rmse": 8,
+      "variable": "precip",
+      "blend_rmse": 10.096,
+      "best_single": "graphcast",
+      "best_single_rmse": 10.093,
+      "loss_pct": 0.02,
       "ci": [
-        1,
-        3
+        -0.0888,
+        0.1728
       ],
-      "reason": "shrinkage_to_national",
-      "override_available": true
+      "significant": false,
+      "n_days": 49,
+      "reason": "graphcast had the lowest RMSE in Northwest India, JJAS, regime active over 49 held-out days; the blend was 0.0% worse (within the bootstrap noise)",
+      "override_available": false
+    },
+    {
+      "district": "East & Northeast India",
+      "region": "EAST_NE",
+      "lead_day": 7,
+      "season": "JF",
+      "regime": "all",
+      "variable": "precip",
+      "blend_rmse": 3.428,
+      "best_single": "graphcast",
+      "best_single_rmse": 3.428,
+      "loss_pct": 0.02,
+      "ci": [
+        -0.2897,
+        0.2959
+      ],
+      "significant": false,
+      "n_days": 57,
+      "reason": "graphcast had the lowest RMSE in East & Northeast India, JF, regime all over 57 held-out days; the blend was 0.0% worse (within the bootstrap noise)",
+      "override_available": false
     }
-  ]
+  ],
+  "summary": {
+    "contexts_tested": 371,
+    "contexts_lost": 90,
+    "contexts_lost_significantly": 12,
+    "blend": "context_shrink",
+    "comparison": "best single model of each context in hindsight",
+    "ci": "95% moving-block bootstrap over forecast dates, RMSE(blend) - RMSE(best single)"
+  }
 }

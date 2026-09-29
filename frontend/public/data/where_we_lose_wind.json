@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "cycle": "2022-06-14T00Z",
+    "generated_utc": "2026-09-29T12:46:10Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
+    "models_used": [
+      "hres",
+      "ens",
+      "graphcast",
+      "pangu"
+    ],
+    "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
+    "strategy": "context_shrink",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "summary": {
+    "contexts_tested": 371,
+    "contexts_lost": 0,
+    "contexts_lost_significantly": 0,
+    "blend": "context_shrink",
+    "comparison": "best single model of each context in hindsight",
+    "ci": "95% moving-block bootstrap over forecast dates, RMSE(blend) - RMSE(best single)"
+  },
+  "cells": []
+}

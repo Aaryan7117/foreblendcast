@@ -33,7 +33,7 @@ PRECIP_CMAP = "Blues"
 DISAGREE_CMAP = "RdYlGn_r"
 
 
-def _save_png(data: np.ndarray, path: Path, cmap: str = "viridis",
+def _save_png(data: np.ndarray, path: Path, cmap: str | ListedColormap = "viridis",
               vmin: float = 0, vmax: float = 1,
               transparent_below: float | None = None) -> None:
     """Save a 2D array as a georeferenced PNG (no axes, no border)."""
@@ -42,19 +42,13 @@ def _save_png(data: np.ndarray, path: Path, cmap: str = "viridis",
         np.save(path.with_suffix(".npy"), data)
         return
 
-    fig, ax = plt.subplots(1, 1, figsize=(len(LON) / 50, len(LAT) / 50), dpi=100)
-    ax.set_axis_off()
-
-    plot_data = data.copy().astype(np.float64)
+    plot_data = np.ma.masked_invalid(data.astype(np.float64))
     if transparent_below is not None:
         plot_data = np.ma.masked_where(plot_data < transparent_below, plot_data)
 
-    ax.imshow(plot_data[::-1], cmap=cmap, vmin=vmin, vmax=vmax,
-              aspect="auto", interpolation="nearest")
-    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
     path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(path, dpi=100, transparent=True, bbox_inches="tight", pad_inches=0)
-    plt.close(fig)
+    # Use imsave to avoid hard crashes in plt.subplots/savefig on Windows conda envs
+    plt.imsave(path, plot_data[::-1], cmap=cmap, vmin=vmin, vmax=vmax)
 
 
 def render_probability(field: np.ndarray, field_name: str, lead: int) -> Path:
@@ -77,7 +71,7 @@ def render_dominant_model(model_ids: np.ndarray, lead: int) -> Path:
     if HAS_MPL:
         cmap = ListedColormap(MODEL_COLORS[:int(model_ids.max()) + 1])
         _save_png(model_ids.astype(np.float64), path, cmap=cmap,
-                  vmin=-0.5, vmax=model_ids.max() + 0.5)
+                  vmin=-0.5, vmax=model_ids.max() + 0.5, transparent_below=-0.5)
     else:
         np.save(path.with_suffix(".npy"), model_ids)
     return path
@@ -97,6 +91,14 @@ def render_weight(field: np.ndarray, model: str, lead: int) -> Path:
     return path
 
 
+def render_field(field: np.ndarray, name: str, lead: int, cmap: str,
+                 vmin: float, vmax: float, transparent_below: float | None = None) -> Path:
+    """Render any (lat, lon) field, e.g. temperature or wind speed."""
+    path = RASTERS / f"{name}_L{lead}.png"
+    _save_png(field, path, cmap=cmap, vmin=vmin, vmax=vmax, transparent_below=transparent_below)
+    return path
+
+
 def write_bounds() -> Path:
     """Write the bounds.json used by Leaflet ImageOverlay."""
     path = RASTERS / "bounds.json"
@@ -110,9 +112,16 @@ def render_all_for_lead(lead: int,
                         probs: dict[str, np.ndarray] | None = None,
                         dominant_model: np.ndarray | None = None,
                         weight_fields: dict[str, np.ndarray] | None = None,
-                        disagreement: np.ndarray | None = None) -> list[Path]:
+                        disagreement: np.ndarray | None = None,
+                        t2m: np.ndarray | None = None,
+                        wind: np.ndarray | None = None) -> list[Path]:
     """Render all rasters for a single lead day."""
     paths = [write_bounds()]
+
+    if t2m is not None:
+        paths.append(render_field(t2m, "t2m", lead, "inferno", 10, 48))
+    if wind is not None:
+        paths.append(render_field(wind, "wind", lead, "viridis", 0, 12, transparent_below=0.5))
 
     if precip_pm is not None:
         paths.append(render_precip(precip_pm, lead))

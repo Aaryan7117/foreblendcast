@@ -14,8 +14,12 @@ def rmse(forecast: np.ndarray, truth: np.ndarray,
     """Root-mean-square error, optionally area-weighted."""
     diff2 = (forecast - truth) ** 2
     mask = np.isfinite(diff2)
+    if not mask.any():
+        return float("nan")
     if weights is not None:
         w = weights[mask] if weights.shape == diff2.shape else weights.ravel()[:mask.sum()]
+        if w.sum() == 0:
+            return float("nan")
         return float(np.sqrt(np.average(diff2[mask], weights=w)))
     return float(np.sqrt(np.nanmean(diff2)))
 
@@ -25,8 +29,12 @@ def mae(forecast: np.ndarray, truth: np.ndarray,
     """Mean absolute error."""
     absdiff = np.abs(forecast - truth)
     mask = np.isfinite(absdiff)
+    if not mask.any():
+        return float("nan")
     if weights is not None:
         w = weights[mask]
+        if w.sum() == 0:
+            return float("nan")
         return float(np.average(absdiff[mask], weights=w))
     return float(np.nanmean(absdiff))
 
@@ -36,8 +44,12 @@ def bias(forecast: np.ndarray, truth: np.ndarray,
     """Mean bias (forecast - truth)."""
     diff = forecast - truth
     mask = np.isfinite(diff)
+    if not mask.any():
+        return float("nan")
     if weights is not None:
         w = weights[mask]
+        if w.sum() == 0:
+            return float("nan")
         return float(np.average(diff[mask], weights=w))
     return float(np.nanmean(diff))
 

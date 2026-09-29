@@ -16,8 +16,8 @@ const CITY_LABELS: Record<string, string> = {
 
 const MODEL_COLORS: Record<string, string> = {
   blend: '#0e3825',
-  gfs: '#1d4ed8',
-  ecmwf: '#7c3aed',
+  hres: '#1d4ed8',
+  ens: '#7c3aed',
   graphcast: '#d97706',
 };
 
@@ -39,7 +39,7 @@ export const ForecastChart: React.FC = () => {
     fill: 'toself',
     fillcolor: 'rgba(16, 185, 129, 0.12)',
     line: { color: 'transparent' },
-    name: 'Ensemble Spread (q05–q95)',
+    name: '90% predictive interval (q05–q95)',
     showlegend: true,
     hoverinfo: 'none',
   });
@@ -51,8 +51,8 @@ export const ForecastChart: React.FC = () => {
       x: xDays,
       y: values as number[],
       mode: 'lines',
-      line: { width: 1.5, color, dash: model === 'ecmwf' ? 'dash' : 'solid' },
-      name: model === 'gfs' ? 'ECMWF HRES' : model === 'ecmwf' ? 'ECMWF ENS' : model === 'graphcast' ? 'GraphCast (AI)' : model.toUpperCase(),
+      line: { width: 1.5, color, dash: model === 'ens' ? 'dash' : 'solid' },
+      name: model === 'hres' ? 'ECMWF HRES' : model === 'ens' ? 'ECMWF ENS mean' : model === 'graphcast' ? 'GraphCast (AI)' : model.toUpperCase(),
       hovertemplate: `${model.toUpperCase()}: %{y:.1f} mm<extra></extra>`,
     });
   });
@@ -76,7 +76,7 @@ export const ForecastChart: React.FC = () => {
             <LineChart size={16} className="text-brand-forest" />
             Rainfall Plume & Ensemble Meteogram
           </h3>
-          <p className="text-[11px] text-textMuted">Lead-time trajectory across NWP & AI members</p>
+          <p className="text-[11px] text-textMuted">Members, blend and the interval learned from past errors</p>
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1 text-xs text-textMuted font-medium bg-surfaceHighlight hover:bg-slate-100 border border-border rounded-lg px-2.5 py-1 transition-colors">

@@ -6,17 +6,32 @@ import { useResults } from '../hooks/useResults';
 import type { DistrictsResult } from '../types/results';
 import { useAppStore } from '../store';
 
+const LAYER_TITLE = {
+  rainfall: 'Rainfall Forecast',
+  exceedance: 'Calibrated P(rain ≥ 64.5 mm)',
+  disagreement: 'Model Disagreement Index',
+  risk_tiers: 'District Risk Tiers',
+};
+const MODEL_TITLE = {
+  blend: 'Adaptive Blend',
+  hres: 'ECMWF HRES',
+  ens: 'ECMWF ENS mean',
+  graphcast: 'GraphCast',
+  baseline: 'Equal-Weight Mean',
+};
+
+// matplotlib "Blues" over 0–200 mm, the colormap outputs/render_png.py uses
 const RAINFALL_LEGEND = [
-  { value: '0', color: '#F7FCF0' },
-  { value: '10', color: '#C7E9C0' },
-  { value: '50', color: '#74C476' },
-  { value: '100', color: '#FEB24C' },
-  { value: '200', color: '#F03B20' },
-  { value: '300+', color: '#BD0026' },
+  { value: '0', color: '#F7FBFF' },
+  { value: '40', color: '#D0E1F2' },
+  { value: '80', color: '#94C4DF' },
+  { value: '120', color: '#4A98C9' },
+  { value: '160', color: '#1764AB' },
+  { value: '200+', color: '#08306B' },
 ];
 
 export const DistrictMap: React.FC = () => {
-  const { leadDay, mapMode, setMapMode } = useAppStore();
+  const { leadDay, mapMode, setMapMode, activeLayer, selectedModel, rasterOverride } = useAppStore();
   const { data: _districts } = useResults<DistrictsResult>(`districts_L${leadDay}.json`);
 
   // Public, keyless basemaps (Zero CARTO dependencies, zero red watermarks)
@@ -35,10 +50,10 @@ export const DistrictMap: React.FC = () => {
         <div className="bg-surface/95 backdrop-blur-md px-3.5 py-2 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
           <h3 className="text-sm font-semibold text-textMain flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-brand-forest" />
-            Rainfall Forecast (Calibrated Blend)
+            {LAYER_TITLE[activeLayer]}{activeLayer === 'rainfall' ? ` (${MODEL_TITLE[selectedModel]})` : ''}
           </h3>
           <span className="block text-[11px] text-textMuted font-medium mt-0.5">
-            24h Accumulation • Lead Day {leadDay} (L+{leadDay * 24}h)
+            {rasterOverride ? 'Event replay' : `24h Accumulation • Lead Day ${leadDay} (L+${leadDay * 24}h)`}
           </span>
         </div>
       </div>
@@ -107,17 +122,17 @@ export const DistrictMap: React.FC = () => {
       {/* IMD Hazard Tier legend */}
       <div className="absolute bottom-4 right-4 z-[400] bg-surface/95 backdrop-blur-md p-3 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
         <h4 className="text-[10px] font-bold uppercase tracking-wider text-textMuted mb-2">
-          IMD Hazard Alert Tiers
+          Alert Tiers (probability of)
         </h4>
         <div className="flex flex-col gap-1.5 text-[11px] font-medium">
           <div className="flex items-center gap-2 text-textMain">
-            <div className="w-2.5 h-2.5 rounded-full bg-tier-red shadow-xs" /> Red (&gt;204.4 mm)
+            <div className="w-2.5 h-2.5 rounded-full bg-tier-red shadow-xs" /> Red (≥204.5 mm)
           </div>
           <div className="flex items-center gap-2 text-textMain">
-            <div className="w-2.5 h-2.5 rounded-full bg-tier-orange shadow-xs" /> Orange (115.6–204.4 mm)
+            <div className="w-2.5 h-2.5 rounded-full bg-tier-orange shadow-xs" /> Orange (≥115.6 mm)
           </div>
           <div className="flex items-center gap-2 text-textMain">
-            <div className="w-2.5 h-2.5 rounded-full bg-tier-yellow shadow-xs" /> Yellow (64.5–115.5 mm)
+            <div className="w-2.5 h-2.5 rounded-full bg-tier-yellow shadow-xs" /> Yellow (≥64.5 mm)
           </div>
           <div className="flex items-center gap-2 text-textMain">
             <div className="w-2.5 h-2.5 rounded-full bg-tier-green shadow-xs" /> Green (Normal)

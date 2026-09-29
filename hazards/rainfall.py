@@ -1,11 +1,13 @@
 """Rainfall probabilities (B11).
 
-Predictive distribution using LightGBM quantiles with empirical fallback.
+exceedance_prob_empirical is the weighted share of members above a threshold. The
+pipeline uses its neighbourhood version followed by isotonic calibration
+(experiments.evaluate). Predictive quantiles come from calibration.quantiles or
+calibration.lgbm, whichever has the lower cross-validated pinball loss in training.
 """
 from __future__ import annotations
 
 import numpy as np
-import lightgbm as lgb
 
 
 # IMD warning thresholds (mm/24h)
@@ -48,19 +50,3 @@ def all_exceedance_probs_empirical(member_values: dict[str, np.ndarray],
         "p_gt_115p6": exceedance_prob_empirical(member_values, weights, THRESHOLDS["very_heavy"]),
         "p_gt_204p5": exceedance_prob_empirical(member_values, weights, THRESHOLDS["extremely_heavy"]),
     }
-
-def fit_lgbm_quantiles(X_train: np.ndarray, y_train: np.ndarray, quantiles: list[float] = [0.1, 0.5, 0.9]) -> dict[float, lgb.Booster]:
-    """Fit LightGBM quantile regression."""
-    models = {}
-    train_data = lgb.Dataset(X_train, label=y_train)
-    for q in quantiles:
-        params = {
-            'objective': 'quantile',
-            'alpha': q,
-            'metric': 'quantile',
-            'learning_rate': 0.1,
-            'num_leaves': 31,
-            'verbose': -1
-        }
-        models[q] = lgb.train(params, train_data, num_boost_round=100)
-    return models

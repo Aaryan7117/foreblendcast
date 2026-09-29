@@ -24,10 +24,8 @@ def export_cycle_netcdf(datasets: dict[int, xr.Dataset], cycle: str, provenance_
     
     # Add global attributes
     for k, v in provenance_meta.items():
-        if isinstance(v, (dict, list)):
-            combined.attrs[k] = str(v)
-        else:
-            combined.attrs[k] = v
+        # NetCDF attributes only hold numbers and strings
+        combined.attrs[k] = v if isinstance(v, (int, float, str)) and not isinstance(v, bool) else str(v)
             
     combined.attrs["Conventions"] = "CF-1.8"
     

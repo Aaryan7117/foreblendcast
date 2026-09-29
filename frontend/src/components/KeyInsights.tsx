@@ -1,6 +1,6 @@
 import React from 'react';
 import { useResults } from '../hooks/useResults';
-import type { DistrictsResult, WhereWeLoseResult } from '../types/results';
+import type { DistrictsResult, WhereWeLoseResult, SummaryResult } from '../types/results';
 import { useAppStore } from '../store';
 import { CloudRain, AlertTriangle, TrendingUp, GitBranch, ArrowRight } from 'lucide-react';
 
@@ -15,6 +15,7 @@ export const KeyInsights: React.FC = () => {
   const { leadDay, setActivePage } = useAppStore();
   const { data: districtsData } = useResults<DistrictsResult>(`districts_L${leadDay}.json`);
   const { data: whereLose } = useResults<WhereWeLoseResult>('where_we_lose.json');
+  const { data: summary } = useResults<SummaryResult>('summary.json');
 
   if (!districtsData) return null;
 
@@ -29,7 +30,7 @@ export const KeyInsights: React.FC = () => {
       icon: <CloudRain size={16} />,
       iconBg: 'bg-emerald-100 text-brand-forest',
       title: `Intense Rainfall Cluster in ${names}`,
-      description: `High probability of >${Math.max(...heavyRainfallDistricts.map((d) => d.precip_p90_mm))} mm accumulation in next 24 hours.`,
+      description: `${heavyRainfallDistricts.length} districts with a blended P90 above 100 mm; highest ${Math.max(...heavyRainfallDistricts.map((d) => d.precip_p90_mm))} mm.`,
     });
   }
 
@@ -40,35 +41,40 @@ export const KeyInsights: React.FC = () => {
     insights.push({
       icon: <AlertTriangle size={16} />,
       iconBg: 'bg-amber-100 text-tier-orange',
-      title: `Flood Early Warning: ${atRiskDistricts.length} High-Alert Districts`,
-      description: `${(totalPop / 1e6).toFixed(1)}M residents in exposed river basins. State disaster management alerted.`,
+      title: `${atRiskDistricts.length} Districts at Orange or Red`,
+      description: `${(totalPop / 1e6).toFixed(1)}M residents live in these districts (WorldPop 2020). Exercise output, no alert has been issued.`,
     });
   }
 
   // Insight 3: Blend performance
-  insights.push({
-    icon: <TrendingUp size={16} />,
-    iconBg: 'bg-emerald-50 text-brand-forest',
-    title: 'Probability-Matched Blending Active',
-    description: 'Preserves peak convective rainfall tails, outperforming arithmetic ensemble averaging by +18.4% CRPS.',
-  });
+  const rain = summary?.variables?.precip;
+  const prob = rain?.ablation?.[`L${leadDay}`]?.probabilistic;
+  const rmseVsEqual = rain?.headline?.rmse_change_vs_equal_weight_pct?.[`L${leadDay}`];
+  if (summary && prob && rmseVsEqual !== undefined) {
+    insights.push({
+      icon: <TrendingUp size={16} />,
+      iconBg: 'bg-emerald-50 text-brand-forest',
+      title: 'Adaptive Blend vs Equal-Weight Mean',
+      description: `Held-out ${summary.test_years.join(' & ')}, lead day ${leadDay}: RMSE ${rmseVsEqual.toFixed(1)}%, CRPS ${prob.crps_change_vs_equal_weight_pct.toFixed(1)}% (negative is better). The 90% interval (${prob.quantile_methods?.selected === 'lgbm' ? 'LightGBM' : 'quantile table'}) covered ${((prob.selected_interval_90_coverage ?? prob.interval_90_coverage) * 100).toFixed(0)}% of observations.`,
+    });
+  }
 
   // Insight 4: Model disagreement
   const highDisagreement = districts.filter((d) => d.disagreement > 2.0);
-  if (whereLose && whereLose.cells.length > 0) {
-    const uniqueDistricts = [...new Set(whereLose.cells.map((c) => c.district))];
+  if (whereLose?.summary) {
+    const s = whereLose.summary;
     insights.push({
       icon: <GitBranch size={16} />,
       iconBg: 'bg-slate-100 text-slate-700',
-      title: `Model Divergence in ${uniqueDistricts.length > 0 ? uniqueDistricts.length : highDisagreement.length} Coastal Sectors`,
-      description: 'NWP vs AI variance elevated; consult plume ensemble spread in Meteograms.',
+      title: `Blend Loses in ${s.contexts_lost_significantly} of ${s.contexts_tested} Contexts`,
+      description: `Region × season × regime contexts where a single model beat the blend beyond bootstrap noise. ${highDisagreement.length} districts show model spread above twice the training norm today.`,
     });
   } else if (highDisagreement.length > 0) {
     insights.push({
       icon: <GitBranch size={16} />,
       iconBg: 'bg-slate-100 text-slate-700',
       title: `Model Disagreement in ${highDisagreement.length} Districts`,
-      description: 'Use multi-model ensemble spread for confidence calibration.',
+      description: 'Model spread is more than twice its training-period norm in these districts.',
     });
   }
 
@@ -77,7 +83,7 @@ export const KeyInsights: React.FC = () => {
       <div className="flex items-center justify-between mb-3">
         <div>
           <h3 className="text-sm font-bold text-textMain">Key Meteorological Insights</h3>
-          <p className="text-[11px] text-textMuted">Operational synthesis from real-time analysis</p>
+          <p className="text-[11px] text-textMuted">Computed from the pipeline outputs of this cycle</p>
         </div>
         <button
           className="text-xs text-brand-forest font-semibold hover:text-brand-darkGreen transition-colors flex items-center gap-1 group"

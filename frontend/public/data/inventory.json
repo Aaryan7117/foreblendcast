@@ -1,0 +1,136 @@
+{
+  "hres": {
+    "url": "gs://weatherbench2/datasets/hres/2016-2022-0012-1440x721.zarr",
+    "dims": {
+      "time": 5134,
+      "prediction_timedelta": 41,
+      "latitude": 721,
+      "longitude": 1440,
+      "level": 13
+    },
+    "time_first": "2016-01-01T00:00",
+    "time_last": "2023-01-10T12:00",
+    "lead_hours": [
+      0,
+      6,
+      240
+    ],
+    "vars_wanted": {
+      "total_precipitation_24hr": true,
+      "total_precipitation_6hr": true,
+      "total_precipitation": true,
+      "2m_temperature": true,
+      "10m_u_component_of_wind": true,
+      "10m_v_component_of_wind": true,
+      "maximum_temperature": false,
+      "minimum_temperature": false
+    },
+    "precip_vars": [
+      "total_precipitation",
+      "total_precipitation_24hr",
+      "total_precipitation_6hr"
+    ],
+    "lat_order": "asc"
+  },
+  "ifs_ens_mean": {
+    "url": "gs://weatherbench2/datasets/ifs_ens/2018-2022-1440x721_mean.zarr",
+    "dims": {
+      "time": 3652,
+      "prediction_timedelta": 61,
+      "latitude": 721,
+      "longitude": 1440,
+      "level": 3
+    },
+    "time_first": "2018-01-01T00:00",
+    "time_last": "2022-12-31T12:00",
+    "lead_hours": [
+      0,
+      6,
+      360
+    ],
+    "vars_wanted": {
+      "total_precipitation_24hr": true,
+      "total_precipitation_6hr": true,
+      "total_precipitation": true,
+      "2m_temperature": true,
+      "10m_u_component_of_wind": true,
+      "10m_v_component_of_wind": true,
+      "maximum_temperature": false,
+      "minimum_temperature": false
+    },
+    "precip_vars": [
+      "total_precipitation",
+      "total_precipitation_24hr",
+      "total_precipitation_6hr"
+    ],
+    "lat_order": "asc"
+  },
+  "graphcast_2018": {
+    "url": "gs://weatherbench2/datasets/graphcast_v2/2018-1440x721.zarr",
+    "error": "AttributeError(\"'Dataset' object has no attribute 'latitude'\")"
+  },
+  "graphcast_2020": {
+    "url": "gs://weatherbench2/datasets/graphcast_v2/2020-1440x721.zarr",
+    "error": "AttributeError(\"'Dataset' object has no attribute 'latitude'\")"
+  },
+  "graphcast_2022": {
+    "url": "gs://weatherbench2/datasets/graphcast_v2/2022-1440x721.zarr",
+    "error": "AttributeError(\"'Dataset' object has no attribute 'latitude'\")"
+  },
+  "pangu": {
+    "url": "gs://weatherbench2/datasets/pangu/2018-2022_0012_0p25.zarr",
+    "dims": {
+      "time": 3652,
+      "prediction_timedelta": 40,
+      "latitude": 721,
+      "longitude": 1440,
+      "level": 13
+    },
+    "time_first": "2018-01-01T00:00",
+    "time_last": "2022-12-31T12:00",
+    "lead_hours": [
+      6,
+      6,
+      240
+    ],
+    "vars_wanted": {
+      "total_precipitation_24hr": false,
+      "total_precipitation_6hr": false,
+      "total_precipitation": false,
+      "2m_temperature": true,
+      "10m_u_component_of_wind": true,
+      "10m_v_component_of_wind": true,
+      "maximum_temperature": false,
+      "minimum_temperature": false
+    },
+    "precip_vars": [],
+    "lat_order": "desc"
+  },
+  "era5": {
+    "url": "gs://weatherbench2/datasets/era5/1959-2022-6h-1440x721.zarr",
+    "dims": {
+      "time": 92044,
+      "latitude": 721,
+      "longitude": 1440,
+      "level": 13
+    },
+    "time_first": "1959-01-01T00:00",
+    "time_last": "2021-12-31T18:00",
+    "vars_wanted": {
+      "total_precipitation_24hr": true,
+      "total_precipitation_6hr": true,
+      "total_precipitation": false,
+      "2m_temperature": true,
+      "10m_u_component_of_wind": true,
+      "10m_v_component_of_wind": true,
+      "maximum_temperature": false,
+      "minimum_temperature": false
+    },
+    "precip_vars": [
+      "total_precipitation_12hr",
+      "total_precipitation_24hr",
+      "total_precipitation_6hr"
+    ],
+    "lat_order": "desc"
+  }
+}

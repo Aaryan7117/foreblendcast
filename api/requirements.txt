@@ -1,0 +1,9 @@
+# ForeBlendCast API — install with:  pip install -r api/requirements.txt
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2
+httpx>=0.27
+xmltodict>=0.13
+python-dotenv>=1.0
+google-genai>=1.0      # optional: multilingual copilot (needs GEMINI_API_KEY)
+numpy>=1.26            # /api/blend/live server-side re-blend

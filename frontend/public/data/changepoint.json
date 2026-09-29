@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "cycle": "2022-06-14T00Z",
+    "generated_utc": "2026-09-29T12:46:12Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
+    "models_used": [
+      "hres",
+      "ens",
+      "graphcast"
+    ],
+    "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
+    "strategy": "context_shrink_pm",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "variable": "precip",
+  "lead_day": 1,
+  "metric": "daily land RMSE, standardised",
+  "method": "PELT, l2 cost, penalty 3 ln(n)",
+  "models": {
+    "hres": {
+      "n": 549,
+      "change_points": [
+        "2018-05-21",
+        "2018-09-28",
+        "2020-05-24",
+        "2020-10-01",
+        "2022-06-08",
+        "2022-10-16"
+      ]
+    },
+    "ens": {
+      "n": 549,
+      "change_points": [
+        "2018-05-31",
+        "2018-09-28",
+        "2020-05-24",
+        "2020-10-01",
+        "2022-06-08",
+        "2022-10-16"
+      ]
+    },
+    "graphcast": {
+      "n": 548,
+      "change_points": [
+        "2018-05-21",
+        "2018-09-28",
+        "2020-05-24",
+        "2020-10-01",
+        "2022-06-08",
+        "2022-10-16"
+      ]
+    }
+  },
+  "note": "Monitoring output. Detected shifts do not yet reset or decay the skill database."
+}

@@ -7,7 +7,8 @@ from __future__ import annotations
 import numpy as np
 
 
-# Tier thresholds on probability (starting values, tuned on validation fold)
+# Default probability thresholds. The pipeline replaces them with the thresholds that
+# maximise the critical success index on training data (experiments.evaluate).
 TIER_THRESHOLDS = {
     "yellow":  ("p_gt_64p5", 0.4),
     "orange":  ("p_gt_115p6", 0.3),
@@ -42,12 +43,18 @@ def district_probability(cell_probs: np.ndarray, district_mask: np.ndarray,
         return float(cells[sorted_idx[min(idx90, len(cells) - 1)]])
 
 
-def assign_tier(p_64: float, p_115: float, p_204: float) -> str:
-    """Assign IMD warning tier from exceedance probabilities."""
-    if p_204 >= TIER_THRESHOLDS["red"][1]:
+def assign_tier(p_64: float, p_115: float, p_204: float,
+                thresholds: dict[str, float] | None = None) -> str:
+    """Assign IMD warning tier from exceedance probabilities.
+
+    thresholds: probability thresholds keyed by event (p_gt_64p5, p_gt_115p6, p_gt_204p5).
+    """
+    thr = {key: value for key, value in TIER_THRESHOLDS.values()}
+    thr.update(thresholds or {})
+    if p_204 >= thr["p_gt_204p5"]:
         return "red"
-    if p_115 >= TIER_THRESHOLDS["orange"][1]:
+    if p_115 >= thr["p_gt_115p6"]:
         return "orange"
-    if p_64 >= TIER_THRESHOLDS["yellow"][1]:
+    if p_64 >= thr["p_gt_64p5"]:
         return "yellow"
     return "green"

@@ -18,15 +18,29 @@ import { Spaghetti } from './components/Spaghetti';
 import { WhereWeLose } from './components/WhereWeLose';
 import { DecisionCard } from './components/DecisionCard';
 import { AboutPage } from './components/AboutPage';
+import { CopilotChat } from './components/CopilotChat';
+import { AssamReplay } from './components/AssamReplay';
 
 function App() {
   const { activePage } = useAppStore();
-  const { data: ladder, loading } = useResults<LadderResult>('ladder.json');
+  const { data: ladder, loading, error } = useResults<LadderResult>('ladder.json');
   const [showLoading, setShowLoading] = useState(true);
 
   const handleLoadingComplete = useCallback(() => {
     setShowLoading(false);
   }, []);
+
+  if (error) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-background">
+        <div className="text-center p-6 border border-red-900 bg-red-950/20 rounded-lg max-w-lg">
+          <p className="font-bold text-red-500 mb-2">Error Loading Operational Data</p>
+          <p className="text-sm text-red-400 font-mono break-words">{error.message}</p>
+          <p className="text-sm text-textMuted mt-4">Check that the backend JSON files are valid.</p>
+        </div>
+      </div>
+    );
+  }
 
   if (loading || !ladder) {
     return (
@@ -62,11 +76,19 @@ function App() {
           {activePage === 'evaluation' && <EvaluationPage />}
           {activePage === 'wherewellose' && <WhereWeLosePage />}
           {activePage === 'about' && <AboutPage />}
+          {activePage === 'replay' && <AssamReplay />}
         </main>
       </div>
+
+      {/* Grounded Forecaster Copilot — floating overlay */}
+      <CopilotChat />
     </div>
   );
 }
+
+import { ImpactCards } from './components/ImpactCards';
+import { WeightAttributionCard } from './components/WeightAttributionCard';
+import { CrowdsourcedGroundTruth } from './components/CrowdsourcedGroundTruth';
 
 /* ─── Page: Live Forecast (Primary Operational View) ─ */
 function LiveForecastPage() {
@@ -82,10 +104,13 @@ function LiveForecastPage() {
         </div>
       </div>
 
-      {/* Right Panel: Risk Summary, District Details, Plume Chart, Key Insights */}
+      {/* Right Panel: Risk Summary, Attribution, District Details, Plume Chart, Key Insights */}
       <div className="w-[390px] xl:w-[430px] flex-shrink-0 h-full overflow-y-auto custom-scrollbar border-l border-border bg-background p-3 space-y-3">
         <RiskSummary />
+        <WeightAttributionCard />
         <DistrictInfo />
+        <ImpactCards />
+        <CrowdsourcedGroundTruth />
         <ForecastChart />
         <KeyInsights />
       </div>
@@ -104,11 +129,14 @@ function RiskDashboardPage() {
         <RiskSummary />
         <DistrictInfo />
         <DecisionCard />
+        <ImpactCards />
+        <CrowdsourcedGroundTruth />
         <KeyInsights />
       </div>
     </div>
   );
 }
+
 
 /* ─── Page: Model Comparison ───────────────────────── */
 function ModelComparisonPage() {

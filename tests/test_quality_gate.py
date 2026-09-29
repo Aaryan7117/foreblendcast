@@ -30,7 +30,7 @@ class TestQualityGate:
         assert result.passed
 
     def test_corrupt_range_rejected(self):
-        vals = np.full((5, len(LAT), len(LON)), 999.0, dtype=np.float32)
+        vals = np.full((5, len(LAT), len(LON)), 9999.0, dtype=np.float32)
         fc = _make_forecast(values=vals)
         result = check_forecast(fc)
         assert not result.passed

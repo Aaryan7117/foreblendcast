@@ -8,6 +8,7 @@ import numpy as np
 
 from weighting.base import WeightStrategy
 from weighting.baselines import EqualWeights
+from weighting.shrinkage import softmax_weights
 
 class ContextAware(WeightStrategy):
     name = "context"
@@ -20,17 +21,7 @@ class ContextAware(WeightStrategy):
         if not scores:
             return EqualWeights().compute_weights(models)
         
-        vals = np.array([scores.get(m, 0.0) for m in models])
-        # Handle nan in scores by setting them to high values (low weight)
-        vals = np.nan_to_num(vals, nan=1e6)
-        
-        # Stability: subtract min before exp
-        vals = vals - vals.min()
-        exp_vals = np.exp(-vals / self.tau)
-        
-        total = exp_vals.sum()
-        if total == 0 or np.isnan(total):
-             return EqualWeights().compute_weights(models)
-             
-        exp_vals /= total
-        return {m: float(w) for m, w in zip(models, exp_vals)}
+        # Scores are historical errors (lower is better); a model with no history gets 0.
+        vals = np.array([scores.get(m, np.nan) for m in models], dtype=np.float64)
+        w = softmax_weights(vals, self.tau)
+        return {m: float(x) for m, x in zip(models, w)}

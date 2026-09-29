@@ -31,7 +31,7 @@ export const Spaghetti: React.FC = () => {
     fill: 'toself',
     fillcolor: 'rgba(23, 74, 53, 0.08)',
     line: { color: 'transparent' },
-    name: '90% CI',
+    name: '90% predictive interval',
     showlegend: true,
     hoverinfo: 'none',
   });
@@ -44,13 +44,24 @@ export const Spaghetti: React.FC = () => {
       mode: 'lines',
       line: {
         width: 1.5,
-        color: model === 'gfs' ? '#2878B5' : model === 'ecmwf' ? '#7B61FF' : model === 'graphcast' ? '#EF6C00' : '#94A3B8',
+        color: model === 'hres' ? '#2878B5' : model === 'ens' ? '#7B61FF' : model === 'graphcast' ? '#EF6C00' : '#94A3B8',
       },
       name: model.toUpperCase(),
       showlegend: true,
       hovertemplate: `${model.toUpperCase()}: %{y:.1f}mm<extra></extra>`,
     });
   });
+
+  if (points.obs?.some((v) => v !== null)) {
+    data.push({
+      x: xDays,
+      y: points.obs as number[],
+      mode: 'markers',
+      marker: { size: 7, color: '#111827', symbol: 'x' },
+      name: 'ERA5 (verification)',
+      hovertemplate: 'ERA5: %{y:.1f}mm<extra></extra>',
+    });
+  }
 
   // Blend (thick line)
   data.push({

@@ -21,14 +21,16 @@ export const WhereWeLose: React.FC = () => {
       </div>
 
       <p className="text-xs text-textMuted mb-4 leading-relaxed">
-        Meteorological conditions and geographic sub-regions where individual models outperform the blend. Scientific transparency is maintained — no model failure is concealed.
+        Region × season × regime contexts of the held-out years where a single model had a lower RMSE than the blend. The comparison is against the best model of each context in hindsight. “Significant” means the 95% block-bootstrap interval of the RMSE difference excludes zero.
       </p>
 
       {cells.length === 0 ? (
         <div className="text-textMuted text-xs py-8 text-center bg-surfaceHighlight/60 rounded-xl border border-border flex flex-col items-center justify-center">
           <CheckCircle2 size={24} className="text-brand-forest mb-2" />
-          <span className="font-semibold text-textMain">No Systematic Blend Losses</span>
-          <span className="text-textLight mt-0.5">The multi-model blend captured optimal performance across all evaluated districts for Lead Day {leadDay}.</span>
+          <span className="font-semibold text-textMain">No Context Lost at Lead Day {leadDay}</span>
+          <span className="text-textLight mt-0.5">
+            No single model had a lower RMSE than the blend in any region × season × regime context at this lead.
+          </span>
         </div>
       ) : (
         <div className="space-y-2.5 overflow-y-auto custom-scrollbar flex-1 pr-1">
@@ -38,9 +40,12 @@ export const WhereWeLose: React.FC = () => {
               className="bg-surfaceHighlight/70 hover:bg-surfaceHighlight p-3 rounded-lg border border-amber-200/50 hover:border-amber-300 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-xs"
             >
               <div className="flex justify-between items-start mb-2">
-                <div className="font-bold text-xs text-textMain">{cell.district}</div>
+                <div className="font-bold text-xs text-textMain">
+                  {cell.district} · {cell.season} · {cell.regime}
+                  <span className="font-normal text-textMuted"> ({cell.n_days ?? '—'} days)</span>
+                </div>
                 <div className="text-[9.5px] uppercase font-bold tracking-wider bg-tier-orangeBg text-tier-orange border border-tier-orange/30 px-2 py-0.5 rounded">
-                  Loss vs {cell.best_single.toUpperCase()}
+                  {cell.significant ? 'Significant loss' : 'Within noise'} vs {cell.best_single.toUpperCase()}
                 </div>
               </div>
 
@@ -56,7 +61,8 @@ export const WhereWeLose: React.FC = () => {
               </div>
 
               <div className="text-[11px] text-textMuted pt-1.5 border-t border-border/80">
-                <span className="font-semibold text-textMain">Root Cause:</span> {cell.reason}
+                <span className="font-semibold text-textMain">RMSE difference 95% CI:</span>{' '}
+                [{cell.ci[0]?.toFixed(3)}, {cell.ci[1]?.toFixed(3)}] mm — {cell.reason}
               </div>
             </div>
           ))}

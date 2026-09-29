@@ -23,5 +23,12 @@ def all_adapters() -> dict[str, "Adapter"]:
 
 
 def load_all() -> None:
-    """Import all adapter modules to trigger registration."""
-    from ingestion import ecmwf, graphcast  # noqa: F401
+    """Import all adapter modules to trigger registration, then attach the GRIB2 sources."""
+    from ingestion import ecmwf, graphcast, pangu  # noqa: F401
+    from ingestion import grib2
+    grib2.register_grib_sources()
+
+
+def for_variable(variable: str) -> list[str]:
+    """Names of the registered adapters that provide a variable."""
+    return [name for name, a in _ADAPTERS.items() if variable in a.variables]

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAppStore } from '../store';
 import type { PageId } from '../store';
 import type { LadderResult } from '../types/results';
+import { OpsTelemetryModal } from './OpsTelemetryModal';
 
 interface HeaderProps {
   meta?: LadderResult['meta'];
@@ -13,6 +14,7 @@ const NAV_ITEMS: { id: PageId; label: string }[] = [
   { id: 'comparison', label: 'Model Comparison' },
   { id: 'evaluation', label: 'Evaluation' },
   { id: 'wherewellose', label: 'Where We Lose' },
+  { id: 'replay', label: 'Assam Replay' },
   { id: 'about', label: 'About' },
 ];
 
@@ -64,6 +66,7 @@ function formatCycleDate(cycleStr?: string): { short: string; full: string } {
 
 export const Header: React.FC<HeaderProps> = ({ meta }) => {
   const { activePage, setActivePage } = useAppStore();
+  const [showTelemetry, setShowTelemetry] = useState(false);
   const dateInfo = formatCycleDate(meta?.cycle);
 
   return (
@@ -178,12 +181,30 @@ export const Header: React.FC<HeaderProps> = ({ meta }) => {
 
             <div className="w-px h-8 bg-white/20 hidden xl:block" aria-hidden="true" />
 
+            {/* Ops Feeds Telemetry Button */}
+            <button
+              type="button"
+              onClick={() => setShowTelemetry(true)}
+              className="flex items-center gap-2 bg-[#092B1C]/85 hover:bg-emerald-900/90 border border-emerald-400/40 rounded-xl px-3 py-1.5 shadow-sm backdrop-blur-md transition-all duration-150 cursor-pointer text-left"
+              title="Quality-gate report of the archived model feeds"
+            >
+              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-xs" />
+              <div>
+                <div className="text-[9px] uppercase tracking-wider text-emerald-300 font-bold leading-none">
+                  Ops Telemetry
+                </div>
+                <div className="text-xs font-bold text-white leading-tight mt-0.5 whitespace-nowrap">
+                  Archive feeds · QC
+                </div>
+              </div>
+            </button>
+
             {/* Cycle Date Card */}
             <div 
               className="flex items-center gap-2.5 bg-[#092B1C]/85 hover:bg-[#092B1C]/95 border border-emerald-400/40 rounded-xl px-3.5 py-1.5 shadow-sm backdrop-blur-md transition-all duration-150 cursor-default"
               title={`Operational Forecast Cycle: ${dateInfo.full}`}
             >
-              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-xs" />
+              <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-xs" />
               <div className="text-left">
                 <div className="text-[9px] uppercase tracking-wider text-emerald-300 font-bold leading-none">
                   Cycle Date
@@ -196,6 +217,9 @@ export const Header: React.FC<HeaderProps> = ({ meta }) => {
           </div>
         </div>
       </div>
+
+      <OpsTelemetryModal isOpen={showTelemetry} onClose={() => setShowTelemetry(false)} />
+
 
       {/* Navigation bar with polished hover and active states */}
       <nav className="bg-surface border-b border-border shadow-xs px-4 sm:px-6">

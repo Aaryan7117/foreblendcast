@@ -12,15 +12,15 @@ const TIER_CONFIG = {
 };
 
 export const DistrictInfo: React.FC = () => {
-  const { leadDay, selectedDistrict, setSelectedDistrict } = useAppStore();
+  const { leadDay, region, selectedDistrict, setSelectedDistrict } = useAppStore();
   const { data: districtsData } = useResults<DistrictsResult>(`districts_L${leadDay}.json`);
 
   if (!districtsData) return null;
 
-  const districts = districtsData.districts;
-  const selected = selectedDistrict
-    ? districts.find((d) => d.id === selectedDistrict)
-    : districts[0];
+  const districts = districtsData.districts.filter((d) => region === 'all' || d.region === region);
+  // default to the district with the highest heavy-rain probability
+  const top = [...districts].sort((a, b) => b.p_gt_115p6 - a.p_gt_115p6 || b.p_gt_64p5 - a.p_gt_64p5)[0];
+  const selected = (selectedDistrict && districts.find((d) => d.id === selectedDistrict)) || top;
 
   if (!selected) return null;
 
@@ -57,12 +57,14 @@ export const DistrictInfo: React.FC = () => {
           </span>
         </div>
         <p className="text-xs text-textMuted leading-relaxed">{tierInfo.desc}</p>
-        {selected.p_gt_204p5 > 0.05 && (
-          <div className="flex items-center gap-1.5 text-xs text-amber-800 font-medium mt-1.5 pt-1.5 border-t border-amber-200/50">
-            <AlertTriangle size={13} className="text-tier-orange flex-shrink-0" />
-            <span>High probability of localized flash floods in vulnerable lowlands.</span>
-          </div>
-        )}
+        <div className="flex items-center gap-1.5 text-xs text-amber-800 font-medium mt-1.5 pt-1.5 border-t border-amber-200/50">
+          <AlertTriangle size={13} className="text-tier-orange flex-shrink-0" />
+          <span>
+            P(≥64.5 mm) {(selected.p_gt_64p5 * 100).toFixed(0)}% · P(≥115.6 mm) {(selected.p_gt_115p6 * 100).toFixed(0)}% · P(≥204.5 mm) {(selected.p_gt_204p5 * 100).toFixed(0)}%
+            {selected.tmax_c != null && ` · T(12 UTC) ${selected.tmax_c.toFixed(1)} °C${selected.heatwave ? ' (heatwave)' : ''}`}
+            {selected.wind_ms != null && ` · wind ${selected.wind_ms.toFixed(1)} m/s${selected.high_wind ? ' (strong)' : ''}`}
+          </span>
+        </div>
       </div>
 
       {/* Info grid with interactive cards */}
@@ -74,7 +76,7 @@ export const DistrictInfo: React.FC = () => {
           </div>
           <div className="text-[10.5px] font-semibold text-textMuted uppercase tracking-wider">Population</div>
           <div className="text-base font-bold text-textMain mt-0.5">{totalPop}M</div>
-          <div className="text-[9.5px] text-textLight">Residents at risk</div>
+          <div className="text-[9.5px] text-textLight">Residents (WorldPop 2020)</div>
         </div>
 
         {/* Expected Rainfall */}
@@ -84,7 +86,11 @@ export const DistrictInfo: React.FC = () => {
           </div>
           <div className="text-[10.5px] font-semibold text-textMuted uppercase tracking-wider">Expected Rain</div>
           <div className="text-base font-bold text-textMain mt-0.5">{selected.precip_p90_mm} mm</div>
-          <div className="text-[9.5px] text-textLight">P90 (Next 24h)</div>
+          <div className="text-[9.5px] text-textLight">
+            {selected.precip_q05_mm != null && selected.precip_q95_mm != null
+              ? `90% interval ${selected.precip_q05_mm}–${selected.precip_q95_mm} mm`
+              : 'district P90 cell'}
+          </div>
         </div>
 
         {/* Model Weights */}

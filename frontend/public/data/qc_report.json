@@ -1,0 +1,2937 @@
+{
+  "meta": {
+    "cycle": "2022-06-14T00Z",
+    "generated_utc": "2026-09-29T12:46:10Z",
+    "git_commit": "f91ae65",
+    "fixture": false,
+    "ground_truth": "ERA5",
+    "models_used": [
+      "hres",
+      "ens",
+      "graphcast"
+    ],
+    "availability_pattern": "full",
+    "ground_truth_detail": "ERA5 reanalysis (WeatherBench2), not IMD gridded observations",
+    "strategy": "context_shrink_pm",
+    "accumulation_window_utc": "03:00-03:00",
+    "district_aggregation": "area_weighted_p90",
+    "status": "EXERCISE - NOT AN OFFICIAL IMD WARNING"
+  },
+  "gate": [
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "ens",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 32783,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 21695,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 25884,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 36512,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 47785,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 194550,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 71084,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 71883,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 84990,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 102545,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 161767,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 49389,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 45999,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 48478,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 54760,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 115924,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 61295,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 64407,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 75455,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 83467,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "graphcast",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 1,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "precip",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "hres",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "t2m",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2018,
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 366,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2020
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 1,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 3,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 5,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 7,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    },
+    {
+      "model": "pangu",
+      "variable": "wind",
+      "years": [
+        2022
+      ],
+      "lead_day": 9,
+      "fields": 183,
+      "missing": 0,
+      "rejected": 0,
+      "repaired_cells": 0,
+      "reasons": []
+    }
+  ]
+}

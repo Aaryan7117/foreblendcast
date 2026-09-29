@@ -29,7 +29,7 @@ export const AboutPage: React.FC = () => {
         <div className="bg-surface rounded-card border border-border p-6 shadow-card hover:shadow-cardHover transition-shadow duration-200">
           <h2 className="text-lg font-bold text-textMain mb-3">System Architecture & Capabilities</h2>
           <p className="text-sm text-textMuted leading-relaxed mb-4">
-            ForeBlendCast is an operational-grade multi-model forecast blending system designed for the Ministry of Earth Sciences (MoES) and NCMRWF. It synthesizes numerical weather prediction (NWP) models (ECMWF IFS HRES, ECMWF IFS ENS) with state-of-the-art AI-driven atmospheric models (Google DeepMind GraphCast) to produce calibrated, probabilistic rainfall predictions and automated district-level disaster risk early warnings across India.
+            ForeBlendCast is a prototype multi-model forecast blending system designed for the Ministry of Earth Sciences (MoES) and NCMRWF. It synthesizes numerical weather prediction (NWP) models (ECMWF IFS HRES, ECMWF IFS ENS) with state-of-the-art AI-driven atmospheric models (Google DeepMind GraphCast) to produce calibrated, probabilistic rainfall, temperature and wind forecasts and district-level risk tiers across India. It runs retrospectively on the WeatherBench2 archive (2018, 2020, 2022).
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-surfaceHighlight rounded-lg p-4 border border-border hover:border-slate-300 hover:shadow-xs transition-all duration-150">
@@ -56,7 +56,7 @@ export const AboutPage: React.FC = () => {
                 Calibrated IMD Risk Classification
               </h3>
               <p className="text-xs text-textMuted leading-relaxed">
-                All 700+ districts are categorized into Green, Yellow, Orange, and Red alert tiers according to rigorous IMD threshold exceedances (64.5mm, 115.6mm, 204.5mm) weighted by vulnerable populations.
+                All 700+ districts are categorized into Green, Yellow, Orange, and Red alert tiers from calibrated probabilities of exceeding the IMD rainfall categories (64.5 mm, 115.6 mm, 204.5 mm). Probability thresholds are tuned on training years; population exposure is reported alongside.
               </p>
             </div>
             <div className="bg-surfaceHighlight rounded-lg p-4 border border-border hover:border-slate-300 hover:shadow-xs transition-all duration-150">
@@ -132,7 +132,7 @@ export const AboutPage: React.FC = () => {
         {/* Disclaimer */}
         <div className="bg-tier-yellowBg border border-tier-yellow/30 rounded-card p-4">
           <p className="text-xs text-textMuted leading-relaxed">
-            <strong className="text-textMain">Official Notice:</strong> Prototype system developed for Smart India Hackathon 2026 (SIH26081). Evaluated against IMD 0.25° gridded observation ground truth and ECMWF ERA5 reanalysis. All backend models, ingestion pipelines, and verification metrics are preserved.
+            <strong className="text-textMain">Official Notice:</strong> Prototype system developed for Smart India Hackathon 2026 (SIH26081). Verified against ECMWF ERA5 reanalysis on the 0.25° grid; no IMD gridded observations are used. ERA5 favours models trained on it (GraphCast, Pangu-Weather) and under-represents extreme rainfall. Temperature is the 12 UTC value, a proxy for the daily maximum.
           </p>
         </div>
       </div>

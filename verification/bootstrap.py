@@ -1,10 +1,40 @@
 """Block bootstrap for CIs on metric differences (B6, TECH_APPROACH §2.3).
 
-7-day block bootstrap, 1000 reps, 95% CI on differences vs. best single model.
+Moving-block bootstrap over forecast dates, 1000 reps, 95% CI on differences vs. a
+reference system. The inputs are one value per forecast date in time order; blocks keep
+the serial correlation of consecutive dates. Never pass spatial cells as samples.
 """
 from __future__ import annotations
 
 import numpy as np
+
+
+def block_indices(n: int, block_size: int, n_reps: int, seed: int = 42) -> np.ndarray:
+    """(n_reps, n) resampled time indices built from contiguous blocks."""
+    block_size = max(1, min(block_size, n))
+    n_blocks = int(np.ceil(n / block_size))
+    rng = np.random.default_rng(seed)
+    starts = rng.integers(0, n - block_size + 1, size=(n_reps, n_blocks))
+    idx = starts[:, :, None] + np.arange(block_size)[None, None, :]
+    return idx.reshape(n_reps, -1)[:, :n]
+
+
+def block_bootstrap_rmse_diff(mse_a: np.ndarray, mse_b: np.ndarray,
+                              block_size: int = 4, n_reps: int = 1000,
+                              ci: float = 0.95) -> tuple[float, float]:
+    """CI on RMSE(A) - RMSE(B) from per-date mean squared errors of both systems.
+
+    block_size counts forecast dates (4 dates = 8 days at one init every second day).
+    """
+    ok = np.isfinite(mse_a) & np.isfinite(mse_b)
+    a, b = np.asarray(mse_a)[ok], np.asarray(mse_b)[ok]
+    if a.size < 2 * block_size:
+        return float("nan"), float("nan")
+    idx = block_indices(a.size, block_size, n_reps)
+    diffs = np.sqrt(a[idx].mean(axis=1)) - np.sqrt(b[idx].mean(axis=1))
+    alpha = (1 - ci) / 2
+    return (float(np.percentile(diffs, 100 * alpha)),
+            float(np.percentile(diffs, 100 * (1 - alpha))))
 
 
 def block_bootstrap_diff(errors_a: np.ndarray, errors_b: np.ndarray,
@@ -13,9 +43,9 @@ def block_bootstrap_diff(errors_a: np.ndarray, errors_b: np.ndarray,
     """Bootstrap CI on the difference in mean |error| between A and B.
 
     Args:
-        errors_a: 1D array of absolute errors for system A (e.g. blend)
-        errors_b: 1D array of absolute errors for system B (e.g. best single)
-        block_size: block length in days
+        errors_a: 1D array, one mean absolute error per forecast date, system A (e.g. blend)
+        errors_b: 1D array, one mean absolute error per forecast date, system B
+        block_size: block length in forecast dates
         n_reps: number of bootstrap replicates
         ci: confidence level
 
@@ -23,13 +53,8 @@ def block_bootstrap_diff(errors_a: np.ndarray, errors_b: np.ndarray,
         (lower, upper) bounds of the CI on mean(|A|) - mean(|B|)
     """
     n = len(errors_a)
-    n_blocks = max(1, n // block_size)
     diffs = np.empty(n_reps)
-
-    rng = np.random.default_rng(42)
-    for i in range(n_reps):
-        starts = rng.integers(0, n - block_size + 1, size=n_blocks)
-        idx = np.concatenate([np.arange(s, s + block_size) for s in starts])[:n]
+    for i, idx in enumerate(block_indices(n, block_size, n_reps)):
         diffs[i] = np.nanmean(errors_a[idx]) - np.nanmean(errors_b[idx])
 
     alpha = (1 - ci) / 2
@@ -47,13 +72,8 @@ def block_bootstrap_metric(values: np.ndarray, metric_fn,
         (estimate, ci_lower, ci_upper)
     """
     n = len(values)
-    n_blocks = max(1, n // block_size)
     estimates = np.empty(n_reps)
-
-    rng = np.random.default_rng(42)
-    for i in range(n_reps):
-        starts = rng.integers(0, n - block_size + 1, size=n_blocks)
-        idx = np.concatenate([np.arange(s, s + block_size) for s in starts])[:n]
+    for i, idx in enumerate(block_indices(n, block_size, n_reps)):
         estimates[i] = metric_fn(values[idx])
 
     alpha = (1 - ci) / 2
