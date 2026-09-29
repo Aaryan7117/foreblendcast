@@ -1,8 +1,8 @@
 {
   "meta": {
     "cycle": "2022-06-14T00Z",
-    "generated_utc": "2026-09-29T12:46:09Z",
-    "git_commit": "f91ae65",
+    "generated_utc": "2026-09-29T13:46:54Z",
+    "git_commit": "dd8f0ee",
     "fixture": false,
     "ground_truth": "ERA5",
     "models_used": [
@@ -63,6 +63,16 @@
           "rmse_change_vs_previous_pct": -0.76
         }
       ],
+      "learned_blend": {
+        "strategy": "lgbm_blend",
+        "rmse": 0.5,
+        "mae": 0.37,
+        "bias": 0.026,
+        "fss": null,
+        "freq_bias": 0.741,
+        "rmse_change_vs_context_shrink_pct": -4.76,
+        "note": "LightGBM regression on the blend, the members and the context; an alternative to the weights, not a step on top of them"
+      },
       "probabilistic": {
         "event": "p_wind_8",
         "brier": {
@@ -79,6 +89,51 @@
         "crps_change_vs_equal_weight_pct": -7.35,
         "crps_change_vs_raw_ensemble_pct": -11.62,
         "interval_90_coverage": 0.9091,
+        "quantile_methods": {
+          "selected": "lgbm",
+          "selected_by": "cross-validated pinball loss inside the training years",
+          "selected_by_fold": {
+            "2020": "lgbm",
+            "2022": "lgbm"
+          },
+          "train_cv_pinball": {
+            "2020": {
+              "table": 0.1188,
+              "lgbm": 0.1081
+            },
+            "2022": {
+              "table": 0.1159,
+              "lgbm": 0.1066
+            }
+          },
+          "test_crps_7_levels": {
+            "quantile_table": 0.2289,
+            "lightgbm": 0.2137
+          },
+          "test_interval_90_coverage": {
+            "quantile_table": 0.9091,
+            "lightgbm": 0.8883
+          },
+          "test_crps_change_lightgbm_vs_table_pct": -6.64,
+          "lightgbm_feature_importance": {
+            "blend": 0.0432,
+            "spread": 0.0349,
+            "member_min": 0.0743,
+            "member_max": 0.0522,
+            "member_hres": 0.0045,
+            "member_ens": 0.0287,
+            "member_graphcast": 0.0491,
+            "member_pangu": 0.15,
+            "lat": 0.1028,
+            "lon": 0.0801,
+            "season": 0.0212,
+            "regime": 0.0145,
+            "normal": 0.2037,
+            "doy_sin": 0.0657,
+            "doy_cos": 0.0751
+          }
+        },
+        "selected_interval_90_coverage": 0.8883,
         "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
       }
     },
@@ -125,6 +180,16 @@
           "rmse_change_vs_previous_pct": -0.6
         }
       ],
+      "learned_blend": {
+        "strategy": "lgbm_blend",
+        "rmse": 0.638,
+        "mae": 0.468,
+        "bias": 0.038,
+        "fss": null,
+        "freq_bias": 0.611,
+        "rmse_change_vs_context_shrink_pct": -3.92,
+        "note": "LightGBM regression on the blend, the members and the context; an alternative to the weights, not a step on top of them"
+      },
       "probabilistic": {
         "event": "p_wind_8",
         "brier": {
@@ -141,6 +206,51 @@
         "crps_change_vs_equal_weight_pct": -2.9,
         "crps_change_vs_raw_ensemble_pct": -8.77,
         "interval_90_coverage": 0.9079,
+        "quantile_methods": {
+          "selected": "lgbm",
+          "selected_by": "cross-validated pinball loss inside the training years",
+          "selected_by_fold": {
+            "2020": "lgbm",
+            "2022": "lgbm"
+          },
+          "train_cv_pinball": {
+            "2020": {
+              "table": 0.1458,
+              "lgbm": 0.1337
+            },
+            "2022": {
+              "table": 0.144,
+              "lgbm": 0.133
+            }
+          },
+          "test_crps_7_levels": {
+            "quantile_table": 0.2849,
+            "lightgbm": 0.2695
+          },
+          "test_interval_90_coverage": {
+            "quantile_table": 0.9079,
+            "lightgbm": 0.8835
+          },
+          "test_crps_change_lightgbm_vs_table_pct": -5.41,
+          "lightgbm_feature_importance": {
+            "blend": 0.1126,
+            "spread": 0.0229,
+            "member_min": 0.1014,
+            "member_max": 0.0789,
+            "member_hres": 0.0076,
+            "member_ens": 0.0208,
+            "member_graphcast": 0.0222,
+            "member_pangu": 0.0702,
+            "lat": 0.0848,
+            "lon": 0.0583,
+            "season": 0.0114,
+            "regime": 0.0196,
+            "normal": 0.2276,
+            "doy_sin": 0.0784,
+            "doy_cos": 0.0834
+          }
+        },
+        "selected_interval_90_coverage": 0.8835,
         "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
       }
     },
@@ -187,6 +297,16 @@
           "rmse_change_vs_previous_pct": -0.4
         }
       ],
+      "learned_blend": {
+        "strategy": "lgbm_blend",
+        "rmse": 0.713,
+        "mae": 0.517,
+        "bias": 0.029,
+        "fss": null,
+        "freq_bias": 0.509,
+        "rmse_change_vs_context_shrink_pct": -3.39,
+        "note": "LightGBM regression on the blend, the members and the context; an alternative to the weights, not a step on top of them"
+      },
       "probabilistic": {
         "event": "p_wind_8",
         "brier": {
@@ -203,6 +323,51 @@
         "crps_change_vs_equal_weight_pct": -1.77,
         "crps_change_vs_raw_ensemble_pct": -7.66,
         "interval_90_coverage": 0.9052,
+        "quantile_methods": {
+          "selected": "lgbm",
+          "selected_by": "cross-validated pinball loss inside the training years",
+          "selected_by_fold": {
+            "2020": "lgbm",
+            "2022": "lgbm"
+          },
+          "train_cv_pinball": {
+            "2020": {
+              "table": 0.1595,
+              "lgbm": 0.1458
+            },
+            "2022": {
+              "table": 0.1582,
+              "lgbm": 0.1459
+            }
+          },
+          "test_crps_7_levels": {
+            "quantile_table": 0.3146,
+            "lightgbm": 0.2979
+          },
+          "test_interval_90_coverage": {
+            "quantile_table": 0.9052,
+            "lightgbm": 0.8799
+          },
+          "test_crps_change_lightgbm_vs_table_pct": -5.31,
+          "lightgbm_feature_importance": {
+            "blend": 0.0577,
+            "spread": 0.0108,
+            "member_min": 0.1121,
+            "member_max": 0.1337,
+            "member_hres": 0.0588,
+            "member_ens": 0.0257,
+            "member_graphcast": 0.0323,
+            "member_pangu": 0.0338,
+            "lat": 0.0718,
+            "lon": 0.0478,
+            "season": 0.0088,
+            "regime": 0.0204,
+            "normal": 0.2265,
+            "doy_sin": 0.0808,
+            "doy_cos": 0.0791
+          }
+        },
+        "selected_interval_90_coverage": 0.8799,
         "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
       }
     },
@@ -249,6 +414,16 @@
           "rmse_change_vs_previous_pct": -0.25
         }
       ],
+      "learned_blend": {
+        "strategy": "lgbm_blend",
+        "rmse": 0.779,
+        "mae": 0.563,
+        "bias": 0.038,
+        "fss": null,
+        "freq_bias": 0.438,
+        "rmse_change_vs_context_shrink_pct": -3.35,
+        "note": "LightGBM regression on the blend, the members and the context; an alternative to the weights, not a step on top of them"
+      },
       "probabilistic": {
         "event": "p_wind_8",
         "brier": {
@@ -265,6 +440,51 @@
         "crps_change_vs_equal_weight_pct": -1.5,
         "crps_change_vs_raw_ensemble_pct": -7.49,
         "interval_90_coverage": 0.9012,
+        "quantile_methods": {
+          "selected": "lgbm",
+          "selected_by": "cross-validated pinball loss inside the training years",
+          "selected_by_fold": {
+            "2020": "lgbm",
+            "2022": "lgbm"
+          },
+          "train_cv_pinball": {
+            "2020": {
+              "table": 0.1702,
+              "lgbm": 0.1575
+            },
+            "2022": {
+              "table": 0.1696,
+              "lgbm": 0.1576
+            }
+          },
+          "test_crps_7_levels": {
+            "quantile_table": 0.3411,
+            "lightgbm": 0.3246
+          },
+          "test_interval_90_coverage": {
+            "quantile_table": 0.9012,
+            "lightgbm": 0.8757
+          },
+          "test_crps_change_lightgbm_vs_table_pct": -4.84,
+          "lightgbm_feature_importance": {
+            "blend": 0.0765,
+            "spread": 0.0106,
+            "member_min": 0.0933,
+            "member_max": 0.126,
+            "member_hres": 0.0523,
+            "member_ens": 0.0206,
+            "member_graphcast": 0.0218,
+            "member_pangu": 0.0324,
+            "lat": 0.0692,
+            "lon": 0.048,
+            "season": 0.0084,
+            "regime": 0.0222,
+            "normal": 0.234,
+            "doy_sin": 0.0912,
+            "doy_cos": 0.0935
+          }
+        },
+        "selected_interval_90_coverage": 0.8757,
         "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
       }
     },
@@ -311,6 +531,16 @@
           "rmse_change_vs_previous_pct": -0.23
         }
       ],
+      "learned_blend": {
+        "strategy": "lgbm_blend",
+        "rmse": 0.842,
+        "mae": 0.611,
+        "bias": 0.043,
+        "fss": null,
+        "freq_bias": 0.306,
+        "rmse_change_vs_context_shrink_pct": -3.77,
+        "note": "LightGBM regression on the blend, the members and the context; an alternative to the weights, not a step on top of them"
+      },
       "probabilistic": {
         "event": "p_wind_8",
         "brier": {
@@ -327,6 +557,51 @@
         "crps_change_vs_equal_weight_pct": -1.18,
         "crps_change_vs_raw_ensemble_pct": -7.49,
         "interval_90_coverage": 0.8987,
+        "quantile_methods": {
+          "selected": "lgbm",
+          "selected_by": "cross-validated pinball loss inside the training years",
+          "selected_by_fold": {
+            "2020": "lgbm",
+            "2022": "lgbm"
+          },
+          "train_cv_pinball": {
+            "2020": {
+              "table": 0.1809,
+              "lgbm": 0.1668
+            },
+            "2022": {
+              "table": 0.1823,
+              "lgbm": 0.1695
+            }
+          },
+          "test_crps_7_levels": {
+            "quantile_table": 0.3684,
+            "lightgbm": 0.3514
+          },
+          "test_interval_90_coverage": {
+            "quantile_table": 0.8987,
+            "lightgbm": 0.8707
+          },
+          "test_crps_change_lightgbm_vs_table_pct": -4.61,
+          "lightgbm_feature_importance": {
+            "blend": 0.0979,
+            "spread": 0.0078,
+            "member_min": 0.0943,
+            "member_max": 0.1202,
+            "member_hres": 0.0507,
+            "member_ens": 0.014,
+            "member_graphcast": 0.0177,
+            "member_pangu": 0.0293,
+            "lat": 0.0613,
+            "lon": 0.0454,
+            "season": 0.007,
+            "regime": 0.0189,
+            "normal": 0.2416,
+            "doy_sin": 0.1023,
+            "doy_cos": 0.0916
+          }
+        },
+        "selected_interval_90_coverage": 0.8707,
         "crps_note": "Quantile CRPS is twice the mean pinball loss over 19 levels; the ensemble CRPS uses the exact small-ensemble formula."
       }
     }

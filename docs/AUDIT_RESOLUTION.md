@@ -91,6 +91,32 @@ Change of the adaptive blend (weighted mean) against the references. Negative is
 Rainfall, lead day 1, 64.5 mm event: Brier score 0.00282 (equal weight), 0.00256 (adaptive
 weights), 0.00219 (adaptive weights, calibrated).
 
+### LightGBM
+
+Held-out years, both methods scored on the same seven quantile levels. Negative is better.
+
+| Variable | Lead | CRPS, LightGBM vs quantile table | 90% interval coverage, table | 90% interval coverage, LightGBM | RMSE, learned blend vs weighted blend |
+|---|---|---|---|---|---|
+| Rainfall | 1 | −2.0% | 0.908 | 0.910 | +7.6% |
+| Rainfall | 5 | +0.2% | 0.912 | 0.902 | +8.4% |
+| Rainfall | 9 | −0.1% | 0.912 | 0.889 | +7.8% |
+| Temperature | 1 | −14.1% | 0.930 | 0.865 | +1.7% |
+| Temperature | 5 | −9.3% | 0.920 | 0.859 | +1.3% |
+| Temperature | 9 | −5.1% | 0.916 | 0.843 | +1.5% |
+| Wind speed | 1 | −6.6% | 0.909 | 0.888 | −4.8% |
+| Wind speed | 5 | −5.3% | 0.905 | 0.880 | −3.4% |
+| Wind speed | 9 | −4.6% | 0.899 | 0.871 | −3.8% |
+
+- The training cross-validation chose LightGBM quantiles for every variable and lead, so
+  the intervals in the products are LightGBM's.
+- LightGBM quantiles are sharper and score better for temperature and wind. For rainfall
+  the two methods are level.
+- **LightGBM intervals are too narrow for temperature**: the 90% interval covers 84 to 87%
+  of observations. The quantile table is closer to 90%.
+- **The learned blend is not better than the weights** for rainfall and temperature. It
+  helps for wind. It is reported in the ladder as `lgbm_blend` and is not used in the
+  products.
+
 ## What the results do not show
 
 - **The gain over the best single model is small at short leads.** For rainfall at lead

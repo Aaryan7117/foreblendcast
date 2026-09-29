@@ -1,8 +1,8 @@
 {
   "meta": {
     "cycle": "2022-06-14T00Z",
-    "generated_utc": "2026-09-29T12:46:00Z",
-    "git_commit": "f91ae65",
+    "generated_utc": "2026-09-29T13:46:49Z",
+    "git_commit": "dd8f0ee",
     "fixture": false,
     "ground_truth": "ERA5",
     "models_used": [
@@ -534,6 +534,57 @@
           "freq_bias": 0.402,
           "rev_cl0p1": 0.2456,
           "brier": 0.002889
+        }
+      }
+    },
+    {
+      "rung": "ablation",
+      "strategy": "lgbm_blend",
+      "metrics": {
+        "L1": {
+          "rmse": 0.5,
+          "mae": 0.37,
+          "bias": 0.026,
+          "n_days": 366,
+          "freq_bias": 0.741,
+          "rev_cl0p1": 0.6337,
+          "brier": 0.001469
+        },
+        "L3": {
+          "rmse": 0.638,
+          "mae": 0.468,
+          "bias": 0.038,
+          "n_days": 365,
+          "freq_bias": 0.611,
+          "rev_cl0p1": 0.4854,
+          "brier": 0.002003
+        },
+        "L5": {
+          "rmse": 0.713,
+          "mae": 0.517,
+          "bias": 0.029,
+          "n_days": 364,
+          "freq_bias": 0.509,
+          "rev_cl0p1": 0.3809,
+          "brier": 0.002356
+        },
+        "L7": {
+          "rmse": 0.779,
+          "mae": 0.563,
+          "bias": 0.038,
+          "n_days": 363,
+          "freq_bias": 0.438,
+          "rev_cl0p1": 0.313,
+          "brier": 0.002576
+        },
+        "L9": {
+          "rmse": 0.842,
+          "mae": 0.611,
+          "bias": 0.043,
+          "n_days": 362,
+          "freq_bias": 0.306,
+          "rev_cl0p1": 0.2189,
+          "brier": 0.002792
         }
       }
     },

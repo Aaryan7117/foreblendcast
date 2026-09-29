@@ -1,8 +1,8 @@
 {
   "meta": {
     "cycle": "2022-06-14T00Z",
-    "generated_utc": "2026-09-29T12:45:36Z",
-    "git_commit": "f91ae65",
+    "generated_utc": "2026-09-29T13:46:34Z",
+    "git_commit": "dd8f0ee",
     "fixture": false,
     "ground_truth": "ERA5",
     "models_used": [
@@ -617,6 +617,72 @@
           "fss": 0.1579,
           "fss50": 0.1579,
           "freq_bias_64p5": 0.166
+        }
+      }
+    },
+    {
+      "rung": "ablation",
+      "strategy": "lgbm_blend",
+      "metrics": {
+        "L1": {
+          "rmse": 4.299,
+          "mae": 1.347,
+          "bias": -0.096,
+          "n_days": 366,
+          "freq_bias": 0.616,
+          "rev_cl0p1": 0.4517,
+          "brier": 0.002949,
+          "fss": 0.7229,
+          "fss50": 0.7229,
+          "freq_bias_64p5": 0.616
+        },
+        "L3": {
+          "rmse": 6.247,
+          "mae": 2.063,
+          "bias": -0.043,
+          "n_days": 365,
+          "freq_bias": 0.326,
+          "rev_cl0p1": 0.1852,
+          "brier": 0.004037,
+          "fss": 0.3942,
+          "fss50": 0.3942,
+          "freq_bias_64p5": 0.326
+        },
+        "L5": {
+          "rmse": 6.873,
+          "mae": 2.363,
+          "bias": -0.072,
+          "n_days": 364,
+          "freq_bias": 0.238,
+          "rev_cl0p1": 0.118,
+          "brier": 0.004268,
+          "fss": 0.2632,
+          "fss50": 0.2632,
+          "freq_bias_64p5": 0.238
+        },
+        "L7": {
+          "rmse": 7.548,
+          "mae": 2.71,
+          "bias": -0.039,
+          "n_days": 363,
+          "freq_bias": 0.226,
+          "rev_cl0p1": 0.0804,
+          "brier": 0.004539,
+          "fss": 0.184,
+          "fss50": 0.184,
+          "freq_bias_64p5": 0.226
+        },
+        "L9": {
+          "rmse": 8.07,
+          "mae": 3.007,
+          "bias": -0.011,
+          "n_days": 362,
+          "freq_bias": 0.168,
+          "rev_cl0p1": 0.0511,
+          "brier": 0.004569,
+          "fss": 0.1232,
+          "fss50": 0.1232,
+          "freq_bias_64p5": 0.168
         }
       }
     },
